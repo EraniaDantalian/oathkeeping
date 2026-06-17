@@ -58,7 +58,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 1
     },
     {
       "id": "sarah_black",
@@ -66,7 +67,6 @@
       "aliases": [],
       "category": "supporting",
       "species": "",
-      "faction": "",
       "role": "Grief",
       "symbol": "◉",
       "image": "https://images2.imgbox.com/f3/32/qrNp4pZR_o.jpg",
@@ -86,7 +86,9 @@
         }
       ],
       "relationships": [],
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 2
     },
     {
       "id": "billy_black",
@@ -108,7 +110,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 3
     },
     {
       "id": "rachel--ray--black-mmbnyn1z",
@@ -125,7 +128,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 4
     },
     {
       "id": "rebecca--beck--black-mmbo6r1p",
@@ -142,7 +146,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 5
     },
     {
       "id": "ephraim-black-mmbo6r1p",
@@ -159,7 +164,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 6
     },
     {
       "id": "martha-young-mmbo6r1p",
@@ -176,7 +182,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 7
     },
     {
       "id": "william-black-sr--mmbo6r1p",
@@ -193,7 +200,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 8
     },
     {
       "id": "judith-peterson-mmbo6r1p",
@@ -210,7 +218,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 9
     },
     {
       "id": "mary-black-mmbo6r1q",
@@ -227,7 +236,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 10
     },
     {
       "id": "jane-black-mmbo6r1q",
@@ -244,7 +254,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 11
     },
     {
       "id": "eleanor--nora--black-mmbo6r1q",
@@ -261,7 +272,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 12
     },
     {
       "id": "mateo-reyes-mmbo6r1q",
@@ -278,7 +290,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 13
     },
     {
       "id": "eugenia--jennie--black-mmbo6r1q",
@@ -288,8 +301,7 @@
         "Jennie"
       ],
       "category": "background",
-      "species": "human",
-      "faction": "quileute",
+      "species": "Human",
       "role": "Paternal Aunt",
       "symbol": "◈",
       "image": "https://images2.imgbox.com/33/1f/HGAMY3Ke_o.jpg",
@@ -298,7 +310,11 @@
       "summary": "",
       "fields": [],
       "relationships": [],
-      "group": ""
+      "group": "",
+      "factions": [
+        "quileute"
+      ],
+      "added": 14
     },
     {
       "id": "constance--connie--black-mmbo6r1q",
@@ -307,8 +323,7 @@
         "Coco"
       ],
       "category": "background",
-      "species": "human",
-      "faction": "quileute",
+      "species": "Human",
       "role": "Paternal Aunt",
       "symbol": "◈",
       "image": "https://images2.imgbox.com/6b/0c/y9IxsFkl_o.jpg",
@@ -317,7 +332,11 @@
       "summary": "",
       "fields": [],
       "relationships": [],
-      "group": ""
+      "group": "",
+      "factions": [
+        "quileute"
+      ],
+      "added": 15
     },
     {
       "id": "kevin-littlesea-mmbo6r1q",
@@ -334,7 +353,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 16
     },
     {
       "id": "ezra--emmie--black-mmbo6r1q",
@@ -351,7 +371,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 17
     },
     {
       "id": "colin-littlesea-mmbo6r1q",
@@ -368,7 +389,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 18
     },
     {
       "id": "calla-littlesea-mmbo6r1q",
@@ -385,7 +407,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 19
     },
     {
       "id": "jacob-black-mmbplb7r",
@@ -402,7 +425,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 20
     },
     {
       "id": "alice-fox-mmbplb7r",
@@ -419,7 +443,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 21
     },
     {
       "id": "joseph-black-mmbplb7r",
@@ -436,7 +461,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 22
     },
     {
       "id": "jane-clearwater-mmbplb7r",
@@ -453,7 +479,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 23
     },
     {
       "id": "dorothy-black-mmbplb7r",
@@ -470,7 +497,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 24
     },
     {
       "id": "deborah-black-mmbplb7r",
@@ -487,7 +515,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 25
     },
     {
       "id": "susanah-black-mmbplb7r",
@@ -504,7 +533,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 26
     },
     {
       "id": "lape-huautah-mmbplb7r",
@@ -521,7 +551,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 27
     },
     {
       "id": "joanna-black-mmbplb7r",
@@ -538,7 +569,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 28
     },
     {
       "id": "loraraine-huautah-mmbplb7r",
@@ -555,7 +587,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 29
     },
     {
       "id": "alice-huautah-mmbplb7r",
@@ -572,7 +605,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 30
     },
     {
       "id": "caleb-uley-mmbplb7r",
@@ -589,7 +623,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 31
     },
     {
       "id": "jared-cameron-mmbplb7r",
@@ -606,7 +641,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 32
     },
     {
       "id": "kim-mmbplb7r",
@@ -623,7 +659,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 33
     },
     {
       "id": "solomon-finau-mmbppkqw",
@@ -640,7 +677,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 34
     },
     {
       "id": "verne-williams-mmbq00op",
@@ -657,7 +695,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 35
     },
     {
       "id": "geoffrey-swan-mmbqpn8a",
@@ -674,7 +713,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 36
     },
     {
       "id": "helen-swan--nee-jefferson--mmbqpn8a",
@@ -691,7 +731,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 37
     },
     {
       "id": "renee-dwyer-mmbqpn8a",
@@ -708,7 +749,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 38
     },
     {
       "id": "isabella-swan-mmbqpn8c",
@@ -725,7 +767,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 39
     },
     {
       "id": "joy-ateara--nee-quehpa--mmbqpn8c",
@@ -742,7 +785,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 40
     },
     {
       "id": "quil--quillian--atera-iv-mmbqpn8c",
@@ -750,7 +794,6 @@
       "aliases": [],
       "category": "background",
       "species": "",
-      "faction": "",
       "role": "Quil's Dad",
       "symbol": "◈",
       "image": "https://images2.imgbox.com/f1/ed/8d2kqHte_o.jpg",
@@ -759,15 +802,16 @@
       "summary": "",
       "fields": [],
       "relationships": [],
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 41
     },
     {
       "id": "quil--old-man-quil--atera-iii-mmbqpn8c",
       "name": "Quil \"Old Man Quil\" Atera III",
       "aliases": [],
       "category": "background",
-      "species": "human",
-      "faction": "quileute",
+      "species": "Human",
       "role": "",
       "symbol": "◈",
       "image": "https://images2.imgbox.com/2f/f3/VIUrCBFh_o.jpg",
@@ -776,7 +820,11 @@
       "summary": "",
       "fields": [],
       "relationships": [],
-      "group": ""
+      "group": "",
+      "factions": [
+        "quileute"
+      ],
+      "added": 42
     },
     {
       "id": "quil--q--atera-v-mmbqpn8c",
@@ -793,7 +841,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 43
     },
     {
       "id": "embry--em--call-mmbqpn8c",
@@ -810,7 +859,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 44
     },
     {
       "id": "jane-wilde-mmbqpn8c",
@@ -827,7 +877,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 45
     },
     {
       "id": "hank-wilde-mmbqpn8d",
@@ -844,7 +895,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 46
     },
     {
       "id": "doris-wilde--nee-ateara--mmbqpn8d",
@@ -861,7 +913,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 47
     },
     {
       "id": "charlie-swan-mmbqr6ae",
@@ -878,7 +931,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 48
     },
     {
       "id": "moses-clearwater-mmbr7q3u",
@@ -895,7 +949,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 49
     },
     {
       "id": "eliza-clearwater--nee-smythe--mmbr7q3u",
@@ -912,7 +967,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 50
     },
     {
       "id": "dema-clearwater-mmbr9uc2",
@@ -929,7 +985,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 51
     },
     {
       "id": "miriam-clearwater-mmbrgac4",
@@ -946,7 +1003,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 52
     },
     {
       "id": "elliot-hudson-mmbrgac4",
@@ -963,7 +1021,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 53
     },
     {
       "id": "edmund-clearwater-mmbrgac4",
@@ -980,7 +1039,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 54
     },
     {
       "id": "molly-clearwater-mmbrgac4",
@@ -997,7 +1057,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 55
     },
     {
       "id": "tabitha-clearwater-mmbrgac4",
@@ -1014,7 +1075,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 56
     },
     {
       "id": "daniel-clearwater-mmbrgac4",
@@ -1031,7 +1093,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 57
     },
     {
       "id": "lucy-clearwater-mmbrgac4",
@@ -1048,7 +1111,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 58
     },
     {
       "id": "peter-clearwater-mmbrgac4",
@@ -1065,7 +1129,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 59
     },
     {
       "id": "michael-clearwater-mmbrgac4",
@@ -1082,7 +1147,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 60
     },
     {
       "id": "elizabeth-clearwater-mmbrgac4",
@@ -1099,7 +1165,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 61
     },
     {
       "id": "harry-clearwater-mmbrgac4",
@@ -1116,7 +1183,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 62
     },
     {
       "id": "leah-clearwater-mmbrgac4",
@@ -1124,7 +1192,6 @@
       "aliases": [],
       "category": "main",
       "species": "",
-      "faction": "",
       "role": "wolfshifter",
       "symbol": "◈",
       "image": "https://images2.imgbox.com/c4/c2/6FtYRiO0_o.jpg",
@@ -1133,7 +1200,9 @@
       "summary": "",
       "fields": [],
       "relationships": [],
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 63
     },
     {
       "id": "seth-clearwater-mmbrgac4",
@@ -1150,7 +1219,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 64
     },
     {
       "id": "esther-clearwater-mmbrgac4",
@@ -1167,7 +1237,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 65
     },
     {
       "id": "samuel-clearwater-mmbrgac4",
@@ -1184,7 +1255,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 66
     },
     {
       "id": "amelia-ateara-mmbrk8qa",
@@ -1201,7 +1273,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 67
     },
     {
       "id": "julia-littlesea-mmbrmkts",
@@ -1218,7 +1291,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 68
     },
     {
       "id": "beatrice-deer-mmcgpm4f",
@@ -1235,7 +1309,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 69
     },
     {
       "id": "thomas-uley-mmcgpm4f",
@@ -1252,7 +1327,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 70
     },
     {
       "id": "caleb-uley-mmcgpm4f",
@@ -1269,7 +1345,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 71
     },
     {
       "id": "ruth-lahote--nee-uley--mmcgpm4f",
@@ -1286,7 +1363,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 72
     },
     {
       "id": "gene-lahote-mmcgpm4f",
@@ -1303,7 +1381,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 73
     },
     {
       "id": "levi-uley-mmcgpm4f",
@@ -1320,7 +1399,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 74
     },
     {
       "id": "johnathon--johnny--uley-mmcgpm4f",
@@ -1337,7 +1417,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 75
     },
     {
       "id": "mirabelle-uley-mmcgpm4f",
@@ -1354,7 +1435,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 76
     },
     {
       "id": "charlotte--lottie--uley--nee-hewes--mmcgpm4f",
@@ -1371,7 +1453,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 77
     },
     {
       "id": "sue-clearwater--nee-uley--mmcgpm4f",
@@ -1388,7 +1471,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 78
     },
     {
       "id": "lucas-uley-mmcgpm4f",
@@ -1405,7 +1489,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 79
     },
     {
       "id": "ellen-longtree-mmcgpm4f",
@@ -1422,7 +1507,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 80
     },
     {
       "id": "douglas-uley-mmcgpm4g",
@@ -1439,7 +1525,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 81
     },
     {
       "id": "charles-uley-mmcgpm4g",
@@ -1456,7 +1543,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 82
     },
     {
       "id": "clara-uley--nee-zollanger--mmcgpm4g",
@@ -1473,7 +1561,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 83
     },
     {
       "id": "christine--zollanger--mmcgpm4g",
@@ -1490,7 +1579,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 84
     },
     {
       "id": "joshua-uley-mmcgpm4g",
@@ -1507,7 +1597,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 85
     },
     {
       "id": "thomas-uley-mmcgpm4g",
@@ -1524,7 +1615,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 86
     },
     {
       "id": "ellen-uley-mmcgpm4g",
@@ -1541,7 +1633,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 87
     },
     {
       "id": "natalya-reznikov-mmcgpm4g",
@@ -1558,24 +1651,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
-    },
-    {
-      "id": "allison-uley--nee-alaruk--mmcgpm4g",
-      "name": "Allison Uley (nee Alaruk)",
-      "aliases": [],
-      "category": "background",
-      "role": "Sam's mother",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 88
     },
     {
       "id": "sam-uley--nee-alaruk--mmcgpm4g",
@@ -1597,7 +1674,8 @@
       ],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 90
     },
     {
       "id": "alexander-zhelanov-mmcgpm4g",
@@ -1614,7 +1692,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 91
     },
     {
       "id": "lucida-zhelenov-mmcgpm4g",
@@ -1631,7 +1710,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 92
     },
     {
       "id": "laurel-zhelenov-mmcgpm4g",
@@ -1648,7 +1728,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 93
     },
     {
       "id": "paul-lahote-mmchkloj",
@@ -1665,7 +1746,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 94
     },
     {
       "id": "tamika-gray-mmchkloj",
@@ -1682,7 +1764,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 95
     },
     {
       "id": "dominic-gray-mmchkloj",
@@ -1699,7 +1782,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 96
     },
     {
       "id": "kaison-gray-mmchkloj",
@@ -1716,7 +1800,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 97
     },
     {
       "id": "jeremiah-gray-mmchkloj",
@@ -1733,7 +1818,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 98
     },
     {
       "id": "penelope-simmons-mmci1eig",
@@ -1750,7 +1836,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 99
     },
     {
       "id": "scarlet-philips-mmci1eig",
@@ -1767,7 +1854,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 100
     },
     {
       "id": "naomi-parker-mmci1eig",
@@ -1784,7 +1872,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 101
     },
     {
       "id": "brady-fuller-mmcm51lh",
@@ -1801,7 +1890,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 102
     },
     {
       "id": "ralphie-fuller-mmcm51lh",
@@ -1818,7 +1908,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 103
     },
     {
       "id": "penny-fuller-mmcm51lh",
@@ -1835,7 +1926,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 104
     },
     {
       "id": "miles-fuller-mmcm51lh",
@@ -1852,7 +1944,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 105
     },
     {
       "id": "jamie-fuller-mmcm51lh",
@@ -1869,7 +1962,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 106
     },
     {
       "id": "ambrose-fuller-mmcm51lh",
@@ -1886,7 +1980,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 107
     },
     {
       "id": "emily-young--makah--mmcma605",
@@ -1903,7 +1998,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 108
     },
     {
       "id": "jack-young--makah--mmcma605",
@@ -1920,7 +2016,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 109
     },
     {
       "id": "phil-dwyer-mmdqw25u",
@@ -1937,7 +2034,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 110
     },
     {
       "id": "carlisle-cullen-mmdqw25u",
@@ -1956,7 +2054,8 @@
       "relationships": [],
       "group": "",
       "species": "vampire",
-      "faction": ""
+      "factions": [],
+      "added": 111
     },
     {
       "id": "esme-cullen-mmdqw25u",
@@ -1975,7 +2074,8 @@
       "relationships": [],
       "group": "",
       "species": "vampire",
-      "faction": ""
+      "factions": [],
+      "added": 112
     },
     {
       "id": "alice-cullen-mmdqw25u",
@@ -1994,7 +2094,8 @@
       "relationships": [],
       "group": "",
       "species": "vampire",
-      "faction": ""
+      "factions": [],
+      "added": 113
     },
     {
       "id": "jasper-hale-mmdqw25u",
@@ -2013,7 +2114,8 @@
       "relationships": [],
       "group": "",
       "species": "vampire",
-      "faction": ""
+      "factions": [],
+      "added": 114
     },
     {
       "id": "edward-cullen-mmdqw25w",
@@ -2032,7 +2134,8 @@
       "relationships": [],
       "group": "",
       "species": "vampire",
-      "faction": ""
+      "factions": [],
+      "added": 115
     },
     {
       "id": "rosalie-hale-mmdqw25w",
@@ -2051,7 +2154,8 @@
       "relationships": [],
       "group": "",
       "species": "vampire",
-      "faction": ""
+      "factions": [],
+      "added": 116
     },
     {
       "id": "emmett-cullen-mmdqw25w",
@@ -2070,7 +2174,8 @@
       "relationships": [],
       "group": "",
       "species": "vampire",
-      "faction": ""
+      "factions": [],
+      "added": 117
     },
     {
       "id": "audrey-eleanor-clapp-mnc6qkmh",
@@ -2078,7 +2183,6 @@
       "aliases": [],
       "category": "supporting",
       "species": "",
-      "faction": "",
       "role": "Cheerleader, Mathematician, Future Leader of the World",
       "symbol": "◈",
       "image": "https://images2.imgbox.com/ce/a0/8AatnIF2_o.png",
@@ -2087,7 +2191,9 @@
       "summary": "",
       "fields": [],
       "relationships": [],
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 118
     },
     {
       "id": "tiffany-call-mnc6tj61",
@@ -2104,7 +2210,8 @@
       "relationships": [],
       "group": "",
       "species": "",
-      "faction": ""
+      "factions": [],
+      "added": 119
     },
     {
       "id": "molly-swan-mqgjfdn1",
@@ -2120,8 +2227,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 120
     },
     {
       "id": "helen-clapp-nee-lowry-mqgql7g1",
@@ -2137,8 +2245,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 121
     },
     {
       "id": "rick-clapp-mqgql7g2",
@@ -2154,8 +2263,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 122
     },
     {
       "id": "arthur-clapp-mqgql7g2",
@@ -2171,8 +2281,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 123
     },
     {
       "id": "ruth-lowry-mqgql7g2",
@@ -2188,8 +2299,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 124
     },
     {
       "id": "lucas-wilder-mqgql7g2",
@@ -2205,8 +2317,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 125
     },
     {
       "id": "janet--janey--wilder-nee-rogers-mqgql7g2",
@@ -2222,8 +2335,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 126
     },
     {
       "id": "david-wilder-mqgql7g2",
@@ -2239,8 +2353,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 127
     },
     {
       "id": "lucy-wilder-mqgql7g2",
@@ -2256,8 +2371,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 128
     },
     {
       "id": "gale-wilder-mqgql7g2",
@@ -2273,8 +2389,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 129
     },
     {
       "id": "lorelai-wilder-mqgql7g2",
@@ -2290,8 +2407,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 130
     },
     {
       "id": "tina-wilder-mqgql7g2",
@@ -2307,8 +2425,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 131
     },
     {
       "id": "ruby-wilder-mqgql7g2",
@@ -2324,8 +2443,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 132
     },
     {
       "id": "gregory-wilder-mqgql7g2",
@@ -2341,8 +2461,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 133
     },
     {
       "id": "beatrice--bea--murphy-mqgql7g2",
@@ -2358,8 +2479,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 134
     },
     {
       "id": "laura-murphy-mqgql7g2",
@@ -2375,8 +2497,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 135
     },
     {
       "id": "bobby-murphy-mqgql7g2",
@@ -2392,8 +2515,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 136
     },
     {
       "id": "marjorie--may--reed-mqgql7g2",
@@ -2409,8 +2533,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 137
     },
     {
       "id": "judith-reed-mqgql7g2",
@@ -2426,8 +2551,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 138
     },
     {
       "id": "howard-reed-mqgql7g2",
@@ -2443,8 +2569,9 @@
       "fields": [],
       "relationships": [],
       "species": "",
-      "faction": "",
-      "group": ""
+      "group": "",
+      "factions": [],
+      "added": 139
     }
   ],
   "trees": [
@@ -4228,5 +4355,22 @@
   "charCredit": "Credits to PinkSparkleDays for the wonderful casting- I could not have come up with any of these on my own and it's entirely their credit!",
   "theme": "lilac",
   "font": "Cormorant Garamond",
-  "title2": "The Art of Oathbreaking"
+  "title2": "The Art of Oathbreaking",
+  "speciesList": [
+    "Human",
+    "Demigod",
+    "Ghost",
+    "Earthling",
+    "Unknown",
+    "vampire"
+  ],
+  "factionList": [
+    "Arcobaleno",
+    "Giglio Nero",
+    "Vongola",
+    "CEDEF",
+    "Varia",
+    "quileute"
+  ],
+  "relationships": []
 }
