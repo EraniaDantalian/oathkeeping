@@ -30,29 +30,7 @@
       "label": "Human"
     }
   ],
-  "characters": [
-    {
-      "id": "quil--old-man-quil--atera-iii-mmbqpn8c",
-      "name": "Quil \"Old Man Quil\" Atera III",
-      "aliases": [],
-      "category": "background",
-      "species": "Human",
-      "role": "",
-      "symbol": "◈",
-      "image": "https://images2.imgbox.com/2f/f3/VIUrCBFh_o.jpg",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "factions": [
-        "quileute"
-      ],
-      "added": 42,
-      "body": ""
-    }
-  ],
+  "characters": [],
   "trees": [
     {
       "label": "The Black Family Tree",
