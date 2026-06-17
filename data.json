@@ -4485,8 +4485,10 @@
     }
   ],
   "scrapbook": [],
-  "castingCredit": "Credits to PinkSparkleDays for the wonderful casting- I could not have come up with any of these on my own and it's entirely their credit!",
-  "galleryOrder": [],
+  "castingCredit": "",
+  "galleryOrder": [
+    "casting:undefined"
+  ],
   "about": {
     "body": "",
     "refs": []
