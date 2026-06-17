@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Art of Oathbreaking — Companion Archive</title>
+<title>The Art of Oathbreaking — Reference Sheet</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -396,7 +396,17 @@ body.em-on .node:hover .node-del{display:block}
 .note-meta{display:flex;gap:10px;font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tdim);margin-bottom:8px}
 .note-meta .ch{color:var(--gold)}
 .note-title{font-family:var(--hfont);font-size:1.28rem;font-weight:600;margin-bottom:7px;line-height:1.15}
-.note-body{font-size:.9rem;color:var(--tmid);line-height:1.6;white-space:pre-wrap}
+.note-body{font-size:.9rem;color:var(--tmid);line-height:1.6}
+.note-body h2,.note-body h3{font-style:italic;margin:.4em 0 .3em;color:var(--text)}
+.note-body h2{font-size:1.15rem}.note-body h3{font-size:1rem}
+.note-body p{margin:0 0 .6em}.note-body ul,.note-body ol{margin:0 0 .6em 1.3em}
+.note-body a{color:var(--gold)}
+.rt-toolbar{display:flex;gap:3px;flex-wrap:wrap;padding:6px 8px;border:1px solid var(--b1);border-bottom:none;background:var(--bg4);border-radius:var(--rad) var(--rad) 0 0}
+.rt-toolbar button{background:var(--bg3);border:1px solid var(--b2);color:var(--tmid);width:30px;height:28px;border-radius:4px;font-size:.8rem;font-family:var(--bfont)}
+.rt-toolbar button:hover{background:var(--gold);color:var(--bg4);border-color:var(--gold)}
+.rt-body{padding:12px 13px;min-height:120px;line-height:1.6;font-size:.95rem;color:var(--text);outline:none;background:var(--bg4);border:1px solid var(--b1);border-radius:0 0 var(--rad) var(--rad)}
+.rt-body h2{font-size:1.2rem;font-style:italic;margin:.4em 0 .3em}.rt-body h3{font-size:1.05rem;margin:.3em 0}
+.rt-body p{margin:0 0 .5em}.rt-body ul,.rt-body ol{margin:0 0 .5em 1.3em}
 .note-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
 
 /* ============ ABOUT ============ */
@@ -441,6 +451,22 @@ body.em-on .about-toolbar{display:flex}
 .em-hint{font-size:.74rem;color:var(--tdim);font-style:italic;margin-top:-6px;margin-bottom:10px}
 .em-dynrow{display:flex;gap:8px;margin-bottom:7px;align-items:center}
 .em-dynrow .em-in{flex:1}
+.fac-picker{display:flex;flex-wrap:wrap;gap:7px}
+.fac-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border:1px solid var(--b1);border-radius:30px;font-size:.82rem;cursor:pointer;background:var(--bg4);color:var(--tmid);user-select:none;transition:.15s}
+.fac-chip:hover{border-color:var(--goldl)}
+.fac-chip.on{background:var(--gold);border-color:var(--gold);color:var(--bg4);font-weight:600}
+.fac-chip input{display:none}
+.tree-block{margin-bottom:30px}
+.canvas-title{font-family:var(--hfont);font-style:italic;font-size:1.4rem;margin:0 0 10px;color:var(--text);display:flex;align-items:center;gap:10px}
+.ct-count{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;background:var(--bg3);border:1px solid var(--b2);color:var(--tdim);padding:2px 7px;border-radius:20px}
+.rel-list{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.rel-card{background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rad);padding:12px 15px}
+.rel-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rel-who{font-family:var(--hfont);font-size:1.05rem;font-weight:600;color:var(--text)}
+.rel-arrow{color:var(--tdim)}
+.rel-badge{color:#fff;font-size:.64rem;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px}
+.rel-ed{margin-left:auto;background:none;border:none;color:var(--gold);font-size:.95rem;cursor:pointer}
+.rel-note{margin-top:7px;font-size:.92rem;color:var(--tmid);line-height:1.55;font-style:italic}
 .em-dynrow button{background:var(--bg);border:1px solid var(--b1);color:var(--red);width:32px;height:34px;border-radius:4px;flex-shrink:0}
 .em-addrow{background:none;border:1px dashed var(--b1);color:var(--gold);font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px;border-radius:4px;width:100%}
 .em-addrow:hover{border-color:var(--gold);background:color-mix(in srgb,var(--gold) 6%,transparent)}
@@ -568,10 +594,16 @@ const DEFAULTS = {
     { id: "supporting", label: "Supporting" },
     { id: "background", label: "Background" }
   ],
+  speciesList: ["Human","Demigod","Ghost","Earthling","Unknown"],
+  factionList: ["Arcobaleno","Giglio Nero","Vongola","CEDEF","Varia"],
+  relationships: [
+    { id:"rel-1", a:"c-cassius", b:"c-iolanthe", rel:"ambiguous", note:"She owns a secret of his, and neither will say which one." },
+    { id:"rel-2", a:"c-cassius", b:"c-thackeray", rel:"family", note:"The ringmaster raised him under the big top — the closest thing to a father he kept." }
+  ],
   characters: [
     {
       id: "c-cassius", name: "Cassius Veil", aliases: ["The Violet","Six-Spoke"], category: "main",
-      species: "human", faction: "border", role: "The Outsider", symbol: "✦", image: "",
+      species: "Human", factions: ["CEDEF"], role: "The Outsider", symbol: "✦", image: "",
       tags: ["protagonist","ex-circus","stunt rider","secret-keeper"],
       excerpt: "He never asked to know. People simply told him, the way you tell a wall.",
       summary: "Trapeze child, tightrope prodigy, then the stunt motorcyclist whose name filled arenas. Cassius moves between the civilian world and the criminal one without belonging to either — which is exactly why the powerful trust him with what they'd kill to hide. The violet hair he was born with is the one thing about his past he can't explain. By the story's end, neither can anyone else.",
@@ -591,7 +623,7 @@ const DEFAULTS = {
     },
     {
       id: "c-iolanthe", name: "Iolanthe Marrow", aliases: ["The Lender"], category: "main",
-      species: "demigod", faction: "criminal", role: "The Patron", symbol: "❖", image: "",
+      species: "Demigod", factions: ["Giglio Nero"], role: "The Patron", symbol: "❖", image: "",
       tags: ["demigod","power-broker","collects oaths"],
       excerpt: "Every favour she grants is a thread. Pull enough of them and a man unravels.",
       summary: "A demigod who runs her empire on promises rather than money. Iolanthe never threatens; she lends. The debt always comes due, and it always costs more than it was worth. She takes an interest in Cassius the moment she learns what he is — and she may have known his mother.",
@@ -605,7 +637,7 @@ const DEFAULTS = {
     },
     {
       id: "c-thackeray", name: "Thackeray Bell", aliases: ["The Ringmaster"], category: "supporting",
-      species: "human", faction: "civilian", role: "The Ringmaster", symbol: "✜", image: "",
+      species: "Human", factions: ["Vongola"], role: "The Ringmaster", symbol: "✜", image: "",
       tags: ["circus","father-figure","keeps secrets too"],
       excerpt: "He gave the boy a name, a wire, and one rule: never tell what you're told.",
       summary: "The ringmaster who took in an abandoned violet-haired infant and raised him in the only home Cassius ever trusted. Thackeray taught him balance, performance, and the discipline of silence. He knows more about where Cassius came from than he ever admits.",
@@ -618,7 +650,7 @@ const DEFAULTS = {
     },
     {
       id: "c-wren", name: "Wren", aliases: ["The Handler"], category: "supporting",
-      species: "earthling", faction: "border", role: "The Handler", symbol: "⬡", image: "",
+      species: "Earthling", factions: ["Arcobaleno"], role: "The Handler", symbol: "⬡", image: "",
       tags: ["fixer","border-walker","knows what he is"],
       excerpt: "She isn't here to protect him. She's here to make sure he doesn't find out too soon.",
       summary: "An earthling fixer who works the border between the mortal world and the demigods' games. Wren is assigned to Cassius — to watch, to steer, occasionally to save. Her loyalties are a question the story keeps asking.",
@@ -631,7 +663,7 @@ const DEFAULTS = {
     },
     {
       id: "c-dovan", name: "Dovan Crale", aliases: [], category: "background",
-      species: "human", faction: "criminal", role: "The Rival", symbol: "✗", image: "",
+      species: "Human", factions: ["Varia"], role: "The Rival", symbol: "✗", image: "",
       tags: ["stunt rider","jealous","muscle-for-hire"],
       excerpt: "Second-best for ten years, and he never forgave the violet-haired ghost for it.",
       summary: "A stunt rider who spent a decade losing the marquee to Six-Spoke. When the criminal world comes looking for leverage on Cassius, Dovan is happy to point the way.",
@@ -766,6 +798,9 @@ function migrateD(){
   if(D.about.body==null) D.about.body="";
   if(!Array.isArray(D.about.refs)) D.about.refs=[];
   if(!Array.isArray(D.categories)||!D.categories.length) D.categories = DEFAULTS.categories.slice();
+  if(!Array.isArray(D.speciesList)||!D.speciesList.length) D.speciesList = DEFAULTS.speciesList.slice();
+  if(!Array.isArray(D.factionList)||!D.factionList.length) D.factionList = DEFAULTS.factionList.slice();
+  if(!Array.isArray(D.relationships)) D.relationships = [];
   if(!Array.isArray(D.characters)) D.characters=[];
   if(!Array.isArray(D.arcs)) D.arcs=[];
   if(!Array.isArray(D.timeline)) D.timeline=[];
@@ -779,7 +814,7 @@ function migrateD(){
   if(!D.sectionIntros) D.sectionIntros={};
   if(D.charCredit==null) D.charCredit="";
   if(D.castingCredit==null) D.castingCredit="";
-  D.characters.forEach(c=>{
+  D.characters.forEach((c,i)=>{
     if(!Array.isArray(c.aliases)) c.aliases=[];
     if(!Array.isArray(c.tags)) c.tags=[];
     if(!Array.isArray(c.fields)) c.fields=[];
@@ -787,12 +822,21 @@ function migrateD(){
     if(c.symbol==null) c.symbol="◆";
     if(c.image==null) c.image="";
     if(c.species==null) c.species="";
-    if(c.faction==null) c.faction="";
+    // single faction -> factions array
+    if(!Array.isArray(c.factions)){ c.factions = c.faction ? [c.faction] : []; }
+    delete c.faction;
     if(c.role==null) c.role="";
     if(c.excerpt==null) c.excerpt="";
     if(c.summary==null) c.summary="";
     if(c.group==null) c.group="";
     if(!c.category) c.category=(D.categories[0]||{}).id||"main";
+    if(c.added==null) c.added=i+1;                       // preserve order for "recently added"
+  });
+  // fold species/factions in use into master lists, matching case-insensitively to avoid duplicates
+  const _canon=(list,val)=>list.find(x=>x.toLowerCase()===String(val).toLowerCase());
+  D.characters.forEach(c=>{
+    if(c.species){ const h=_canon(D.speciesList,c.species); if(h) c.species=h; else D.speciesList.push(c.species); }
+    c.factions=(c.factions||[]).map(f=>{ if(!f) return null; const h=_canon(D.factionList,f); if(h) return h; D.factionList.push(f); return f; }).filter(Boolean);
   });
   D.timeline.forEach(t=>{ if(t.key==null)t.key=""; if(t.spoiler==null)t.spoiler=false; if(t.arc==null)t.arc=""; });
   D.casting.forEach(c=>{ if(!c.size)c.size="md"; if(c.castingNote==null)c.castingNote=""; if(c.authorNote==null)c.authorNote=""; if(c.image==null)c.image=""; if(c.title==null)c.title=""; });
@@ -801,6 +845,7 @@ function migrateD(){
   D.notes.forEach(n=>{ if(!Array.isArray(n.tags))n.tags=[]; if(n.chapter==null)n.chapter=""; if(n.date==null)n.date=""; if(n.body==null)n.body=""; });
   D.trees.forEach(t=>{ if(!Array.isArray(t.nodes))t.nodes=[]; if(!Array.isArray(t.edges))t.edges=[]; });
   D.links.forEach(l=>{ if(!Array.isArray(l.nodes))l.nodes=[]; if(!Array.isArray(l.edges))l.edges=[]; });
+  D.relationships.forEach(r=>{ if(r.id==null)r.id=uid("rel"); if(r.rel==null)r.rel="complex"; if(r.note==null)r.note=""; });
 }
 
 /* ===================== THEME & FONT ===================== */
@@ -946,14 +991,15 @@ function uniqVals(key){ return [...new Set(D.characters.map(c=>c[key]).filter(Bo
 function buildChars(){
   const s=document.getElementById("sec-characters");
   const roles=D.categories;
-  const species=uniqVals("species");
-  const facs=uniqVals("faction");
+  const species=D.speciesList;
+  const facs=D.factionList;
   const pill=(active,attr,val,lbl)=>'<button class="pill'+(active?' on':'')+'" '+attr+'="'+esc(val)+'">'+esc(lbl)+'</button>';
 
   let html = secHead("The Cast","Characters","characters");
   html += '<div class="addbar editonly block">'+
             '<button class="btn p" onclick="editChar(null)">+ Character</button>'+
             '<button class="btn" onclick="openBulkAddChar()">+ Bulk Add</button>'+
+            '<button class="btn" onclick="manageLists()">⚙ Species &amp; Factions</button>'+
             '<button class="btn" id="bulk-toggle" onclick="toggleBulk()">☑ Select</button>'+
             '<span id="bulk-actions" style="display:none;gap:8px">'+
               '<button class="btn" onclick="bulkDeleteChars()">Delete selected</button>'+
@@ -972,6 +1018,7 @@ function buildChars(){
               facs.map(v=>pill(charFilter.fac===v,"data-fac",v,v)).join("")+'</div>';
   html +=   '<div class="filter-row"><span class="fl-lbl">Sort</span>'+
               pill(charFilter.sort==="name","data-sort","name","A → Z")+
+              pill(charFilter.sort==="recent","data-sort","recent","Recently added")+
               pill(charFilter.sort==="role","data-sort","role","By role")+
               pill(charFilter.sort==="species","data-sort","species","By species")+'</div>';
   html += '</div>';
@@ -979,9 +1026,10 @@ function buildChars(){
   let list=D.characters.filter(c=>
     (charFilter.role==="all"||c.category===charFilter.role)&&
     (charFilter.species==="all"||c.species===charFilter.species)&&
-    (charFilter.fac==="all"||c.faction===charFilter.fac)
+    (charFilter.fac==="all"||(c.factions||[]).includes(charFilter.fac))
   );
   list.sort((a,b)=>{
+    if(charFilter.sort==="recent"){ return (b.added||0)-(a.added||0); }
     if(charFilter.sort==="role"){ return (catLabel(a.category)+a.name).localeCompare(catLabel(b.category)+b.name); }
     if(charFilter.sort==="species"){ return ((a.species||"~")+a.name).localeCompare((b.species||"~")+b.name); }
     return a.name.localeCompare(b.name);
@@ -1010,7 +1058,7 @@ function charCard(c){
     '<div class="cc-body">'+
       '<div class="cc-name">'+esc(c.name)+'</div>'+
       (c.role?'<div class="cc-role">'+esc(c.role)+'</div>':'')+
-      '<div class="cc-meta">'+[c.species,c.faction].filter(Boolean).map(esc).join(" · ")+'</div>'+
+      '<div class="cc-meta">'+[c.species,...(c.factions||[])].filter(Boolean).map(esc).join(" · ")+'</div>'+
       (c.tags.length?'<div class="cc-tags">'+c.tags.slice(0,4).map(t=>'<span class="cc-tag">'+esc(t)+'</span>').join("")+'</div>':'')+
     '</div>'+
     '<button class="cc-edit" data-eci="'+esc(c.id)+'">✎</button>'+
@@ -1057,6 +1105,30 @@ function bulkCatChars(){
   const idx=parseInt(pick,10);
   if(D.categories[idx]){ D.characters.forEach(c=>{ if(bulkSel.has(c.id)) c.category=D.categories[idx].id; }); saveD(); buildChars(); }
 }
+function manageLists(){
+  const row=(kind,v)=>'<div class="em-dynrow"><input class="em-in" value="'+esc(v)+'" disabled><button type="button" onclick="removeListItem(\''+kind+'\',\''+esc(v).replace(/'/g,"\\'")+'\')">✕</button></div>';
+  const body=
+    '<label class="em-lbl">Species</label>'+
+    '<div id="ml-species">'+D.speciesList.map(v=>row("species",v)).join("")+'</div>'+
+    '<div style="display:flex;gap:6px;margin:6px 0 18px"><input class="em-in" id="ml-newspec" placeholder="Add species…" style="flex:1"><button type="button" class="em-btn" onclick="addListItem(\'species\')">+ Add</button></div>'+
+    '<label class="em-lbl">Factions</label>'+
+    '<div id="ml-factions">'+D.factionList.map(v=>row("faction",v)).join("")+'</div>'+
+    '<div style="display:flex;gap:6px;margin-top:6px"><input class="em-in" id="ml-newfac" placeholder="Add faction…" style="flex:1"><button type="button" class="em-btn" onclick="addListItem(\'faction\')">+ Add</button></div>'+
+    '<p class="em-hint" style="margin-top:14px">Removing a species or faction here just takes it off the menus; characters already tagged with it keep the label until you edit them.</p>';
+  openEM("Species & Factions", body, '<button class="em-btn p" onclick="closeEM();buildChars()">Done</button>');
+}
+function addListItem(kind){
+  const inp=document.getElementById(kind==="species"?"ml-newspec":"ml-newfac");
+  const v=(inp.value||"").trim(); if(!v) return;
+  const list=kind==="species"?D.speciesList:D.factionList;
+  if(!list.includes(v)) list.push(v);
+  saveD(); manageLists();
+}
+function removeListItem(kind,v){
+  if(kind==="species") D.speciesList=D.speciesList.filter(x=>x!==v);
+  else D.factionList=D.factionList.filter(x=>x!==v);
+  saveD(); manageLists();
+}
 
 /* ---- char modal ---- */
 function openCharModal(id){
@@ -1067,7 +1139,7 @@ function openCharModal(id){
   const chips=[
     catLabel(c.category)?{t:catLabel(c.category),acc:true}:null,
     c.species?{t:c.species}:null,
-    c.faction?{t:c.faction}:null,
+    ...(c.factions||[]).map(f=>({t:f})),
     c.role?{t:c.role}:null
   ].filter(Boolean).map(x=>'<span class="m-chip'+(x.acc?' acc':'')+'">'+esc(x.t)+'</span>').join("");
   const fields=c.fields.length?'<div class="m-fields">'+c.fields.map(f=>'<div class="m-field"><span class="k">'+esc(f.key)+'</span><span class="v">'+esc(f.val)+'</span></div>').join("")+'</div>':'';
@@ -1141,36 +1213,71 @@ function readRel(cid){ return [...document.getElementById(cid).querySelectorAll(
 let _editCharId=null;
 function editChar(id){
   _editCharId=id;
-  const c=id?charById(id):{name:"",aliases:[],category:(D.categories[0]||{}).id,species:"",faction:"",role:"",symbol:"◆",image:"",tags:[],excerpt:"",summary:"",fields:[],relationships:[],group:""};
+  const c=id?charById(id):{name:"",aliases:[],category:(D.categories[0]||{}).id,species:"",factions:[],role:"",symbol:"◆",image:"",tags:[],excerpt:"",summary:"",fields:[],relationships:[],group:""};
   const catSel=D.categories.map(x=>({v:x.id,l:x.label}));
+  const speciesSel=[{v:"",l:"—"}].concat(D.speciesList.map(x=>({v:x,l:x})));
   const body=
     '<div class="em-row two">'+emField("ec-name","Name",c.name)+emField("ec-symbol","Symbol",c.symbol)+'</div>'+
     '<div class="em-row two">'+emField("ec-cat","Category",c.category,{sel:catSel})+emField("ec-role","Role title",c.role)+'</div>'+
-    '<div class="em-row two">'+emField("ec-species","Species",c.species)+emField("ec-faction","Faction",c.faction)+'</div>'+
+    '<div class="em-row two">'+
+      '<div><label class="em-lbl">Species</label>'+
+        '<div style="display:flex;gap:6px">'+
+          '<select class="em-sel" id="ec-species" style="flex:1">'+speciesSel.map(o=>'<option value="'+esc(o.v)+'"'+(o.v===(c.species||"")?' selected':'')+'>'+esc(o.l)+'</option>').join("")+'</select>'+
+          '<button type="button" class="em-btn" onclick="addSpeciesInline()" title="Add a species">+</button>'+
+        '</div>'+
+      '</div>'+
+      '<div><label class="em-lbl">Group / house</label><input class="em-in" id="ec-group" value="'+esc(c.group||"")+'"></div>'+
+    '</div>'+
+    '<div class="em-row"><label class="em-lbl">Factions <span style="color:var(--tdim);font-weight:400">(select any that apply)</span></label>'+
+      '<div id="ec-factions" class="fac-picker">'+factionChecks(c.factions||[])+'</div>'+
+      '<div style="display:flex;gap:6px;margin-top:8px"><input class="em-in" id="ec-newfac" placeholder="Add a new faction…" style="flex:1"><button type="button" class="em-btn" onclick="addFactionInline()">+ Add faction</button></div>'+
+    '</div>'+
     emField("ec-image","Portrait image URL",c.image)+
     '<div class="em-row"><label class="em-lbl">Aliases</label>'+dynList("ec-aliases",c.aliases,"alias")+'</div>'+
     '<div class="em-row"><label class="em-lbl">Tags</label>'+dynList("ec-tags",c.tags,"tag")+'</div>'+
     emField("ec-excerpt","Pull quote",c.excerpt,{ta:true})+
     emField("ec-summary","Summary",c.summary,{ta:true})+
     '<div class="em-row"><label class="em-lbl">Detail fields</label>'+kvList("ec-fields",c.fields)+'</div>'+
-    '<div class="em-row"><label class="em-lbl">Relationships</label>'+relList("ec-rels",c.relationships)+'</div>'+
-    emField("ec-group","Group / house",c.group);
+    '<div class="em-row"><label class="em-lbl">Relationships (quick notes)</label>'+relList("ec-rels",c.relationships)+'</div>';
   const foot=(id?'<button class="em-btn d" onclick="deleteChar()">Delete</button>':'')+
     '<button class="em-btn" onclick="closeEM()">Cancel</button>'+
     '<button class="em-btn p" onclick="saveChar()">Save character</button>';
   openEM(id?"Edit character":"New character", body, foot);
 }
+function factionChecks(selected){
+  return D.factionList.map(f=>{
+    const on=selected.includes(f);
+    return '<label class="fac-chip'+(on?' on':'')+'"><input type="checkbox" value="'+esc(f)+'"'+(on?' checked':'')+' onchange="this.parentElement.classList.toggle(\'on\',this.checked)">'+esc(f)+'</label>';
+  }).join("");
+}
+function readFactions(){ return [...document.querySelectorAll("#ec-factions input:checked")].map(i=>i.value); }
+function addFactionInline(){
+  const inp=document.getElementById("ec-newfac"); const v=(inp.value||"").trim();
+  if(!v) return;
+  if(!D.factionList.includes(v)) D.factionList.push(v);
+  saveD();
+  const cur=readFactions(); cur.push(v);
+  document.getElementById("ec-factions").innerHTML=factionChecks(cur);
+  inp.value="";
+}
+function addSpeciesInline(){
+  const v=(prompt("New species:")||"").trim(); if(!v) return;
+  if(!D.speciesList.includes(v)) D.speciesList.push(v);
+  saveD();
+  const sel=document.getElementById("ec-species");
+  const o=document.createElement("option"); o.value=v; o.textContent=v; o.selected=true; sel.appendChild(o);
+}
 function saveChar(){
   const name=getVal("ec-name"); if(!name){ toast("Name required."); return; }
   const data={
     name, symbol:getVal("ec-symbol")||"◆", category:getVal("ec-cat"), role:getVal("ec-role"),
-    species:getVal("ec-species"), faction:getVal("ec-faction"), image:getVal("ec-image"),
+    species:getVal("ec-species"), factions:readFactions(), image:getVal("ec-image"),
     aliases:readDyn("ec-aliases"), tags:readDyn("ec-tags"),
     excerpt:getVal("ec-excerpt"), summary:getVal("ec-summary"),
     fields:readKV("ec-fields"), relationships:readRel("ec-rels"), group:getVal("ec-group")
   };
   if(_editCharId){ Object.assign(charById(_editCharId), data); }
-  else { data.id=uid("c"); D.characters.push(data); }
+  else { data.id=uid("c"); data.added=Date.now(); D.characters.push(data); }
   saveD(); closeEM(); buildChars();
   toast("Character saved.");
 }
@@ -1196,7 +1303,7 @@ function doBulkAddChar(){
   const cat=getVal("ba-cat");
   const names=getVal("ba-names").split("\n").map(s=>s.trim()).filter(Boolean);
   if(!names.length){ toast("Add at least one name."); return; }
-  names.forEach(n=>D.characters.push({id:uid("c"),name:n,aliases:[],category:cat,species:"",faction:"",role:"",symbol:"◆",image:"",tags:[],excerpt:"",summary:"",fields:[],relationships:[],group:""}));
+  names.forEach((n,k)=>D.characters.push({id:uid("c"),name:n,aliases:[],category:cat,species:"",factions:[],role:"",symbol:"◆",image:"",tags:[],excerpt:"",summary:"",fields:[],relationships:[],group:"",added:Date.now()+k}));
   saveD(); closeEM(); buildChars();
   toast(names.length+" characters added.");
 }
@@ -1348,7 +1455,7 @@ function noteCard(n,i){
     '<div class="note-meta">'+(n.chapter?'<span class="ch">'+esc(n.chapter)+'</span>':'')+(n.date?'<span>'+esc(n.date)+'</span>':'')+
       '<button class="editonly" style="margin-left:auto;background:none;border:none;color:var(--gold)" onclick="editNote('+i+')">✎</button></div>'+
     '<div class="note-title">'+esc(n.title)+'</div>'+
-    '<div class="note-body">'+esc(n.body)+'</div>'+
+    '<div class="note-body">'+(n.body||"")+'</div>'+
     (n.tags.length?'<div class="note-tags">'+n.tags.map(t=>'<span class="cc-tag">'+esc(t)+'</span>').join("")+'</div>':'')+
   '</div>';
 }
@@ -1372,19 +1479,46 @@ function saveLore(){
 }
 function deleteLore(){ if(_editLoreIdx!=null&&confirm("Delete this entry?")){ D.lore.splice(_editLoreIdx,1); saveD(); closeEM(); buildStoryLore(); } }
 let _editNoteIdx=null;
+function richEditorHTML(id,html){
+  return '<div class="rt-toolbar" data-rt="'+id+'">'+
+    '<button type="button" data-cmd="bold"><b>B</b></button>'+
+    '<button type="button" data-cmd="italic"><i>I</i></button>'+
+    '<button type="button" data-cmd="underline"><u>U</u></button>'+
+    '<button type="button" data-cmd="strikeThrough"><s>S</s></button>'+
+    '<button type="button" data-cmd="formatBlock" data-val="h3">H</button>'+
+    '<button type="button" data-cmd="insertUnorderedList">•</button>'+
+    '<button type="button" data-cmd="insertOrderedList">1.</button>'+
+    '<button type="button" data-cmd="createLink">🔗</button>'+
+    '<button type="button" data-cmd="removeFormat">⌫</button>'+
+    '</div>'+
+    '<div class="rt-body" id="'+id+'" contenteditable="true">'+(html||"")+'</div>';
+}
+function bindRich(id){
+  const tb=document.querySelector('.rt-toolbar[data-rt="'+id+'"]');
+  if(!tb) return;
+  tb.querySelectorAll("button").forEach(b=>b.addEventListener("mousedown",e=>{
+    e.preventDefault();
+    const cmd=b.dataset.cmd;
+    if(cmd==="createLink"){ const u=prompt("Link URL:"); if(u)document.execCommand(cmd,false,u); }
+    else if(cmd==="formatBlock"){ document.execCommand(cmd,false,b.dataset.val); }
+    else document.execCommand(cmd,false,null);
+  }));
+}
 function editNote(i){
   _editNoteIdx=i;
   const n=(i!=null)?D.notes[i]:{chapter:"",date:"",title:"",body:"",tags:[]};
   const body='<div class="em-row two">'+emField("en-chapter","Chapter",n.chapter)+emField("en-date","Date / status",n.date)+'</div>'+
     emField("en-title","Title",n.title)+
-    emField("en-body","Body",n.body,{ta:true})+
+    '<div class="em-row"><label class="em-lbl">Body <span style="color:var(--tdim);font-weight:400">(rich text — bold, italic, headings, lists, links)</span></label>'+richEditorHTML("en-body",n.body)+'</div>'+
     '<div class="em-row"><label class="em-lbl">Tags</label>'+dynList("en-tags",n.tags,"tag")+'</div>';
   openEM(i!=null?"Edit note":"New story note", body,
     (i!=null?'<button class="em-btn d" onclick="deleteNote()">Delete</button>':'')+
     '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="saveNote()">Save</button>');
+  bindRich("en-body");
 }
 function saveNote(){
-  const data={chapter:getVal("en-chapter"),date:getVal("en-date"),title:getVal("en-title"),body:getVal("en-body"),tags:readDyn("en-tags")};
+  const bodyEl=document.getElementById("en-body");
+  const data={chapter:getVal("en-chapter"),date:getVal("en-date"),title:getVal("en-title"),body:bodyEl?bodyEl.innerHTML:"",tags:readDyn("en-tags")};
   if(!data.title){ toast("Title required."); return; }
   if(_editNoteIdx!=null) D.notes[_editNoteIdx]=data; else D.notes.push(data);
   saveD(); closeEM(); buildStoryLore(); toast("Note saved.");
@@ -1552,6 +1686,8 @@ function closeLB(){ document.getElementById("lightbox").classList.remove("open")
 
 /* ===================== CANVAS ENGINE (tree + links) ===================== */
 const _cv={ tree:{i:0,panX:40,panY:20,zoom:1}, links:{i:0,panX:20,panY:20,zoom:1} };
+function cvType(key){ return /^links/.test(key) ? "links" : "tree"; }
+function cvState(key){ if(!_cv[key]) _cv[key]={panX:30,panY:20,zoom:1}; return _cv[key]; }
 
 function canvasHost(kind, toolbarHTML){
   return '<div class="canvas-host" data-kind="'+kind+'">'+
@@ -1562,12 +1698,12 @@ function canvasHost(kind, toolbarHTML){
   '</div>';
 }
 function applyPan(kind){
-  const st=_cv[kind];
+  const st=cvState(kind);
   const pan=document.getElementById("pan-"+kind);
   if(pan) pan.style.transform="translate("+st.panX+"px,"+st.panY+"px) scale("+st.zoom+")";
 }
-function zoomCanvas(kind,d){ const st=_cv[kind]; st.zoom=Math.min(2,Math.max(.4,+(st.zoom+d).toFixed(2))); applyPan(kind); }
-function resetCanvas(kind){ const st=_cv[kind]; st.panX=kind==="tree"?40:20; st.panY=20; st.zoom=1; applyPan(kind); }
+function zoomCanvas(kind,d){ const st=cvState(kind); st.zoom=Math.min(2,Math.max(.4,+(st.zoom+d).toFixed(2))); applyPan(kind); }
+function resetCanvas(kind){ const st=cvState(kind); st.panX=cvType(kind)==="tree"?40:20; st.panY=20; st.zoom=1; applyPan(kind); }
 
 function bindStagePan(kind){
   const stage=document.getElementById("stage-"+kind);
@@ -1576,9 +1712,9 @@ function bindStagePan(kind){
   stage.addEventListener("mousedown",e=>{
     if(e.target.closest(".node")) return;
     panning=true; stage.classList.add("panning");
-    sx=e.clientX; sy=e.clientY; ox=_cv[kind].panX; oy=_cv[kind].panY;
+    sx=e.clientX; sy=e.clientY; ox=cvState(kind).panX; oy=cvState(kind).panY;
   });
-  window.addEventListener("mousemove",e=>{ if(!panning)return; _cv[kind].panX=ox+(e.clientX-sx); _cv[kind].panY=oy+(e.clientY-sy); applyPan(kind); });
+  window.addEventListener("mousemove",e=>{ if(!panning)return; cvState(kind).panX=ox+(e.clientX-sx); cvState(kind).panY=oy+(e.clientY-sy); applyPan(kind); });
   window.addEventListener("mouseup",()=>{ panning=false; stage.classList.remove("panning"); });
   stage.addEventListener("wheel",e=>{ e.preventDefault(); zoomCanvas(kind, e.deltaY<0?.1:-.1); },{passive:false});
 }
@@ -1597,8 +1733,8 @@ function drawEdges(kind, model){
     const a=nodeEls[ed.from], b=nodeEls[ed.to];
     if(!a||!b) return;
     const p1=nodeCenter(a), p2=nodeCenter(b);
-    const col = kind==="links" ? (REL_TYPES[ed.rel]||REL_TYPES.complex).color : "var(--b1)";
-    const dash = (kind==="links"&&(ed.rel==="ambiguous"||ed.rel==="complex"))?'stroke-dasharray="6 5"':'';
+    const col = (REL_TYPES[ed.rel]||{color:"var(--b1)"}).color;
+    const dash = (ed.rel==="ambiguous"||ed.rel==="complex")?'stroke-dasharray="6 5"':'';
     parts+='<line x1="'+p1.x+'" y1="'+p1.y+'" x2="'+p2.x+'" y2="'+p2.y+'" stroke="'+col+'" stroke-width="2.2" '+dash+'/>';
     const mx=(p1.x+p2.x)/2, my=(p1.y+p2.y)/2;
     if(ed.label) parts+='<text class="edge-lbl" x="'+mx+'" y="'+(my-6)+'" text-anchor="middle">'+esc(ed.label)+'</text>';
@@ -1613,7 +1749,7 @@ function renderNodes(kind, model){
   (model.nodes||[]).forEach(n=>{
     const el=document.createElement("div");
     let names,sub;
-    if(kind==="links"){
+    if(cvType(kind)==="links"){
       const c=charById(n.charId); names=c?c.name:"(missing)"; sub=c?[c.role,c.species].filter(Boolean).join(" · "):"";
       el.className="node";
     } else {
@@ -1624,7 +1760,7 @@ function renderNodes(kind, model){
     }
     el.dataset.nid=n.id; el.style.left=(n.x||0)+"px"; el.style.top=(n.y||0)+"px";
     el.innerHTML='<button class="node-del" title="Remove">✕</button>'+
-      (kind==="links"||(n.charIds||[]).length<=1?'<div class="node-name">'+(typeof names==="string"?esc(names):names)+'</div>':names)+
+      (cvType(kind)==="links"||(n.charIds||[]).length<=1?'<div class="node-name">'+(typeof names==="string"?esc(names):names)+'</div>':names)+
       (sub?'<div class="node-sub">'+esc(sub)+'</div>':'');
     pan.appendChild(el);
     el.querySelector(".node-del").onclick=(e)=>{ e.stopPropagation(); if(!editMode)return; if(confirm("Remove this node?")){ model.nodes=model.nodes.filter(x=>x.id!==n.id); model.edges=model.edges.filter(e=>e.from!==n.id&&e.to!==n.id); saveD(); renderNodes(kind,model); drawEdges(kind,model); } };
@@ -1645,63 +1781,86 @@ function bindNodeDrag(el,kind,n,model){
   });
 }
 
-/* ---- FAMILY TREE SECTION ---- */
+/* ---- FAMILY TREE SECTION (all trees stacked) ---- */
 function buildTreeSection(){
   const s=document.getElementById("sec-tree");
   if(!D.trees.length) D.trees.push({id:uid("tree"),label:"Family Tree",nodes:[],edges:[]});
-  if(_cv.tree.i>=D.trees.length) _cv.tree.i=0;
-  const tree=D.trees[_cv.tree.i];
   let html=secHead("Bonds & Blood","Family Tree","tree");
-  if(D.trees.length>1||editMode){
-    html+='<div class="addbar"><select class="em-sel" style="max-width:240px" id="tree-pick" onchange="_cv.tree.i=this.selectedIndex;buildTreeSection()">'+
-      D.trees.map((t,i)=>'<option'+(i===_cv.tree.i?' selected':'')+'>'+esc(t.label)+'</option>').join("")+'</select>'+
-      '<span class="editonly"><button class="btn" onclick="addTree()">+ Tree</button><button class="btn" onclick="renameTree()">Rename</button><button class="btn" onclick="delTree()">Delete tree</button></span></div>';
-  }
-  const toolbar=
-    '<button class="btn editonly" onclick="openTreeAdd()">+ Person</button>'+
-    '<button class="btn editonly" onclick="openBondAdd()">+ Bond</button>'+
-    '<button class="btn" onclick="zoomCanvas(\'tree\',.1)">+</button>'+
-    '<button class="btn" onclick="zoomCanvas(\'tree\',-.1)">−</button>'+
-    '<button class="btn" onclick="resetCanvas(\'tree\')">⟲</button>';
-  html+=canvasHost("tree",toolbar);
+  html+='<div class="addbar editonly block"><button class="btn p" onclick="addTree()">+ New Tree</button></div>';
+  D.trees.forEach((t,i)=>{
+    const key="tree"+i;
+    const toolbar=
+      '<button class="btn editonly" onclick="openTreeAdd('+i+')">+ Person</button>'+
+      '<button class="btn editonly" onclick="openBondAdd('+i+')">+ Bond</button>'+
+      '<button class="btn" onclick="zoomCanvas(\''+key+'\',.1)">+</button>'+
+      '<button class="btn" onclick="zoomCanvas(\''+key+'\',-.1)">−</button>'+
+      '<button class="btn" onclick="resetCanvas(\''+key+'\')">⟲</button>'+
+      '<button class="btn editonly" onclick="renameTree('+i+')">Rename</button>'+
+      '<button class="btn editonly" onclick="delTree('+i+')">Delete</button>';
+    html+='<div class="tree-block">'+
+      '<h3 class="canvas-title">'+esc(t.label)+(t.nodes.length?' <span class="ct-count">'+t.nodes.length+'</span>':'')+'</h3>'+
+      canvasHost(key,toolbar)+
+    '</div>';
+  });
   s.innerHTML=html;
-  applyPan("tree"); bindStagePan("tree"); renderNodes("tree",tree);
+  D.trees.forEach((t,i)=>{ const key="tree"+i; applyPan(key); bindStagePan(key); renderNodes(key,t); });
   bindIntroEdits(s);
 }
-function curTree(){ return D.trees[_cv.tree.i]; }
-function addTree(){ const n=prompt("Name this tree:","New tree"); if(n){ D.trees.push({id:uid("tree"),label:n.trim(),nodes:[],edges:[]}); _cv.tree.i=D.trees.length-1; saveD(); buildTreeSection(); } }
-function renameTree(){ const t=curTree(); const n=prompt("Rename tree:",t.label); if(n){ t.label=n.trim(); saveD(); buildTreeSection(); } }
-function delTree(){ if(D.trees.length<=1){toast("Keep at least one tree.");return;} if(confirm("Delete this tree?")){ D.trees.splice(_cv.tree.i,1); _cv.tree.i=0; saveD(); buildTreeSection(); } }
+function addTree(){ const n=prompt("Name this tree:","New tree"); if(n){ D.trees.push({id:uid("tree"),label:n.trim(),nodes:[],edges:[]}); saveD(); buildTreeSection(); } }
+function renameTree(i){ const t=D.trees[i]; const n=prompt("Rename tree:",t.label); if(n){ t.label=n.trim(); saveD(); buildTreeSection(); } }
+function delTree(i){ if(D.trees.length<=1){toast("Keep at least one tree.");return;} if(confirm("Delete \""+D.trees[i].label+"\"?")){ D.trees.splice(i,1); saveD(); buildTreeSection(); } }
 
-/* ---- RELATIONSHIPS SECTION ---- */
+/* ---- RELATIONSHIPS SECTION (list-based) ---- */
+let _editRelId=null;
 function buildLinks(){
   const s=document.getElementById("sec-links");
-  if(!D.links.length) D.links.push({id:uid("link"),label:"Relationships",nodes:[],edges:[]});
-  if(_cv.links.i>=D.links.length) _cv.links.i=0;
-  const web=D.links[_cv.links.i];
   let html=secHead("The Threads","Relationships","links");
-  const legend='<div class="rel-legend">'+Object.entries(REL_TYPES).map(([k,v])=>'<span><i style="background:'+v.color+'"></i>'+v.label+'</span>').join("")+'</div>';
-  html+=legend;
-  if(D.links.length>1||editMode){
-    html+='<div class="addbar"><select class="em-sel" style="max-width:240px" onchange="_cv.links.i=this.selectedIndex;buildLinks()">'+
-      D.links.map((w,i)=>'<option'+(i===_cv.links.i?' selected':'')+'>'+esc(w.label)+'</option>').join("")+'</select>'+
-      '<span class="editonly"><button class="btn" onclick="addWeb()">+ Web</button><button class="btn" onclick="renameWeb()">Rename</button><button class="btn" onclick="delWeb()">Delete</button></span></div>';
-  }
-  const toolbar=
-    '<button class="btn editonly" onclick="openLinkAdd()">+ People</button>'+
-    '<button class="btn editonly" onclick="openConnAdd()">+ Connection</button>'+
-    '<button class="btn" onclick="zoomCanvas(\'links\',.1)">+</button>'+
-    '<button class="btn" onclick="zoomCanvas(\'links\',-.1)">−</button>'+
-    '<button class="btn" onclick="resetCanvas(\'links\')">⟲</button>';
-  html+=canvasHost("links",toolbar);
+  html+='<div class="rel-legend">'+Object.entries(REL_TYPES).map(([k,v])=>'<span><i style="background:'+v.color+'"></i>'+v.label+'</span>').join("")+'</div>';
+  html+='<div class="addbar editonly block"><button class="btn p" onclick="editRel(null)">+ Relationship</button></div>';
+  const rels=D.relationships.slice().sort((x,y)=>((charById(x.a)||{}).name||"").localeCompare((charById(y.a)||{}).name||""));
+  html+='<div class="rel-list">';
+  html+= rels.length? rels.map(r=>relCard(r)).join("") : '<div class="empty">No relationships yet. Tap <b>Edit</b>, then <b>+ Relationship</b> to add one.</div>';
+  html+='</div>';
   s.innerHTML=html;
-  applyPan("links"); bindStagePan("links"); renderNodes("links",web);
   bindIntroEdits(s);
 }
-function curWeb(){ return D.links[_cv.links.i]; }
-function addWeb(){ const n=prompt("Name this web:","New web"); if(n){ D.links.push({id:uid("link"),label:n.trim(),nodes:[],edges:[]}); _cv.links.i=D.links.length-1; saveD(); buildLinks(); } }
-function renameWeb(){ const w=curWeb(); const n=prompt("Rename:",w.label); if(n){ w.label=n.trim(); saveD(); buildLinks(); } }
-function delWeb(){ if(D.links.length<=1){toast("Keep at least one web.");return;} if(confirm("Delete this web?")){ D.links.splice(_cv.links.i,1); _cv.links.i=0; saveD(); buildLinks(); } }
+function relCard(r){
+  const a=charById(r.a), b=charById(r.b);
+  const t=REL_TYPES[r.rel]||REL_TYPES.complex;
+  return '<div class="rel-card">'+
+    '<div class="rel-top">'+
+      '<span class="rel-who">'+esc(a?a.name:"(removed)")+'</span>'+
+      '<span class="rel-arrow">↔</span>'+
+      '<span class="rel-who">'+esc(b?b.name:"(removed)")+'</span>'+
+      '<span class="rel-badge" style="background:'+t.color+'">'+esc(t.label)+'</span>'+
+      '<button class="rel-ed editonly" onclick="editRel(\''+r.id+'\')">✎</button>'+
+    '</div>'+
+    (r.note?'<div class="rel-note">'+esc(r.note)+'</div>':'')+
+  '</div>';
+}
+function editRel(id){
+  _editRelId=id;
+  const r=id?D.relationships.find(x=>x.id===id):{a:"",b:"",rel:"friendship",note:""};
+  const opts=[{v:"",l:"— character —"}].concat(D.characters.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(c=>({v:c.id,l:c.name})));
+  const relOpts=Object.entries(REL_TYPES).map(([k,v])=>({v:k,l:v.label}));
+  const body=
+    '<div class="em-row two">'+emField("rl-a","Character A",r.a,{sel:opts})+emField("rl-b","Character B",r.b,{sel:opts})+'</div>'+
+    emField("rl-rel","Relationship type",r.rel,{sel:relOpts})+
+    emField("rl-note","Note — what's the story here?",r.note,{ta:true});
+  openEM(id?"Edit relationship":"New relationship", body,
+    (id?'<button class="em-btn d" onclick="deleteRel()">Delete</button>':'')+
+    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="saveRel()">Save</button>');
+}
+function saveRel(){
+  const a=getVal("rl-a"), b=getVal("rl-b");
+  if(!a||!b){ toast("Pick both characters."); return; }
+  if(a===b){ toast("Pick two different characters."); return; }
+  const data={a,b,rel:getVal("rl-rel")||"complex",note:getVal("rl-note")};
+  if(_editRelId){ Object.assign(D.relationships.find(x=>x.id===_editRelId),data); }
+  else { data.id=uid("rel"); D.relationships.push(data); }
+  saveD(); closeEM(); buildLinks(); toast("Relationship saved.");
+}
+function deleteRel(){ if(_editRelId&&confirm("Delete this relationship?")){ D.relationships=D.relationships.filter(x=>x.id!==_editRelId); saveD(); closeEM(); buildLinks(); } }
 
 /* ===================== SEARCHABLE CHARACTER PICKER ===================== */
 function charPickerBody(){
@@ -1710,7 +1869,7 @@ function charPickerBody(){
   return '<input class="pick-search" id="pick-q" placeholder="Search name, role, species…" oninput="filterPick()">'+
     '<div class="pick-list" id="pick-list">'+
     list.map(c=>{
-      const meta=[c.role,c.species,c.faction].filter(Boolean).join(" · ");
+      const meta=[c.role,c.species,...(c.factions||[])].filter(Boolean).join(" · ");
       return '<div class="pick-row" data-cid="'+esc(c.id)+'" data-hay="'+esc((c.name+" "+(c.role||"")+" "+(c.species||"")).toLowerCase())+'" onclick="togglePick(this)">'+
         '<span class="pk-box"></span><span><b>'+esc(c.name)+'</b>'+(meta?' <span style="color:var(--tdim);font-size:.85em">— '+esc(meta)+'</span>':'')+'</span></div>';
     }).join("")+
@@ -1730,13 +1889,15 @@ function nodeOptions(model){
 }
 
 /* ---- Family tree: + Person / + Bond ---- */
-function openTreeAdd(){
+let _treeTarget=0;
+function openTreeAdd(i){
+  _treeTarget=i;
   openEM("Add people to this tree", charPickerBody(),
     '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="doTreeAdd()">Add selected</button>');
 }
 function doTreeAdd(){
   const ids=pickedIds(); if(!ids.length){ toast("Pick at least one person."); return; }
-  const t=curTree();
+  const t=D.trees[_treeTarget];
   const existing=new Set(t.nodes.flatMap(n=>n.charIds||[]));
   const fresh=ids.filter(id=>!existing.has(id));
   if(!fresh.length){ toast("Those are already on the tree."); closeEM(); return; }
@@ -1744,8 +1905,9 @@ function doTreeAdd(){
   fresh.forEach((id,i)=>t.nodes.push({id:uid("tn"),kind:"single",charIds:[id],x:pts[i].x,y:pts[i].y}));
   saveD(); closeEM(); buildTreeSection(); toast(fresh.length+(fresh.length>1?" people added.":" person added."));
 }
-function openBondAdd(){
-  const t=curTree();
+function openBondAdd(i){
+  _treeTarget=i;
+  const t=D.trees[i];
   if((t.nodes||[]).length<2){ toast("Add at least two people first."); return; }
   const opts=nodeOptions(t);
   const relOpts=Object.entries(REL_TYPES).map(([k,v])=>({v:k,l:v.label}));
@@ -1759,42 +1921,8 @@ function openBondAdd(){
 function doBondAdd(){
   const a=getVal("bond-a"), b=getVal("bond-b");
   if(a===b){ toast("Pick two different people."); return; }
-  curTree().edges.push({id:uid("ed"),from:a,to:b,rel:getVal("bond-rel")||"family",label:getVal("bond-label")});
+  D.trees[_treeTarget].edges.push({id:uid("ed"),from:a,to:b,rel:getVal("bond-rel")||"family",label:getVal("bond-label")});
   saveD(); closeEM(); buildTreeSection(); toast("Bond added.");
-}
-
-/* ---- Relationships: + People / + Connection ---- */
-function openLinkAdd(){
-  openEM("Add people to this web", charPickerBody(),
-    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="doLinkAdd()">Add selected</button>');
-}
-function doLinkAdd(){
-  const ids=pickedIds(); if(!ids.length){ toast("Pick at least one person."); return; }
-  const w=curWeb();
-  const existing=new Set(w.nodes.map(n=>n.charId));
-  const fresh=ids.filter(id=>!existing.has(id));
-  if(!fresh.length){ toast("Those are already on the web."); closeEM(); return; }
-  const pts=fresh.length===1?[{x:330,y:230}]:circleLayout(fresh.length,350,250,Math.max(130,fresh.length*38));
-  fresh.forEach((id,i)=>w.nodes.push({id:uid("ln"),charId:id,x:pts[i].x,y:pts[i].y}));
-  saveD(); closeEM(); buildLinks(); toast(fresh.length+(fresh.length>1?" people added.":" person added."));
-}
-function openConnAdd(){
-  const w=curWeb();
-  if((w.nodes||[]).length<2){ toast("Add at least two people first."); return; }
-  const opts=nodeOptions(w);
-  const relOpts=Object.entries(REL_TYPES).map(([k,v])=>({v:k,l:v.label}));
-  const body=emField("conn-a","From",opts[0].v,{sel:opts})+
-    emField("conn-b","To",opts[1].v,{sel:opts})+
-    emField("conn-rel","Relationship",'friendship',{sel:relOpts})+
-    emField("conn-label","Label (optional)","",{});
-  openEM("Add a connection", body,
-    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="doConnAdd()">Add connection</button>');
-}
-function doConnAdd(){
-  const a=getVal("conn-a"), b=getVal("conn-b");
-  if(a===b){ toast("Pick two different people."); return; }
-  curWeb().edges.push({id:uid("ed"),from:a,to:b,rel:getVal("conn-rel")||"friendship",label:getVal("conn-label")});
-  saveD(); closeEM(); buildLinks(); toast("Connection added.");
 }
 
 /* ===================== GITHUB SYNC ===================== */
