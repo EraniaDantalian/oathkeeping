@@ -32,36 +32,6 @@
   ],
   "characters": [
     {
-      "id": "jay_black",
-      "name": "Jacob \"Jay\" Ephraim Black",
-      "aliases": [],
-      "category": "main",
-      "role": "Protagonist",
-      "symbol": "◈",
-      "image": "https://images2.imgbox.com/53/73/hj61z7JV_o.jpg",
-      "tags": [
-        "main character",
-        "transmigrator"
-      ],
-      "excerpt": "A teaser line for the card.",
-      "summary": "Full summary shown in profile.",
-      "fields": [
-        {
-          "key": "First Appears",
-          "val": "Chapter 1"
-        },
-        {
-          "key": "Arc",
-          "val": "Where they end up."
-        }
-      ],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 1
-    },
-    {
       "id": "sarah_black",
       "name": "Sarah Black (Nee Wilde)",
       "aliases": [],
@@ -127,24 +97,6 @@
       "added": 5
     },
     {
-      "id": "ephraim-black-mmbo6r1p",
-      "name": "Ephraim Black",
-      "aliases": [],
-      "category": "background",
-      "role": "Great Grandfather",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 6
-    },
-    {
       "id": "martha-young-mmbo6r1p",
       "name": "Martha Young",
       "aliases": [],
@@ -199,24 +151,6 @@
       "added": 10
     },
     {
-      "id": "jane-black-mmbo6r1q",
-      "name": "Jane Black",
-      "aliases": [],
-      "category": "background",
-      "role": "Great Aunt",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 11
-    },
-    {
       "id": "mateo-reyes-mmbo6r1q",
       "name": "Mateo Reyes",
       "aliases": [],
@@ -233,29 +167,6 @@
       "species": "",
       "factions": [],
       "added": 13
-    },
-    {
-      "id": "eugenia--jennie--black-mmbo6r1q",
-      "name": "Eugenia \"Jennie\" Black",
-      "aliases": [
-        "Jen",
-        "Jennie"
-      ],
-      "category": "background",
-      "species": "Human",
-      "role": "Paternal Aunt",
-      "symbol": "◈",
-      "image": "https://images2.imgbox.com/33/1f/HGAMY3Ke_o.jpg",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "factions": [
-        "quileute"
-      ],
-      "added": 14
     },
     {
       "id": "kevin-littlesea-mmbo6r1q",
@@ -276,42 +187,6 @@
       "added": 16
     },
     {
-      "id": "ezra--emmie--black-mmbo6r1q",
-      "name": "Ezra \"Emmie\" Black",
-      "aliases": [],
-      "category": "background",
-      "role": "First Cousin (Once Removed)",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 17
-    },
-    {
-      "id": "jacob-black-mmbplb7r",
-      "name": "Jacob Black",
-      "aliases": [],
-      "category": "background",
-      "role": "ancestor",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 20
-    },
-    {
       "id": "joseph-black-mmbplb7r",
       "name": "Joseph Black",
       "aliases": [],
@@ -328,24 +203,6 @@
       "species": "",
       "factions": [],
       "added": 22
-    },
-    {
-      "id": "jane-clearwater-mmbplb7r",
-      "name": "Jane Clearwater",
-      "aliases": [],
-      "category": "background",
-      "role": "ancestor",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 23
     },
     {
       "id": "lape-huautah-mmbplb7r",
@@ -366,24 +223,6 @@
       "added": 27
     },
     {
-      "id": "joanna-black-mmbplb7r",
-      "name": "Joanna Black",
-      "aliases": [],
-      "category": "background",
-      "role": "ancestor",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 28
-    },
-    {
       "id": "loraraine-huautah-mmbplb7r",
       "name": "Loraraine Huautah",
       "aliases": [],
@@ -400,24 +239,6 @@
       "species": "",
       "factions": [],
       "added": 29
-    },
-    {
-      "id": "jared-cameron-mmbplb7r",
-      "name": "Jared Cameron",
-      "aliases": [],
-      "category": "supporting",
-      "role": "wolfshifter",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 32
     },
     {
       "id": "kim-mmbplb7r",
@@ -438,42 +259,6 @@
       "added": 33
     },
     {
-      "id": "geoffrey-swan-mmbqpn8a",
-      "name": "Geoffrey Swan",
-      "aliases": [],
-      "category": "background",
-      "role": "",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 36
-    },
-    {
-      "id": "helen-swan--nee-jefferson--mmbqpn8a",
-      "name": "Helen Swan (nee Jefferson)",
-      "aliases": [],
-      "category": "background",
-      "role": "",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 37
-    },
-    {
       "id": "renee-dwyer-mmbqpn8a",
       "name": "Renee Dwyer (née Higginbotham)",
       "aliases": [],
@@ -490,24 +275,6 @@
       "species": "",
       "factions": [],
       "added": 38
-    },
-    {
-      "id": "isabella-swan-mmbqpn8c",
-      "name": "Isabella Swan",
-      "aliases": [],
-      "category": "main character",
-      "role": "",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 39
     },
     {
       "id": "joy-ateara--nee-quehpa--mmbqpn8c",
@@ -584,60 +351,6 @@
       "added": 43
     },
     {
-      "id": "embry--em--call-mmbqpn8c",
-      "name": "Embry \"Em\" Call",
-      "aliases": [],
-      "category": "main",
-      "role": "partner in crime",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 44
-    },
-    {
-      "id": "jane-wilde-mmbqpn8c",
-      "name": "Jane Wilde",
-      "aliases": [],
-      "category": "background",
-      "role": "maternal aunt",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 45
-    },
-    {
-      "id": "hank-wilde-mmbqpn8d",
-      "name": "Hank Wilde",
-      "aliases": [],
-      "category": "background",
-      "role": "maternal grandfather",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 46
-    },
-    {
       "id": "moses-clearwater-mmbr7q3u",
       "name": "Moses Clearwater",
       "aliases": [],
@@ -672,24 +385,6 @@
       "species": "",
       "factions": [],
       "added": 52
-    },
-    {
-      "id": "elliot-hudson-mmbrgac4",
-      "name": "Elliot Hudson",
-      "aliases": [],
-      "category": "background",
-      "role": "ancestor",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 53
     },
     {
       "id": "molly-clearwater-mmbrgac4",
@@ -764,42 +459,6 @@
       "added": 60
     },
     {
-      "id": "elizabeth-clearwater-mmbrgac4",
-      "name": "Elizabeth Clearwater",
-      "aliases": [],
-      "category": "background",
-      "role": "ancestor",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 61
-    },
-    {
-      "id": "harry-clearwater-mmbrgac4",
-      "name": "Harry Clearwater",
-      "aliases": [],
-      "category": "background",
-      "role": "elder",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 62
-    },
-    {
       "id": "leah-clearwater-mmbrgac4",
       "name": "Leah Clearwater",
       "aliases": [],
@@ -816,24 +475,6 @@
       "group": "",
       "factions": [],
       "added": 63
-    },
-    {
-      "id": "esther-clearwater-mmbrgac4",
-      "name": "Esther Clearwater",
-      "aliases": [],
-      "category": "background",
-      "role": "ancestor",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 65
     },
     {
       "id": "samuel-clearwater-mmbrgac4",
@@ -890,24 +531,6 @@
       "added": 72
     },
     {
-      "id": "gene-lahote-mmcgpm4f",
-      "name": "Gene Lahote",
-      "aliases": [],
-      "category": "background",
-      "role": "",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 73
-    },
-    {
       "id": "levi-uley-mmcgpm4f",
       "name": "Levi Uley",
       "aliases": [],
@@ -924,24 +547,6 @@
       "species": "",
       "factions": [],
       "added": 74
-    },
-    {
-      "id": "johnathon--johnny--uley-mmcgpm4f",
-      "name": "Johnathon \"Johnny\" Uley",
-      "aliases": [],
-      "category": "background",
-      "role": "",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 75
     },
     {
       "id": "mirabelle-uley-mmcgpm4f",
@@ -980,24 +585,6 @@
       "added": 79
     },
     {
-      "id": "ellen-longtree-mmcgpm4f",
-      "name": "Ellen Longtree",
-      "aliases": [],
-      "category": "background",
-      "role": "",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 80
-    },
-    {
       "id": "joshua-uley-mmcgpm4g",
       "name": "Joshua Uley",
       "aliases": [],
@@ -1014,24 +601,6 @@
       "species": "",
       "factions": [],
       "added": 85
-    },
-    {
-      "id": "ellen-uley-mmcgpm4g",
-      "name": "Ellen Uley",
-      "aliases": [],
-      "category": "background",
-      "role": "",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 87
     },
     {
       "id": "natalya-reznikov-mmcgpm4g",
@@ -1147,24 +716,6 @@
       "added": 97
     },
     {
-      "id": "jeremiah-gray-mmchkloj",
-      "name": "Jeremiah Gray",
-      "aliases": [],
-      "category": "background",
-      "role": "",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 98
-    },
-    {
       "id": "penelope-simmons-mmci1eig",
       "name": "Penelope Simmons",
       "aliases": [],
@@ -1273,60 +824,6 @@
       "added": 105
     },
     {
-      "id": "jamie-fuller-mmcm51lh",
-      "name": "Jamie Fuller",
-      "aliases": [],
-      "category": "background",
-      "role": "",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 106
-    },
-    {
-      "id": "emily-young--makah--mmcma605",
-      "name": "Emily Young (Makah)",
-      "aliases": [],
-      "category": "background",
-      "role": "Role",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 108
-    },
-    {
-      "id": "jack-young--makah--mmcma605",
-      "name": "Jack Young (Makah)",
-      "aliases": [],
-      "category": "background",
-      "role": "Emily's father",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "",
-      "factions": [],
-      "added": 109
-    },
-    {
       "id": "phil-dwyer-mmdqw25u",
       "name": "Phil Dwyer",
       "aliases": [],
@@ -1343,46 +840,6 @@
       "species": "",
       "factions": [],
       "added": 110
-    },
-    {
-      "id": "esme-cullen-mmdqw25u",
-      "name": "Esme Cullen",
-      "aliases": [],
-      "category": "supporting",
-      "role": "Matriarch of the Olympic Coven",
-      "symbol": "◈",
-      "image": "",
-      "tags": [
-        "Olympic Coven"
-      ],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "vampire",
-      "factions": [],
-      "added": 112
-    },
-    {
-      "id": "jasper-hale-mmdqw25u",
-      "name": "Jasper Hale",
-      "aliases": [],
-      "category": "main",
-      "role": "Empath of the Olympic Coven",
-      "symbol": "◈",
-      "image": "",
-      "tags": [
-        "Olympic Coven"
-      ],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "vampire",
-      "factions": [],
-      "added": 114
     },
     {
       "id": "rosalie-hale-mmdqw25w",
@@ -1405,26 +862,6 @@
       "added": 116
     },
     {
-      "id": "emmett-cullen-mmdqw25w",
-      "name": "Emmett Cullen",
-      "aliases": [],
-      "category": "supporting",
-      "role": "Brawn of the Olympic Coven",
-      "symbol": "◈",
-      "image": "",
-      "tags": [
-        "Olympic Coven"
-      ],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "group": "",
-      "species": "vampire",
-      "factions": [],
-      "added": 117
-    },
-    {
       "id": "molly-swan-mqgjfdn1",
       "name": "Molly Swan",
       "aliases": [],
@@ -1441,24 +878,6 @@
       "group": "",
       "factions": [],
       "added": 120
-    },
-    {
-      "id": "helen-clapp-nee-lowry-mqgql7g1",
-      "name": "Helen Clapp nee Lowry",
-      "aliases": [],
-      "category": "background",
-      "role": "Audrey's mother",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "species": "",
-      "group": "",
-      "factions": [],
-      "added": 121
     },
     {
       "id": "rick-clapp-mqgql7g2",
@@ -1515,24 +934,6 @@
       "added": 125
     },
     {
-      "id": "janet--janey--wilder-nee-rogers-mqgql7g2",
-      "name": "Janet \"Janey\" Wilder nee Rogers",
-      "aliases": [],
-      "category": "background",
-      "role": "",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "species": "",
-      "group": "",
-      "factions": [],
-      "added": 126
-    },
-    {
       "id": "lucy-wilder-mqgql7g2",
       "name": "Lucy Wilder",
       "aliases": [],
@@ -1549,24 +950,6 @@
       "group": "",
       "factions": [],
       "added": 128
-    },
-    {
-      "id": "gale-wilder-mqgql7g2",
-      "name": "Gale Wilder",
-      "aliases": [],
-      "category": "background",
-      "role": "Lucas's sibling",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "species": "",
-      "group": "",
-      "factions": [],
-      "added": 129
     },
     {
       "id": "lorelai-wilder-mqgql7g2",
@@ -1603,24 +986,6 @@
       "group": "",
       "factions": [],
       "added": 132
-    },
-    {
-      "id": "gregory-wilder-mqgql7g2",
-      "name": "Gregory Wilder",
-      "aliases": [],
-      "category": "background",
-      "role": "Lucas's sibling",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "species": "",
-      "group": "",
-      "factions": [],
-      "added": 133
     },
     {
       "id": "laura-murphy-mqgql7g2",
@@ -1675,24 +1040,6 @@
       "group": "",
       "factions": [],
       "added": 138
-    },
-    {
-      "id": "howard-reed-mqgql7g2",
-      "name": "Howard Reed",
-      "aliases": [],
-      "category": "supporting",
-      "role": "May's grandfather",
-      "symbol": "◈",
-      "image": "",
-      "tags": [],
-      "excerpt": "",
-      "summary": "",
-      "fields": [],
-      "relationships": [],
-      "species": "",
-      "group": "",
-      "factions": [],
-      "added": 139
     }
   ],
   "trees": [
