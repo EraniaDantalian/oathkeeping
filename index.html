@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<!-- The Art of Oathbreaking — build: Lorenz -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Art of Oathbreaking — Companion Archive</title>
+<title>The Art of Oathbreaking - Series Workbook</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -88,6 +89,30 @@
   --btn-bg-hover:#b59348; --btn-border-hover:#b59348; --btn-text-hover:#161e18;
   --shadow:0 12px 40px -14px rgba(0,0,0,.55);
 }
+/* CRIMSON — white & red */
+[data-theme="crimson"]{
+  --bg:#f3ecec; --bg2:#faf5f5; --bg3:#fdfafa; --bg4:#ffffff;
+  --b1:#e2bcbc; --b2:#ecd0d0; --b3:#f4e2e2;
+  --gold:#c01d2e; --gold2:#9a1524; --goldl:#dc4a58;
+  --text:#2a1416; --tmid:#553a3c; --tdim:#7f6567; --tfaint:#aa9092;
+  --nav:#3a1719; --navdim:#8c686a;
+  --red:#c01d2e; --green:#3f7d5a;
+  --btn-bg:#ffffff; --btn-border:#e2bcbc; --btn-text:#553a3c;
+  --btn-bg-hover:#c01d2e; --btn-border-hover:#c01d2e; --btn-text-hover:#ffffff;
+  --shadow:0 8px 30px -12px rgba(120,20,32,.26);
+}
+/* LILAC — violet, lavender & lilac */
+[data-theme="lilac"]{
+  --bg:#e6e0f1; --bg2:#eee9f7; --bg3:#f5f1fc; --bg4:#fcfaff;
+  --b1:#cabce2; --b2:#d7cdea; --b3:#e5def2;
+  --gold:#7e4bb0; --gold2:#623a8d; --goldl:#a173cf;
+  --text:#2b2138; --tmid:#4a3d5e; --tdim:#726588; --tfaint:#9d92ae;
+  --nav:#352a48; --navdim:#75688b;
+  --red:#b0427e; --green:#5a8a6a;
+  --btn-bg:#f5f1fc; --btn-border:#cabce2; --btn-text:#4a3d5e;
+  --btn-bg-hover:#7e4bb0; --btn-border-hover:#7e4bb0; --btn-text-hover:#fcfaff;
+  --shadow:0 8px 30px -12px rgba(82,50,132,.3);
+}
 
 /* ============ BASE ============ */
 *{box-sizing:border-box;margin:0;padding:0}
@@ -125,9 +150,9 @@ button{font-family:var(--mono);cursor:pointer}
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--b2);
 }
-.topbar-inner{max-width:var(--maxw);margin:0 auto;padding:9px 26px;display:flex;align-items:center;gap:14px}
-.tb-brand{font-family:var(--hfont);font-size:1.05rem;font-weight:600;letter-spacing:.01em;color:var(--gold);white-space:nowrap}
-.tb-spacer{flex:1}
+.topbar-inner{max-width:var(--maxw);margin:0 auto;padding:9px 26px;display:flex;align-items:center;gap:14px;position:relative;justify-content:flex-end}
+.tb-brand{font-family:var(--hfont);font-size:1.05rem;font-weight:600;letter-spacing:.01em;color:var(--gold);white-space:nowrap;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.tb-spacer{display:none}
 .tb-btn{
   background:var(--btn-bg);border:1px solid var(--btn-border);color:var(--btn-text);
   font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
@@ -149,7 +174,7 @@ body.em-on .em-badge{display:inline-block;margin-left:8px;font-family:var(--mono
 
 /* ============ HERO ============ */
 .hero{padding:62px 26px 30px;text-align:center;position:relative;z-index:1}
-.hero-inner{max-width:680px;margin:0 auto}
+.hero-inner{max-width:var(--maxw);margin:0 auto}
 .hero .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
 .hero h1{
   font-size:clamp(2.6rem,7vw,4.6rem);font-weight:600;font-style:italic;
@@ -442,6 +467,8 @@ body.em-on .about-toolbar{display:flex}
   .gallery-wall{columns:2}
 }
 @media(max-width:520px){.sec-head h2{font-size:1.7rem}.gallery-wall{columns:1}}
+@media(max-width:760px){.tb-brand{position:static;transform:none;font-size:.95rem}.topbar-inner{justify-content:flex-start}.tb-spacer{display:block;flex:1}}
+.build-stamp{position:fixed;left:10px;bottom:9px;z-index:200;font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tfaint);opacity:.55;pointer-events:none;user-select:none}
 </style>
 </head>
 <body data-theme="rose">
@@ -467,7 +494,7 @@ body.em-on .about-toolbar{display:flex}
   <div class="hero-inner">
     <div class="eyebrow" data-ed="eyebrow" contenteditable="false">A Companion Archive</div>
     <h1 data-ed="title2" contenteditable="false">The Art <span class="amp">of</span> Oathbreaking</h1>
-    <p class="subtitle" data-ed="subtitle" contenteditable="false">Every powerful soul keeps a secret. He keeps them all — until the day the oldest one turns out to be his own.</p>
+    <p class="subtitle" data-ed="subtitle" contenteditable="false">keep your promises, pay your dues</p>
     <div class="ornament">✦ ✦ ✦</div>
   </div>
 </header>
@@ -509,6 +536,7 @@ body.em-on .about-toolbar{display:flex}
 </div>
 
 <div id="toast"></div>
+<div class="build-stamp" title="Build version">Lorenz</div>
 
 <script>
 /* =====================================================================
@@ -522,8 +550,8 @@ const DEFAULTS = {
   font: "Cormorant Garamond",
   eyebrow: "A Companion Archive",
   title: "The Art of Oathbreaking",
-  subtitle: "Every powerful soul keeps a secret. He keeps them all — until the day the oldest one turns out to be his own.",
-  footer: "An unofficial companion archive — fan work, made with devotion.",
+  subtitle: "keep your promises, pay your dues",
+  footer: "An offical author's archive to keep me sane.",
   about: {
     body: "<p><i>The Art of Oathbreaking</i> follows a violet-haired outsider who drifts through the lives of the powerful and the dangerous, picking up their buried secrets the way other men pick up loose change. He never meant to keep them. He just has the kind of face people confess to.</p><p>Born under a circus tent, raised on the high wire, he traded the trapeze for a slackline, the slackline for a tightrope, and finally the rope for a motorcycle — becoming the most famous stunt rider of his decade under a name that wasn't his. The secrets he carries belong to demigods, criminals, and stranger things. The one he can't recover is his own.</p><p>This archive collects the characters, the timeline, the relationships, and the lore. Spoilers are blurred where it matters. Open <b>Edit</b> to make it yours.</p>",
     refs: [
@@ -681,7 +709,7 @@ let D = JSON.parse(JSON.stringify(DEFAULTS));
 let editMode = false;
 let curTab = "about";
 
-const THEMES = ["rose","parchment","dark","sage","slate","fernwood"];
+const THEMES = ["rose","parchment","dark","sage","slate","fernwood","crimson","lilac"];
 const FONTS = ["Cormorant Garamond","EB Garamond","Lora","Libre Baskerville","Playfair Display","Raleway"];
 
 const TABS = [
