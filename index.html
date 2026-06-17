@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Art of Oathbreaking - Series Workbook</title>
+<title>The Art of Oathbreaking — Companion Archive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -171,6 +171,10 @@ body.em-on .editonly{display:inline-flex!important}
 body.em-on .editonly.block{display:block!important}
 .em-badge{display:none}
 body.em-on .em-badge{display:inline-block;margin-left:8px;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;color:var(--bg4);background:var(--gold);padding:2px 8px;border-radius:20px;text-transform:uppercase}
+/* edit mode adds 3 buttons + badge — give the centered brand back its in-flow spot so nothing overlaps */
+body.em-on .tb-brand{position:static;transform:none}
+body.em-on .topbar-inner{justify-content:flex-start}
+body.em-on .tb-spacer{display:block;flex:1}
 
 /* ============ HERO ============ */
 .hero{padding:62px 26px 30px;text-align:center;position:relative;z-index:1}
@@ -551,7 +555,7 @@ const DEFAULTS = {
   eyebrow: "A Companion Archive",
   title: "The Art of Oathbreaking",
   subtitle: "keep your promises, pay your dues",
-  footer: "An offical author's archive to keep me sane.",
+  footer: "An unofficial companion archive — fan work, made with devotion.",
   about: {
     body: "<p><i>The Art of Oathbreaking</i> follows a violet-haired outsider who drifts through the lives of the powerful and the dangerous, picking up their buried secrets the way other men pick up loose change. He never meant to keep them. He just has the kind of face people confess to.</p><p>Born under a circus tent, raised on the high wire, he traded the trapeze for a slackline, the slackline for a tightrope, and finally the rope for a motorcycle — becoming the most famous stunt rider of his decade under a name that wasn't his. The secrets he carries belong to demigods, criminals, and stranger things. The one he can't recover is his own.</p><p>This archive collects the characters, the timeline, the relationships, and the lore. Spoilers are blurred where it matters. Open <b>Edit</b> to make it yours.</p>",
     refs: [
