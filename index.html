@@ -818,6 +818,7 @@ function buildNav(){
   nav.innerHTML = TABS.map(t=>
     '<button class="tab'+(t.id===curTab?' active':'')+'" data-tab="'+t.id+'"><span class="ic">'+t.ic+'</span>'+t.label+'</button>'
   ).join("");
+  nav.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>switchTab(b.dataset.tab)));
 }
 function switchTab(id){
   curTab=id;
