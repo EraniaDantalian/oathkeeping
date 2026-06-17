@@ -263,7 +263,7 @@ body.em-on .cc-edit{display:flex}
 /* ============ CHAR MODAL ============ */
 .m-bg{position:fixed;inset:0;z-index:200;background:color-mix(in srgb,var(--text) 55%,transparent);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:24px}
 .m-bg.open{display:flex}
-.m-card{background:var(--bg3);border:1px solid var(--b1);border-radius:var(--rad);max-width:720px;width:100%;max-height:88vh;overflow:auto;box-shadow:var(--shadow);position:relative}
+.m-card{background:var(--bg3);border:1px solid var(--b1);border-radius:var(--rad);max-width:860px;width:100%;max-height:88vh;overflow:auto;box-shadow:var(--shadow);position:relative}
 .m-close{position:absolute;top:12px;right:14px;z-index:5;background:var(--bg4);border:1px solid var(--b1);color:var(--tmid);width:30px;height:30px;border-radius:50%;font-size:1rem}
 .m-close:hover{background:var(--red);color:#fff;border-color:var(--red)}
 .m-inner{display:flex;gap:0;flex-wrap:wrap}
@@ -284,6 +284,36 @@ body.em-on .cc-edit{display:flex}
 .m-field .v{color:var(--text)}
 .m-rels{margin-top:16px}
 .m-rels h4{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tdim);margin-bottom:8px}
+/* wiki page layout */
+.wiki{padding:28px 30px 30px}
+.wiki-head{border-bottom:1px solid var(--b2);padding-bottom:16px;margin-bottom:20px}
+.wiki-head h3{font-size:2.1rem;font-style:italic;line-height:1.08;color:var(--text)}
+.wiki-cols{display:flex;gap:26px;align-items:flex-start;flex-direction:row-reverse}
+.wiki-main{flex:1;min-width:0}
+.wiki-box{width:236px;flex-shrink:0;background:var(--bg4);border:1px solid var(--b2);border-radius:var(--rad);overflow:hidden}
+.ib-portrait .ph,.ib-portrait .ph-none{width:100%;height:280px;object-fit:cover;object-position:center top;display:block;background:var(--bg4)}
+.ib-portrait .ph-none{display:flex;align-items:center;justify-content:center;font-family:var(--hfont);font-size:3rem;color:var(--b1);background:repeating-linear-gradient(45deg,var(--bg4),var(--bg4) 12px,var(--bg3) 12px,var(--bg3) 24px)}
+.ib-fields{padding:6px 14px 8px}
+.ib-field{display:flex;flex-direction:column;gap:2px;padding:9px 0;border-bottom:1px dotted var(--b2)}
+.ib-field:last-child{border-bottom:none}
+.ib-field .k{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tdim)}
+.ib-field .v{color:var(--text);font-size:.92rem;line-height:1.4}
+.wiki-box .ib-field{padding-left:14px;padding-right:14px}
+.wiki-body{color:var(--text);font-size:1rem;line-height:1.72;margin:6px 0 4px}
+.wiki-body h2{font-size:1.4rem;font-style:italic;margin:1em 0 .35em;border-bottom:1px solid var(--b2);padding-bottom:4px}
+.wiki-body h3{font-size:1.15rem;margin:.9em 0 .3em}
+.wiki-body p{margin:0 0 .85em}.wiki-body ul,.wiki-body ol{margin:0 0 .85em 1.4em}
+.wiki-body a{color:var(--gold)}.wiki-body img{max-width:100%;border-radius:var(--rad);margin:.5em 0}
+.wiki-empty{color:var(--tdim);font-style:italic;padding:14px 0}
+.wiki-sec{margin-top:22px}
+.wiki-sec h4{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tdim);margin-bottom:10px}
+.wiki-rel{padding:7px 0;border-bottom:1px dotted var(--b2);font-size:.95rem;color:var(--text)}
+.wiki-rel:last-child{border-bottom:none}
+.wr-lbl{color:var(--tdim);font-style:italic;font-size:.85em}
+.wr-note{color:var(--tmid);font-size:.88rem;font-style:italic;margin-top:3px;line-height:1.5}
+.wiki-tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:6px}
+.wiki-foot{margin-top:24px;border-top:1px solid var(--b2);padding-top:16px}
+@media(max-width:640px){.wiki-cols{flex-direction:column}.wiki-box{width:100%}.ib-portrait .ph,.ib-portrait .ph-none{height:320px}}
 .m-rel{display:inline-block;font-size:.82rem;background:var(--bg);border:1px solid var(--b2);border-radius:14px;padding:4px 10px;margin:0 6px 6px 0}
 .m-rel b{color:var(--gold);font-weight:600}
 
@@ -833,6 +863,7 @@ function migrateD(){
     if(c.excerpt==null) c.excerpt="";
     if(c.summary==null) c.summary="";
     if(c.group==null) c.group="";
+    if(c.body==null) c.body="";
     if(!c.category) c.category=(D.categories[0]||{}).id||"main";
     if(c.added==null) c.added=i+1;                       // preserve order for "recently added"
   });
@@ -1138,7 +1169,7 @@ function removeListItem(kind,v){
   saveD(); manageLists();
 }
 
-/* ---- char modal ---- */
+/* ---- char modal (wiki page) ---- */
 function openCharModal(id){
   const c=charById(id); if(!c) return;
   const portrait = c.image
@@ -1150,20 +1181,43 @@ function openCharModal(id){
     ...(c.factions||[]).map(f=>({t:f})),
     c.role?{t:c.role}:null
   ].filter(Boolean).map(x=>'<span class="m-chip'+(x.acc?' acc':'')+'">'+esc(x.t)+'</span>').join("");
-  const fields=c.fields.length?'<div class="m-fields">'+c.fields.map(f=>'<div class="m-field"><span class="k">'+esc(f.key)+'</span><span class="v">'+esc(f.val)+'</span></div>').join("")+'</div>':'';
-  const rels=c.relationships.length?'<div class="m-rels"><h4>Relationships</h4>'+c.relationships.map(r=>{const o=charById(r.charId);return o?'<span class="m-rel"><b>'+esc(r.label||"—")+'</b> '+esc(o.name)+'</span>':'';}).join("")+'</div>':'';
+  // infobox detail fields
+  const fields=c.fields.length?'<div class="ib-fields">'+c.fields.map(f=>'<div class="ib-field"><span class="k">'+esc(f.key)+'</span><span class="v">'+esc(f.val)+'</span></div>').join("")+'</div>':'';
+  // relationships: manual quick-notes + anything from the global relationships list
+  let relRows=c.relationships.map(r=>{const o=charById(r.charId);return o?'<div class="wiki-rel"><b>'+esc(o.name)+'</b>'+(r.label?' <span class="wr-lbl">'+esc(r.label)+'</span>':'')+'</div>':'';}).filter(Boolean);
+  D.relationships.filter(r=>r.a===c.id||r.b===c.id).forEach(r=>{
+    const o=charById(r.a===c.id?r.b:r.a); const t=REL_TYPES[r.rel]||REL_TYPES.complex;
+    relRows.push('<div class="wiki-rel"><span class="rel-badge" style="background:'+t.color+'">'+esc(t.label)+'</span> <b>'+esc(o?o.name:"(removed)")+'</b>'+(r.note?'<div class="wr-note">'+esc(r.note)+'</div>':'')+'</div>');
+  });
+  const rels=relRows.length?'<div class="wiki-sec"><h4>Relationships</h4>'+relRows.join("")+'</div>':'';
+  const article = (c.body&&c.body.replace(/<[^>]*>/g,"").trim())
+    ? '<div class="wiki-body">'+c.body+'</div>'
+    : (c.summary?'':'<div class="wiki-empty">No write-up yet'+(editMode?' — tap Edit to start this character\'s page.':'.')+'</div>');
+
   document.getElementById("char-modal-card").innerHTML=
     '<button class="m-close" onclick="closeCharModal()">✕</button>'+
-    '<div class="m-inner"><div class="m-portrait">'+portrait+'</div>'+
-    '<div class="m-info">'+
-      '<h3>'+esc(c.name)+'</h3>'+
-      (c.aliases.length?'<div class="m-alias">aka '+c.aliases.map(esc).join(" · ")+'</div>':'')+
-      '<div class="m-chips">'+chips+'</div>'+
-      (c.excerpt?'<div class="m-excerpt">'+esc(c.excerpt)+'</div>':'')+
-      (c.summary?'<div class="m-summary">'+esc(c.summary)+'</div>':'')+
-      fields+rels+
-      (editMode?'<div style="margin-top:18px"><button class="btn p" onclick="editChar(\''+c.id+'\');closeCharModal()">Edit character</button></div>':'')+
-    '</div></div>';
+    '<div class="wiki">'+
+      '<div class="wiki-head">'+
+        '<h3>'+esc(c.name)+'</h3>'+
+        (c.aliases.length?'<div class="m-alias">aka '+c.aliases.map(esc).join(" · ")+'</div>':'')+
+        '<div class="m-chips">'+chips+'</div>'+
+      '</div>'+
+      '<div class="wiki-cols">'+
+        '<div class="wiki-main">'+
+          (c.excerpt?'<div class="m-excerpt">'+esc(c.excerpt)+'</div>':'')+
+          (c.summary?'<div class="m-summary">'+esc(c.summary)+'</div>':'')+
+          article+
+          rels+
+          (c.tags.length?'<div class="wiki-tags">'+c.tags.map(t=>'<span class="cc-tag">'+esc(t)+'</span>').join("")+'</div>':'')+
+        '</div>'+
+        '<aside class="wiki-box">'+
+          '<div class="ib-portrait">'+portrait+'</div>'+
+          fields+
+          (c.group?'<div class="ib-field"><span class="k">Group</span><span class="v">'+esc(c.group)+'</span></div>':'')+
+        '</aside>'+
+      '</div>'+
+      (editMode?'<div class="wiki-foot"><button class="btn p" onclick="editChar(\''+c.id+'\');closeCharModal()">✎ Edit this page</button></div>':'')+
+    '</div>';
   document.getElementById("char-modal").classList.add("open");
 }
 function closeCharModal(){ document.getElementById("char-modal").classList.remove("open"); }
@@ -1244,13 +1298,15 @@ function editChar(id){
     '<div class="em-row"><label class="em-lbl">Aliases</label>'+dynList("ec-aliases",c.aliases,"alias")+'</div>'+
     '<div class="em-row"><label class="em-lbl">Tags</label>'+dynList("ec-tags",c.tags,"tag")+'</div>'+
     emField("ec-excerpt","Pull quote",c.excerpt,{ta:true})+
-    emField("ec-summary","Summary",c.summary,{ta:true})+
-    '<div class="em-row"><label class="em-lbl">Detail fields</label>'+kvList("ec-fields",c.fields)+'</div>'+
+    emField("ec-summary","Short summary (1-2 lines)",c.summary,{ta:true})+
+    '<div class="em-row"><label class="em-lbl">Wiki article <span style="color:var(--tdim);font-weight:400">(optional — full write-up, rich text)</span></label>'+richEditorHTML("ec-body",c.body)+'</div>'+
+    '<div class="em-row"><label class="em-lbl">Detail fields <span style="color:var(--tdim);font-weight:400">(the infobox — age, height, status, anything)</span></label>'+kvList("ec-fields",c.fields)+'</div>'+
     '<div class="em-row"><label class="em-lbl">Relationships (quick notes)</label>'+relList("ec-rels",c.relationships)+'</div>';
   const foot=(id?'<button class="em-btn d" onclick="deleteChar()">Delete</button>':'')+
     '<button class="em-btn" onclick="closeEM()">Cancel</button>'+
     '<button class="em-btn p" onclick="saveChar()">Save character</button>';
   openEM(id?"Edit character":"New character", body, foot);
+  bindRich("ec-body");
 }
 function factionChecks(selected){
   return D.factionList.map(f=>{
@@ -1282,6 +1338,7 @@ function saveChar(){
     species:getVal("ec-species"), factions:readFactions(), image:getVal("ec-image"),
     aliases:readDyn("ec-aliases"), tags:readDyn("ec-tags"),
     excerpt:getVal("ec-excerpt"), summary:getVal("ec-summary"),
+    body:(document.getElementById("ec-body")||{}).innerHTML||"",
     fields:readKV("ec-fields"), relationships:readRel("ec-rels"), group:getVal("ec-group")
   };
   if(_editCharId){ Object.assign(charById(_editCharId), data); }
