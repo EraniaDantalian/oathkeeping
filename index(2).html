@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Art of Oathbreaking — Companion Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============ THEME TOKENS ============ */
+:root{
+  --hfont:'Cormorant Garamond',serif;
+  --bfont:'Spectral',serif;
+  --mono:'IBM Plex Mono',monospace;
+  --rad:3px;
+  --maxw:1180px;
+}
+/* ROSE (default on load) */
+[data-theme="rose"]{
+  --bg:#efe2e2; --bg2:#f6ecec; --bg3:#fbf4f4; --bg4:#fffafa;
+  --b1:#d8b9bd; --b2:#e3cccf; --b3:#eedddf;
+  --gold:#9e3b54; --gold2:#7d2a40; --goldl:#c25e76;
+  --text:#3a2329; --tmid:#5e424a; --tdim:#876b72; --tfaint:#a98e95;
+  --nav:#4a2730; --navdim:#8a6a72;
+  --red:#b03048; --green:#3f7d5a;
+  --btn-bg:#fbf4f4; --btn-border:#d8b9bd; --btn-text:#5e424a;
+  --btn-bg-hover:#9e3b54; --btn-border-hover:#9e3b54; --btn-text-hover:#fffafa;
+  --shadow:0 8px 30px -12px rgba(95,45,60,.32);
+}
+/* PARCHMENT */
+[data-theme="parchment"]{
+  --bg:#e8e1d2; --bg2:#f1ebde; --bg3:#f7f2e8; --bg4:#fdfaf2;
+  --b1:#cbbd9f; --b2:#d8cdb4; --b3:#e6dcc7;
+  --gold:#9a7b32; --gold2:#7a5f22; --goldl:#bb9a4c;
+  --text:#2c2a22; --tmid:#4f4a3a; --tdim:#7a7460; --tfaint:#a39b84;
+  --nav:#3a3526; --navdim:#7a7058;
+  --red:#a8412f; --green:#4a7a44;
+  --btn-bg:#f7f2e8; --btn-border:#cbbd9f; --btn-text:#4f4a3a;
+  --btn-bg-hover:#9a7b32; --btn-border-hover:#9a7b32; --btn-text-hover:#fdfaf2;
+  --shadow:0 8px 30px -12px rgba(70,60,30,.3);
+}
+/* DARK */
+[data-theme="dark"]{
+  --bg:#12151f; --bg2:#1a1e2c; --bg3:#222738; --bg4:#2b3146;
+  --b1:#3a4258; --b2:#2f3650; --b3:#262c42;
+  --gold:#c9a24a; --gold2:#a9842f; --goldl:#e0bd66;
+  --text:#e8e6df; --tmid:#bcc0cc; --tdim:#8a90a4; --tfaint:#5f6680;
+  --nav:#e6e3da; --navdim:#9aa0b4;
+  --red:#d8627a; --green:#5fb083;
+  --btn-bg:#222738; --btn-border:#3a4258; --btn-text:#bcc0cc;
+  --btn-bg-hover:#c9a24a; --btn-border-hover:#c9a24a; --btn-text-hover:#12151f;
+  --shadow:0 12px 40px -14px rgba(0,0,0,.6);
+}
+/* SAGE */
+[data-theme="sage"]{
+  --bg:#dde3da; --bg2:#e7ece3; --bg3:#f0f3ec; --bg4:#f8faf5;
+  --b1:#b3c1ac; --b2:#c4d0bd; --b3:#d6e0d0;
+  --gold:#5f7a4a; --gold2:#46603a; --goldl:#7e9a66;
+  --text:#26302a; --tmid:#445045; --tdim:#6c7a6b; --tfaint:#97a594;
+  --nav:#33402f; --navdim:#6e7c6a;
+  --red:#a8512f; --green:#467a4a;
+  --btn-bg:#f0f3ec; --btn-border:#b3c1ac; --btn-text:#445045;
+  --btn-bg-hover:#5f7a4a; --btn-border-hover:#5f7a4a; --btn-text-hover:#f8faf5;
+  --shadow:0 8px 30px -12px rgba(50,70,40,.28);
+}
+/* SLATE */
+[data-theme="slate"]{
+  --bg:#dde1e7; --bg2:#e7eaef; --bg3:#f0f2f6; --bg4:#f8f9fc;
+  --b1:#aeb8c8; --b2:#c2cad6; --b3:#d6dce5;
+  --gold:#4a6a8a; --gold2:#39536e; --goldl:#6a8aaa;
+  --text:#242a33; --tmid:#434c59; --tdim:#6b7585; --tfaint:#95a0b0;
+  --nav:#2f3845; --navdim:#6c7888;
+  --red:#a84256; --green:#3f7a6a;
+  --btn-bg:#f0f2f6; --btn-border:#aeb8c8; --btn-text:#434c59;
+  --btn-bg-hover:#4a6a8a; --btn-border-hover:#4a6a8a; --btn-text-hover:#f8f9fc;
+  --shadow:0 8px 30px -12px rgba(40,55,75,.3);
+}
+/* FERNWOOD */
+[data-theme="fernwood"]{
+  --bg:#161e18; --bg2:#1d271f; --bg3:#253128; --bg4:#2f3d31;
+  --b1:#3c4f3f; --b2:#314131; --b3:#283528;
+  --gold:#b59348; --gold2:#977a32; --goldl:#d0ad62;
+  --text:#e3e6dd; --tmid:#b6bdb0; --tdim:#869080; --tfaint:#5d6857;
+  --nav:#e0e4d8; --navdim:#98a28e;
+  --red:#cf6b6b; --green:#6fb078;
+  --btn-bg:#253128; --btn-border:#3c4f3f; --btn-text:#b6bdb0;
+  --btn-bg-hover:#b59348; --btn-border-hover:#b59348; --btn-text-hover:#161e18;
+  --shadow:0 12px 40px -14px rgba(0,0,0,.55);
+}
+
+/* ============ BASE ============ */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--bfont);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  transition:background .4s ease,color .4s ease;
+  min-height:100vh;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(circle at 18% 12%,color-mix(in srgb,var(--gold) 9%,transparent),transparent 42%),
+    radial-gradient(circle at 84% 78%,color-mix(in srgb,var(--gold) 7%,transparent),transparent 46%);
+  opacity:.8;
+}
+h1,h2,h3,h4{font-family:var(--hfont);font-weight:600;line-height:1.15;color:var(--text)}
+a{color:var(--gold);text-decoration:none}
+a:hover{color:var(--gold2);text-decoration:underline}
+button{font-family:var(--mono);cursor:pointer}
+::selection{background:color-mix(in srgb,var(--gold) 28%,transparent)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px;position:relative;z-index:1}
+.mono{font-family:var(--mono)}
+.label{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--tdim)}
+
+/* ============ TOPBAR ============ */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  background:color-mix(in srgb,var(--bg2) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--b2);
+}
+.topbar-inner{max-width:var(--maxw);margin:0 auto;padding:9px 26px;display:flex;align-items:center;gap:14px}
+.tb-brand{font-family:var(--hfont);font-size:1.05rem;font-weight:600;letter-spacing:.01em;color:var(--gold);white-space:nowrap}
+.tb-spacer{flex:1}
+.tb-btn{
+  background:var(--btn-bg);border:1px solid var(--btn-border);color:var(--btn-text);
+  font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 11px;border-radius:var(--rad);transition:.18s;white-space:nowrap;
+}
+.tb-btn:hover{background:var(--btn-bg-hover);border-color:var(--btn-border-hover);color:var(--btn-text-hover)}
+.tb-btn.active{background:var(--gold);border-color:var(--gold);color:var(--bg4)}
+.gh-status{font-family:var(--mono);font-size:.6rem;color:var(--tdim);min-width:54px}
+.gh-status.ok{color:var(--green)}
+.gh-status.err{color:var(--red)}
+.gh-status.busy{color:var(--gold)}
+
+/* edit-only chrome hidden unless em-on */
+.editonly{display:none!important}
+body.em-on .editonly{display:inline-flex!important}
+body.em-on .editonly.block{display:block!important}
+.em-badge{display:none}
+body.em-on .em-badge{display:inline-block;margin-left:8px;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;color:var(--bg4);background:var(--gold);padding:2px 8px;border-radius:20px;text-transform:uppercase}
+
+/* ============ HERO ============ */
+.hero{padding:62px 26px 30px;text-align:center;position:relative;z-index:1}
+.hero-inner{max-width:680px;margin:0 auto}
+.hero .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.hero h1{
+  font-size:clamp(2.6rem,7vw,4.6rem);font-weight:600;font-style:italic;
+  letter-spacing:.005em;margin-bottom:14px;line-height:1.04;
+}
+.hero h1 .amp{font-style:normal;color:var(--gold);font-weight:500}
+.hero .subtitle{font-size:1.12rem;color:var(--tmid);font-style:italic;max-width:540px;margin:0 auto;line-height:1.5}
+.ornament{margin:26px auto 0;color:var(--goldl);letter-spacing:1.1em;font-size:.85rem;padding-left:1.1em}
+.ornament::before,.ornament::after{content:"";display:inline-block;vertical-align:middle;width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--b1),transparent);margin:0 14px}
+[data-ed]{outline:none;border-radius:var(--rad)}
+body.em-on [data-ed]{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--gold) 35%,transparent);padding:2px 6px;transition:.15s}
+body.em-on [data-ed]:hover{background:color-mix(in srgb,var(--gold) 7%,transparent)}
+body.em-on [data-ed]:focus{box-shadow:inset 0 0 0 2px var(--gold);background:var(--bg4)}
+
+/* ============ NAV TABS ============ */
+.nav{position:sticky;top:43px;z-index:50;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-top:1px solid var(--b3);border-bottom:1px solid var(--b2);margin-top:8px}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 18px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.tab{
+  background:none;border:none;border-bottom:2px solid transparent;
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--navdim);padding:14px 15px;white-space:nowrap;transition:.18s;display:flex;align-items:center;gap:7px;
+}
+.tab .ic{font-family:var(--hfont);font-size:.95rem;opacity:.8}
+.tab:hover{color:var(--nav)}
+.tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* ============ SECTIONS ============ */
+.section{display:none;padding:40px 0 90px;animation:fade .4s ease}
+.section.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.sec-head{margin-bottom:10px}
+.sec-head h2{font-size:2.2rem;font-style:italic;font-weight:600}
+.sec-head .label{display:block;margin-bottom:6px}
+.sec-intro{color:var(--tmid);font-style:italic;max-width:660px;margin:4px 0 26px;line-height:1.55}
+.divider-rule{height:1px;background:linear-gradient(90deg,var(--b1),transparent);margin:0 0 26px}
+
+/* generic buttons */
+.btn{background:var(--btn-bg);border:1px solid var(--btn-border);color:var(--btn-text);font-family:var(--mono);font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;padding:8px 14px;border-radius:var(--rad);transition:.18s}
+.btn:hover{background:var(--btn-bg-hover);border-color:var(--btn-border-hover);color:var(--btn-text-hover)}
+.btn.p{background:var(--gold);border-color:var(--gold);color:var(--bg4)}
+.btn.p:hover{background:var(--gold2);border-color:var(--gold2)}
+.addbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+
+/* ============ CHARACTERS ============ */
+.filters{display:flex;flex-direction:column;gap:12px;margin-bottom:26px;padding:18px;background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rad)}
+.filter-row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.filter-row .fl-lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tdim);min-width:64px}
+.pill{background:transparent;border:1px solid var(--b1);color:var(--tmid);font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;padding:5px 11px;border-radius:20px;text-transform:capitalize;transition:.15s}
+.pill:hover{border-color:var(--gold);color:var(--gold)}
+.pill.on{background:var(--gold);border-color:var(--gold);color:var(--bg4)}
+.char-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(186px,1fr));gap:18px}
+.cc{
+  background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rad);
+  overflow:hidden;cursor:pointer;transition:.2s;position:relative;display:flex;flex-direction:column;
+}
+.cc:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--b1)}
+.cc-img{aspect-ratio:3/4;background:var(--bg4);overflow:hidden;position:relative}
+.cc-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.cc-noimg{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--hfont);font-size:2.6rem;color:var(--b1);background:repeating-linear-gradient(45deg,var(--bg4),var(--bg4) 11px,var(--bg3) 11px,var(--bg3) 22px)}
+.cc-sym{position:absolute;top:8px;right:9px;font-family:var(--hfont);font-size:1.1rem;color:var(--bg4);text-shadow:0 1px 4px rgba(0,0,0,.5)}
+.cc-cat{position:absolute;top:8px;left:9px;font-family:var(--mono);font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;background:color-mix(in srgb,var(--gold) 90%,#000);color:#fff;padding:2px 7px;border-radius:12px}
+.cc-body{padding:11px 12px 13px}
+.cc-name{font-family:var(--hfont);font-size:1.18rem;font-weight:600;line-height:1.1}
+.cc-role{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:3px}
+.cc-meta{font-size:.72rem;color:var(--tdim);margin-top:6px;font-style:italic}
+.cc-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.cc-tag{font-family:var(--mono);font-size:.55rem;letter-spacing:.05em;background:var(--bg);border:1px solid var(--b2);color:var(--tdim);padding:2px 6px;border-radius:3px}
+.cc-edit{position:absolute;bottom:8px;right:8px;background:var(--bg4);border:1px solid var(--b1);color:var(--gold);width:26px;height:26px;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:.8rem;z-index:3}
+body.em-on .cc-edit{display:flex}
+.cc-edit:hover{background:var(--gold);color:var(--bg4)}
+/* bulk select */
+.cc.selectable{cursor:copy}
+.cc.bsel{border-width:3px;border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 30%,transparent),var(--shadow)}
+.cc-check{position:absolute;top:8px;left:8px;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--bg4);display:none;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;z-index:4}
+.cc.bsel .cc-check{display:flex}
+
+/* ============ CHAR MODAL ============ */
+.m-bg{position:fixed;inset:0;z-index:200;background:color-mix(in srgb,var(--text) 55%,transparent);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:24px}
+.m-bg.open{display:flex}
+.m-card{background:var(--bg3);border:1px solid var(--b1);border-radius:var(--rad);max-width:720px;width:100%;max-height:88vh;overflow:auto;box-shadow:var(--shadow);position:relative}
+.m-close{position:absolute;top:12px;right:14px;z-index:5;background:var(--bg4);border:1px solid var(--b1);color:var(--tmid);width:30px;height:30px;border-radius:50%;font-size:1rem}
+.m-close:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.m-inner{display:flex;gap:0;flex-wrap:wrap}
+.m-portrait{width:200px;flex-shrink:0}
+.m-portrait .ph{width:200px;height:260px;object-fit:cover;object-position:center top;display:block;background:var(--bg4)}
+.m-portrait .ph-none{width:200px;height:260px;display:flex;align-items:center;justify-content:center;font-family:var(--hfont);font-size:3rem;color:var(--b1);background:repeating-linear-gradient(45deg,var(--bg4),var(--bg4) 12px,var(--bg3) 12px,var(--bg3) 24px)}
+.m-info{flex:1;min-width:260px;padding:26px 28px 28px}
+.m-info h3{font-size:1.9rem;font-style:italic;line-height:1.1}
+.m-alias{font-family:var(--mono);font-size:.68rem;color:var(--tdim);letter-spacing:.05em;margin-top:4px}
+.m-chips{display:flex;flex-wrap:wrap;gap:6px;margin:13px 0}
+.m-chip{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--b1);color:var(--tmid);padding:3px 9px;border-radius:14px}
+.m-chip.acc{background:var(--gold);border-color:var(--gold);color:var(--bg4)}
+.m-excerpt{font-style:italic;color:var(--gold2);border-left:2px solid var(--gold);padding-left:13px;margin:14px 0;font-size:1.02rem;line-height:1.5}
+.m-summary{color:var(--tmid);font-size:.95rem;line-height:1.62;margin-bottom:14px;white-space:pre-wrap}
+.m-fields{display:grid;grid-template-columns:1fr;gap:7px;margin-top:8px}
+.m-field{display:flex;gap:10px;font-size:.86rem;border-bottom:1px dotted var(--b2);padding-bottom:6px}
+.m-field .k{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tdim);min-width:96px;flex-shrink:0;padding-top:2px}
+.m-field .v{color:var(--text)}
+.m-rels{margin-top:16px}
+.m-rels h4{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tdim);margin-bottom:8px}
+.m-rel{display:inline-block;font-size:.82rem;background:var(--bg);border:1px solid var(--b2);border-radius:14px;padding:4px 10px;margin:0 6px 6px 0}
+.m-rel b{color:var(--gold);font-weight:600}
+
+/* ============ TIMELINE ============ */
+.tl-wrap{position:relative;padding:10px 0}
+.tl-spine{position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(var(--b1),var(--gold),var(--b1));transform:translateX(-50%)}
+.arc-divider{text-align:center;margin:28px 0 18px;position:relative;z-index:2}
+.arc-divider span{font-family:var(--mono);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;background:var(--bg);border:1px solid var(--b1);color:var(--arc,var(--gold));padding:6px 18px;border-radius:20px}
+.tli{position:relative;width:50%;padding:0 38px 30px;z-index:2}
+.tli:nth-child(odd){left:0;text-align:right}
+.tli:nth-child(even){left:50%}
+.tli-card{display:inline-block;text-align:left;background:var(--bg3);border:1px solid var(--b2);border-left:3px solid var(--arc,var(--gold));border-radius:var(--rad);padding:14px 16px;max-width:340px;transition:.18s;position:relative}
+.tli-card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.tli-dot{position:absolute;top:18px;width:13px;height:13px;border-radius:50%;background:var(--arc,var(--gold));border:3px solid var(--bg);z-index:3}
+.tli:nth-child(odd) .tli-dot{right:-6.5px}
+.tli:nth-child(even) .tli-dot{left:-6.5px}
+.tli-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--arc,var(--gold));text-transform:uppercase;font-weight:500}
+.tli-title{font-family:var(--hfont);font-size:1.32rem;font-weight:600;margin:3px 0 6px;line-height:1.15}
+.tli-body{font-size:.9rem;color:var(--tmid);line-height:1.55}
+.tli-key{display:inline-block;margin-top:8px;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);border-radius:3px;padding:2px 7px}
+.tli.spoiler .tli-body,.tli.spoiler .tli-title{filter:blur(5px);cursor:pointer;transition:.2s}
+.tli.spoiler.reveal .tli-body,.tli.spoiler.reveal .tli-title{filter:none}
+.tli-grip{position:absolute;top:16px;left:8px;color:var(--tfaint);cursor:grab;font-size:.9rem;display:none}
+.tli:nth-child(odd) .tli-grip{left:auto;right:8px}
+body.em-on .tli-grip{display:block}
+.tli-ed{position:absolute;bottom:8px;right:10px;display:none;gap:6px}
+body.em-on .tli-card .tli-ed{display:flex}
+.tli-ed button{background:var(--bg4);border:1px solid var(--b1);color:var(--gold);width:24px;height:24px;border-radius:4px;font-size:.7rem}
+.tli.dragging{opacity:.4}
+
+/* ============ GALLERY ============ */
+.gallery-wall{columns:4;column-gap:16px}
+@media(max-width:1000px){.gallery-wall{columns:3}}
+@media(max-width:700px){.gallery-wall{columns:2}}
+@media(max-width:460px){.gallery-wall{columns:1}}
+.gallery-item{break-inside:avoid;margin-bottom:16px;position:relative}
+.gallery-item.dragging{opacity:.4}
+.gi-grip{position:absolute;top:-6px;left:-6px;z-index:8;background:var(--gold);color:var(--bg4);width:24px;height:24px;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:.78rem;cursor:grab}
+body.em-on .gi-grip{display:flex}
+.gi-edit{position:absolute;top:-6px;right:-6px;z-index:8;background:var(--bg4);border:1px solid var(--b1);color:var(--gold);width:24px;height:24px;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:.72rem}
+body.em-on .gi-edit{display:flex}
+/* flip card */
+.flip{perspective:1100px;cursor:pointer}
+.flip-inner{position:relative;width:100%;transition:transform .6s;transform-style:preserve-3d}
+.flip.flipped .flip-inner{transform:rotateY(180deg)}
+.flip-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--rad);overflow:hidden;border:1px solid var(--b1)}
+.flip-front{background:var(--bg4)}
+.flip-front img{width:100%;height:100%;object-fit:cover}
+.flip-front .noimg{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--hfont);font-size:2.4rem;color:var(--b1);background:repeating-linear-gradient(45deg,var(--bg4),var(--bg4) 11px,var(--bg3) 11px,var(--bg3) 22px)}
+.flip-name{position:absolute;left:0;right:0;bottom:0;padding:18px 12px 9px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;font-family:var(--hfont);font-size:1.05rem;font-weight:600}
+.flip-hint{position:absolute;bottom:9px;right:10px;color:rgba(255,255,255,.85);font-size:.85rem;z-index:2}
+.flip-expand{position:absolute;top:8px;left:8px;z-index:5;background:rgba(0,0,0,.5);color:#fff;border:none;width:26px;height:26px;border-radius:5px;font-size:.85rem;opacity:0;transition:.2s}
+.flip:hover .flip-expand{opacity:1}
+.flip-back{transform:rotateY(180deg);background:var(--bg3);padding:14px;display:flex;flex-direction:column;gap:10px;overflow:auto}
+.flip-note{background:var(--bg4);border:1px solid var(--b2);border-radius:var(--rad);padding:9px 11px}
+.flip-note .nh{font-family:var(--mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.flip-note .nb{font-size:.82rem;color:var(--tmid);line-height:1.45;font-style:italic}
+/* scrapbook */
+.scrap{border:1px solid var(--b1);border-radius:var(--rad);overflow:hidden;background:var(--bg3)}
+.scrap img{width:100%;display:block}
+.scrap-quote{padding:20px 18px;font-family:var(--hfont);font-style:italic;font-size:1.18rem;line-height:1.4;color:var(--text);background:var(--bg3);position:relative}
+.scrap-quote::before{content:"\201C";font-size:2.6rem;color:var(--goldl);position:absolute;top:6px;left:8px;opacity:.5;font-family:Georgia,serif}
+.scrap-quote .src{display:block;font-family:var(--mono);font-style:normal;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tdim);margin-top:10px}
+.scrap-cap{padding:8px 11px;font-size:.78rem;color:var(--tdim);font-style:italic;border-top:1px solid var(--b3)}
+
+/* ============ LIGHTBOX ============ */
+.lb{position:fixed;inset:0;z-index:300;background:rgba(8,5,8,.92);display:none;align-items:center;justify-content:center;padding:30px}
+.lb.open{display:flex}
+.lb img{max-width:94vw;max-height:90vh;border-radius:var(--rad);box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.lb-x{position:absolute;top:20px;right:26px;color:#fff;font-size:2rem;background:none;border:none}
+
+/* ============ CANVAS (tree + links) ============ */
+.canvas-host{background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rad);overflow:hidden;position:relative;height:560px;margin-bottom:18px}
+.canvas-toolbar{position:absolute;top:10px;left:10px;z-index:10;display:flex;gap:6px;flex-wrap:wrap}
+.canvas-toolbar .btn{font-size:.6rem;padding:6px 10px}
+.canvas-stage{position:absolute;inset:0;cursor:grab;overflow:hidden}
+.canvas-stage.panning{cursor:grabbing}
+.canvas-pan{position:absolute;top:0;left:0;transform-origin:0 0}
+.cv-edges{position:absolute;top:0;left:0;overflow:visible;pointer-events:none}
+.node{position:absolute;background:var(--bg4);border:1.5px solid var(--b1);border-radius:var(--rad);padding:9px 11px;min-width:118px;text-align:center;box-shadow:var(--shadow);user-select:none}
+body.em-on .canvas-stage .node{cursor:move}
+.node.couple{border-color:var(--gold);background:color-mix(in srgb,var(--gold) 7%,var(--bg4))}
+.node-name{font-family:var(--hfont);font-size:1rem;font-weight:600;line-height:1.1}
+.node-sub{font-family:var(--mono);font-size:.54rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tdim);margin-top:2px}
+.node-pair{display:flex;gap:6px;align-items:center;justify-content:center}
+.node-pair .nm{flex:1}
+.node-pair .amp2{color:var(--gold);font-family:var(--hfont)}
+.node-del{position:absolute;top:-8px;right:-8px;background:var(--red);color:#fff;border:none;width:20px;height:20px;border-radius:50%;font-size:.7rem;display:none}
+body.em-on .node:hover .node-del{display:block}
+.edge-lbl{font-family:var(--mono);font-size:.56rem;letter-spacing:.06em;text-transform:uppercase;fill:var(--tdim)}
+.rel-legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px}
+.rel-legend span{font-family:var(--mono);font-size:.62rem;letter-spacing:.05em;display:flex;align-items:center;gap:6px;color:var(--tmid)}
+.rel-legend i{width:22px;height:3px;border-radius:2px;display:inline-block}
+
+/* ============ STORY LORE ============ */
+.lore-acc{display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
+.lore-item{background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rad);overflow:hidden}
+.lore-head{display:flex;align-items:center;gap:13px;padding:15px 17px;cursor:pointer;transition:.15s}
+.lore-head:hover{background:var(--bg4)}
+.lore-icon{font-family:var(--hfont);font-size:1.5rem;color:var(--gold);width:30px;text-align:center}
+.lore-htext{flex:1}
+.lore-name{font-family:var(--hfont);font-size:1.28rem;font-weight:600;line-height:1.1}
+.lore-tag{font-family:var(--mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tdim);margin-top:2px}
+.lore-chev{color:var(--tdim);transition:.25s;font-size:.9rem}
+.lore-item.open .lore-chev{transform:rotate(90deg)}
+.lore-body{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 17px}
+.lore-item.open .lore-body{max-height:900px;padding:0 17px 18px}
+.lore-summary{color:var(--tmid);line-height:1.6;margin-bottom:12px;white-space:pre-wrap}
+.lore-fields{display:grid;gap:6px}
+.lore-f{display:flex;gap:10px;font-size:.86rem;border-bottom:1px dotted var(--b2);padding-bottom:5px}
+.lore-f .k{font-family:var(--mono);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--tdim);min-width:110px;flex-shrink:0}
+.notes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.note-card{background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rad);padding:16px 18px;position:relative}
+.note-meta{display:flex;gap:10px;font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tdim);margin-bottom:8px}
+.note-meta .ch{color:var(--gold)}
+.note-title{font-family:var(--hfont);font-size:1.28rem;font-weight:600;margin-bottom:7px;line-height:1.15}
+.note-body{font-size:.9rem;color:var(--tmid);line-height:1.6;white-space:pre-wrap}
+.note-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+
+/* ============ ABOUT ============ */
+.about-editor{background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rad);padding:0;overflow:hidden;margin-bottom:26px}
+.about-toolbar{display:none;gap:3px;flex-wrap:wrap;padding:8px 10px;border-bottom:1px solid var(--b2);background:var(--bg4)}
+body.em-on .about-toolbar{display:flex}
+.about-toolbar button{background:var(--bg3);border:1px solid var(--b2);color:var(--tmid);width:30px;height:30px;border-radius:4px;font-size:.82rem;font-family:var(--bfont)}
+.about-toolbar button:hover{background:var(--gold);color:var(--bg4);border-color:var(--gold)}
+.about-body{padding:24px 26px;min-height:80px;line-height:1.7;font-size:1.02rem;color:var(--text);outline:none}
+.about-body h2{font-size:1.6rem;margin:18px 0 8px;font-style:italic}
+.about-body h3{font-size:1.25rem;margin:14px 0 6px}
+.about-body p{margin-bottom:12px}
+.about-body ul,.about-body ol{margin:0 0 12px 22px}
+.about-body a{text-decoration:underline}
+.refs h3{font-family:var(--hfont);font-size:1.5rem;font-style:italic;margin-bottom:14px}
+.ref-list{display:flex;flex-direction:column;gap:10px}
+.ref{display:flex;gap:13px;align-items:baseline;background:var(--bg3);border:1px solid var(--b2);border-radius:var(--rad);padding:12px 15px;position:relative}
+.ref-label{font-family:var(--hfont);font-size:1.05rem;font-weight:600;color:var(--gold);min-width:130px}
+.ref-note{font-size:.86rem;color:var(--tmid);flex:1}
+.ref a{font-family:var(--mono);font-size:.72rem}
+
+/* ============ SHARED EDIT MODAL ============ */
+#edit-overlay-bg{position:fixed;inset:0;z-index:400;background:color-mix(in srgb,var(--text) 50%,transparent);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow:auto}
+#edit-overlay-bg.open{display:flex}
+.em-modal{background:var(--bg3);border:1px solid var(--b1);border-radius:var(--rad);max-width:560px;width:100%;box-shadow:var(--shadow);margin:auto}
+#em-title{font-family:var(--hfont);font-size:1.5rem;font-style:italic;font-weight:600;padding:20px 24px 4px}
+#em-body{padding:12px 24px 8px;max-height:64vh;overflow:auto}
+.em-row{margin-bottom:14px}
+.em-row.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.em-lbl{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;color:var(--tdim);margin-bottom:5px}
+.em-in,.em-ta,.em-sel{width:100%;background:var(--bg4);border:1px solid var(--b1);color:var(--text);font-family:var(--bfont);font-size:.92rem;padding:9px 11px;border-radius:var(--rad)}
+.em-ta{min-height:84px;resize:vertical;line-height:1.5}
+.em-in:focus,.em-ta:focus,.em-sel:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 2px color-mix(in srgb,var(--gold) 25%,transparent)}
+.em-sel{font-family:var(--mono);font-size:.82rem}
+#em-foot{display:flex;gap:10px;justify-content:flex-end;padding:14px 24px 22px;border-top:1px solid var(--b2);margin-top:8px;flex-wrap:wrap}
+.em-btn{background:var(--btn-bg);border:1px solid var(--btn-border);color:var(--btn-text);font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:9px 16px;border-radius:var(--rad);transition:.16s}
+.em-btn:hover{background:var(--btn-bg-hover);border-color:var(--btn-border-hover);color:var(--btn-text-hover)}
+.em-btn.p{background:var(--gold);border-color:var(--gold);color:var(--bg4)}
+.em-btn.p:hover{background:var(--gold2);border-color:var(--gold2)}
+.em-btn.d{margin-right:auto;color:var(--red);border-color:var(--red)}
+.em-btn.d:hover{background:var(--red);color:#fff}
+.em-hint{font-size:.74rem;color:var(--tdim);font-style:italic;margin-top:-6px;margin-bottom:10px}
+.em-dynrow{display:flex;gap:8px;margin-bottom:7px;align-items:center}
+.em-dynrow .em-in{flex:1}
+.em-dynrow button{background:var(--bg);border:1px solid var(--b1);color:var(--red);width:32px;height:34px;border-radius:4px;flex-shrink:0}
+.em-addrow{background:none;border:1px dashed var(--b1);color:var(--gold);font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px;border-radius:4px;width:100%}
+.em-addrow:hover{border-color:var(--gold);background:color-mix(in srgb,var(--gold) 6%,transparent)}
+
+/* checkbox picker modal */
+.pick-search{width:100%;background:var(--bg4);border:1px solid var(--b1);color:var(--text);font-family:var(--bfont);padding:10px 12px;border-radius:var(--rad);margin-bottom:12px}
+.pick-list{max-height:300px;overflow:auto;display:flex;flex-direction:column;gap:4px}
+.pick-row{display:flex;align-items:center;gap:10px;padding:8px 11px;border:1px solid var(--b2);border-radius:var(--rad);background:var(--bg4);cursor:pointer;transition:.12s}
+.pick-row:hover{border-color:var(--gold)}
+.pick-row.on{background:color-mix(in srgb,var(--gold) 12%,var(--bg4));border-color:var(--gold)}
+.pick-row .pk-box{width:18px;height:18px;border:1.5px solid var(--b1);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--bg4)}
+.pick-row.on .pk-box{background:var(--gold);border-color:var(--gold)}
+.pick-name{font-family:var(--hfont);font-size:1.02rem;font-weight:600}
+.pick-sub{font-family:var(--mono);font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tdim);margin-top:1px}
+
+/* toast */
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(60px);background:var(--nav);color:var(--bg);font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;padding:11px 20px;border-radius:var(--rad);z-index:500;opacity:0;transition:.3s;box-shadow:var(--shadow)}
+#toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+.empty{text-align:center;padding:50px 20px;color:var(--tfaint);font-style:italic;font-size:1.02rem}
+
+@media(max-width:760px){
+  .tl-spine{left:18px}
+  .tli{width:100%;left:0!important;padding:0 0 24px 42px;text-align:left!important}
+  .tli-card{max-width:none}
+  .tli:nth-child(odd) .tli-dot,.tli:nth-child(even) .tli-dot{left:12px;right:auto}
+  .tli:nth-child(odd) .tli-card{text-align:left}
+  .m-portrait,.m-portrait .ph,.m-portrait .ph-none{width:100%}
+  .gallery-wall{columns:2}
+}
+@media(max-width:520px){.sec-head h2{font-size:1.7rem}.gallery-wall{columns:1}}
+</style>
+</head>
+<body data-theme="rose">
+
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="tb-brand" data-ed="title" contenteditable="false">The Art of Oathbreaking</span>
+    <span class="em-badge">Editing</span>
+    <span class="tb-spacer"></span>
+    <span class="gh-status" id="gh-status"></span>
+    <button class="tb-btn editonly" id="btn-gh" onclick="openGH()">⑂ GitHub</button>
+    <button class="tb-btn editonly" id="btn-export" onclick="exportJSON()">↧ Export</button>
+    <button class="tb-btn editonly" id="btn-import" onclick="importJSON()">↥ Import</button>
+    <button class="tb-btn" id="btn-theme" onclick="cycleTheme()">◑ Theme</button>
+    <button class="tb-btn" id="btn-font" onclick="cycleFont()">A Font</button>
+    <button class="tb-btn" id="btn-edit" onclick="toggleEdit()">✎ Edit</button>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow" data-ed="eyebrow" contenteditable="false">A Companion Archive</div>
+    <h1 data-ed="title2" contenteditable="false">The Art <span class="amp">of</span> Oathbreaking</h1>
+    <p class="subtitle" data-ed="subtitle" contenteditable="false">Every powerful soul keeps a secret. He keeps them all — until the day the oldest one turns out to be his own.</p>
+    <div class="ornament">✦ ✦ ✦</div>
+  </div>
+</header>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav-inner" id="nav-inner"></div>
+</nav>
+
+<!-- ============ SECTIONS ============ -->
+<main class="wrap">
+  <section class="section" id="sec-about"></section>
+  <section class="section" id="sec-characters"></section>
+  <section class="section" id="sec-timeline"></section>
+  <section class="section" id="sec-notes"></section>
+  <section class="section" id="sec-tree"></section>
+  <section class="section" id="sec-casting"></section>
+  <section class="section" id="sec-links"></section>
+</main>
+
+<!-- ============ CHAR MODAL ============ -->
+<div class="m-bg" id="char-modal" onclick="if(event.target===this)closeCharModal()">
+  <div class="m-card" id="char-modal-card"></div>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lb" id="lightbox" onclick="closeLB()">
+  <button class="lb-x">✕</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<!-- ============ SHARED EDIT MODAL ============ -->
+<div id="edit-overlay-bg" onclick="if(event.target===this)closeEM()">
+  <div class="em-modal">
+    <h3 id="em-title">Edit</h3>
+    <div id="em-body"></div>
+    <div id="em-foot"></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* =====================================================================
+   THE ART OF OATHBREAKING — companion archive engine
+   Single-file. No build step. localStorage + optional GitHub sync.
+   ===================================================================== */
+
+const DEFAULTS = {
+  _passhash: "e08fdb65658a6745b95936d61d86b27037ae8c2042d4e19583ecc07fefff75a0", // sha256("oathbreaker")
+  theme: "rose",
+  font: "Cormorant Garamond",
+  eyebrow: "A Companion Archive",
+  title: "The Art of Oathbreaking",
+  subtitle: "Every powerful soul keeps a secret. He keeps them all — until the day the oldest one turns out to be his own.",
+  footer: "An unofficial companion archive — fan work, made with devotion.",
+  about: {
+    body: "<p><i>The Art of Oathbreaking</i> follows a violet-haired outsider who drifts through the lives of the powerful and the dangerous, picking up their buried secrets the way other men pick up loose change. He never meant to keep them. He just has the kind of face people confess to.</p><p>Born under a circus tent, raised on the high wire, he traded the trapeze for a slackline, the slackline for a tightrope, and finally the rope for a motorcycle — becoming the most famous stunt rider of his decade under a name that wasn't his. The secrets he carries belong to demigods, criminals, and stranger things. The one he can't recover is his own.</p><p>This archive collects the characters, the timeline, the relationships, and the lore. Spoilers are blurred where it matters. Open <b>Edit</b> to make it yours.</p>",
+    refs: [
+      { label: "Tone & Influences", url: "", note: "Dark carnival; 1960s–2000s; secrets-as-currency; found family that frays." },
+      { label: "Aesthetic Board", url: "", note: "Violet, brass, sawdust, chrome. Replace this link with your moodboard." }
+    ]
+  },
+  categories: [
+    { id: "main", label: "Main" },
+    { id: "supporting", label: "Supporting" },
+    { id: "background", label: "Background" }
+  ],
+  characters: [
+    {
+      id: "c-cassius", name: "Cassius Veil", aliases: ["The Violet","Six-Spoke"], category: "main",
+      species: "human", faction: "border", role: "The Outsider", symbol: "✦", image: "",
+      tags: ["protagonist","ex-circus","stunt rider","secret-keeper"],
+      excerpt: "He never asked to know. People simply told him, the way you tell a wall.",
+      summary: "Trapeze child, tightrope prodigy, then the stunt motorcyclist whose name filled arenas. Cassius moves between the civilian world and the criminal one without belonging to either — which is exactly why the powerful trust him with what they'd kill to hide. The violet hair he was born with is the one thing about his past he can't explain. By the story's end, neither can anyone else.",
+      fields: [
+        { key: "Born", val: "1963, under the big top" },
+        { key: "Hair", val: "Violet — natural, unexplained" },
+        { key: "Disciplines", val: "Trapeze → slackline → tightrope → motorcycle stunt" },
+        { key: "Stage Name", val: "Six-Spoke (the rider nobody could place)" },
+        { key: "Known For", val: "Carrying secrets he was never meant to keep" }
+      ],
+      relationships: [
+        { charId: "c-thackeray", label: "raised by" },
+        { charId: "c-iolanthe", label: "indebted to" },
+        { charId: "c-wren", label: "watched by" }
+      ],
+      group: "Travelling Show"
+    },
+    {
+      id: "c-iolanthe", name: "Iolanthe Marrow", aliases: ["The Lender"], category: "main",
+      species: "demigod", faction: "criminal", role: "The Patron", symbol: "❖", image: "",
+      tags: ["demigod","power-broker","collects oaths"],
+      excerpt: "Every favour she grants is a thread. Pull enough of them and a man unravels.",
+      summary: "A demigod who runs her empire on promises rather than money. Iolanthe never threatens; she lends. The debt always comes due, and it always costs more than it was worth. She takes an interest in Cassius the moment she learns what he is — and she may have known his mother.",
+      fields: [
+        { key: "Nature", val: "Demigod (lineage disputed)" },
+        { key: "Currency", val: "Oaths, favours, debts" },
+        { key: "Rule", val: "Never asks twice" }
+      ],
+      relationships: [ { charId: "c-cassius", label: "patron to" } ],
+      group: "The Lenders"
+    },
+    {
+      id: "c-thackeray", name: "Thackeray Bell", aliases: ["The Ringmaster"], category: "supporting",
+      species: "human", faction: "civilian", role: "The Ringmaster", symbol: "✜", image: "",
+      tags: ["circus","father-figure","keeps secrets too"],
+      excerpt: "He gave the boy a name, a wire, and one rule: never tell what you're told.",
+      summary: "The ringmaster who took in an abandoned violet-haired infant and raised him in the only home Cassius ever trusted. Thackeray taught him balance, performance, and the discipline of silence. He knows more about where Cassius came from than he ever admits.",
+      fields: [
+        { key: "Role", val: "Ringmaster, Bell's Travelling Wonder" },
+        { key: "Taught Cassius", val: "The wire, the show, the silence" }
+      ],
+      relationships: [ { charId: "c-cassius", label: "guardian of" } ],
+      group: "Travelling Show"
+    },
+    {
+      id: "c-wren", name: "Wren", aliases: ["The Handler"], category: "supporting",
+      species: "earthling", faction: "border", role: "The Handler", symbol: "⬡", image: "",
+      tags: ["fixer","border-walker","knows what he is"],
+      excerpt: "She isn't here to protect him. She's here to make sure he doesn't find out too soon.",
+      summary: "An earthling fixer who works the border between the mortal world and the demigods' games. Wren is assigned to Cassius — to watch, to steer, occasionally to save. Her loyalties are a question the story keeps asking.",
+      fields: [
+        { key: "Nature", val: "Earthling — older than she looks" },
+        { key: "Assignment", val: "Cassius Veil" }
+      ],
+      relationships: [ { charId: "c-cassius", label: "minder of" } ],
+      group: "The Border"
+    },
+    {
+      id: "c-dovan", name: "Dovan Crale", aliases: [], category: "background",
+      species: "human", faction: "criminal", role: "The Rival", symbol: "✗", image: "",
+      tags: ["stunt rider","jealous","muscle-for-hire"],
+      excerpt: "Second-best for ten years, and he never forgave the violet-haired ghost for it.",
+      summary: "A stunt rider who spent a decade losing the marquee to Six-Spoke. When the criminal world comes looking for leverage on Cassius, Dovan is happy to point the way.",
+      fields: [ { key: "Career", val: "Perpetual runner-up" } ],
+      relationships: [ { charId: "c-cassius", label: "rival of" } ],
+      group: "The Circuit"
+    }
+  ],
+  arcs: [
+    { id: "arc-circus", name: "The Circus Years", color: "#9e3b54" },
+    { id: "arc-stunt", name: "The Stunt Era", color: "#b58a3a" },
+    { id: "arc-unravel", name: "The Unravelling", color: "#5a4a8a" }
+  ],
+  timeline: [
+    { label: "1963", title: "Born Under the Big Top", body: "An infant with violet hair is left at the door of Bell's Travelling Wonder. Thackeray names him Cassius and tells no one where he came from — possibly because he doesn't know.", key: "Origin", spoiler: false, arc: "arc-circus" },
+    { label: "1971", title: "First Wire Walk", body: "At eight he crosses the high wire without a net. The crowd gasps; Thackeray never lets him do it again that way. The boy has found the only place the noise in his head goes quiet.", key: "", spoiler: false, arc: "arc-circus" },
+    { label: "1978", title: "The Slackline Season", body: "Restless on the rigid wire, he learns the slackline — the discipline of holding still on something that won't. It teaches him patience he'll later mistake for peace.", key: "", spoiler: false, arc: "arc-circus" },
+    { label: "1984", title: "Trading Rope for Throttle", body: "The circus is dying. Cassius trades the tightrope for a motorcycle and reinvents himself for the arenas as 'Six-Spoke' — a rider with no listed hometown and impossible balance.", key: "Reinvention", spoiler: false, arc: "arc-stunt" },
+    { label: "1989", title: "The Devil's Loop", body: "He lands the stunt no one survives twice. Overnight he's the most famous rider of the decade — and visible enough that the powerful start to notice the man who keeps perfect silence.", key: "", spoiler: false, arc: "arc-stunt" },
+    { label: "1993", title: "A Patron's Favour", body: "Iolanthe Marrow extends a single favour after a near-fatal crash. Cassius takes it. He doesn't yet understand that her favours are threads, and that she has just sewn the first stitch.", key: "The First Debt", spoiler: false, arc: "arc-unravel" },
+    { label: "1997", title: "The First Oath", body: "A dying crime-lord whispers a secret to Cassius instead of a priest. It's the first of many. He becomes the place powerful people put what they cannot bury — and the threads tighten.", key: "", spoiler: false, arc: "arc-unravel" },
+    { label: "2001", title: "What the Violet Hid", body: "Chasing one last secret, Cassius finally reaches his own. The hair, the silence, the way the powerful confess to him — none of it was ever an accident. The oath he was born to break is his.", key: "The Recovery", spoiler: true, arc: "arc-unravel" }
+  ],
+  lore: [
+    { name: "The Oath-Debt", icon: "✦", tag: "core mechanic", summary: "Oaths are real, and they hold weight. To swear one is to owe one. The powerful trade them like currency — and a secret confessed is a kind of oath laid on the listener. Cassius has been collecting that weight his whole life without knowing the bill exists.", fields: [ { key: "Who uses it", val: "Demigods, lenders, the desperate" }, { key: "How it breaks", val: "That is the whole story" } ] },
+    { name: "Demigods, Humans & Earthlings", icon: "❖", tag: "cosmology", summary: "Three kinds of people move through this world. Humans, who forget. Demigods, who remember too much and outlive their oaths. And earthlings — older, quieter, bound to the ground in ways no one explains aloud. Cassius is filed as human. The file is wrong.", fields: [ { key: "Humans", val: "Mortal, forgetful, the crowd" }, { key: "Demigods", val: "Long-lived, oath-bound, powerful" }, { key: "Earthlings", val: "Ancient, grounded, border-dwelling" } ] },
+    { name: "The Border", icon: "⬡", tag: "faction", summary: "Not a place — a profession. Border-walkers move between the civilian world and the criminal one, between mortals and demigods, carrying what can't cross openly. Wren is one. Cassius, without ever being recruited, is another.", fields: [ { key: "Allegiance", val: "To the crossing, not the sides" } ] }
+  ],
+  notes: [
+    { chapter: "Ch. 1", date: "Drafting", title: "The face people confess to", body: "Establish early that Cassius's defining trait isn't the hair or the stunts — it's that strangers tell him things. Plant it as charm. Pay it off as horror.", tags: ["theme","foreshadowing"] },
+    { chapter: "Ch. 8", date: "Outline", title: "Iolanthe's favour", body: "The crash that puts him in her debt should look like luck. Reader shouldn't clock the stitch until much later.", tags: ["plot","patron-arc"] }
+  ],
+  casting: [
+    { id: "cast-0", charId: "c-cassius", title: "Cassius Veil", image: "", size: "md", castingNote: "Lean, watchful, moves like he's still on a wire. The violet should read as natural, never costume.", authorNote: "If you've ever seen someone go very still in a loud room — that's him." },
+    { id: "cast-1", charId: "c-iolanthe", title: "Iolanthe Marrow", image: "", size: "lg", castingNote: "Warmth that costs you something. Never raises her voice.", authorNote: "She smiles before she lends. Always before." }
+  ],
+  scrapbook: [
+    { id: "scrap-0", type: "quote", quote: "I don't keep secrets. I keep the people who give them to me.", source: "Cassius Veil", image: "", caption: "" },
+    { id: "scrap-1", type: "quote", quote: "A favour is the politest cage ever built.", source: "Iolanthe Marrow", image: "", caption: "" }
+  ],
+  galleryOrder: ["casting-0","scrapbook-0","casting-1","scrapbook-1"],
+  trees: [
+    { id: "tree-0", label: "The Travelling Show", nodes: [
+      { id: "tn-0", kind: "single", charIds: ["c-thackeray"], x: 320, y: 80 },
+      { id: "tn-1", kind: "single", charIds: ["c-cassius"], x: 320, y: 260 }
+    ], edges: [ { from: "tn-0", to: "tn-1", rel: "raised" } ] }
+  ],
+  links: [
+    { id: "link-0", label: "The Web of Oaths", nodes: [
+      { id: "ln-0", charId: "c-cassius", x: 360, y: 230 },
+      { id: "ln-1", charId: "c-iolanthe", x: 130, y: 110 },
+      { id: "ln-2", charId: "c-thackeray", x: 130, y: 360 },
+      { id: "ln-3", charId: "c-wren", x: 600, y: 150 },
+      { id: "ln-4", charId: "c-dovan", x: 600, y: 360 }
+    ], edges: [
+      { id: "le-0", from: "ln-1", to: "ln-0", rel: "complex", label: "the first debt" },
+      { id: "le-1", from: "ln-2", to: "ln-0", rel: "family", label: "raised him" },
+      { id: "le-2", from: "ln-3", to: "ln-0", rel: "ambiguous", label: "minder" },
+      { id: "le-3", from: "ln-4", to: "ln-0", rel: "rivals", label: "ten years second" }
+    ] }
+  ],
+  sectionIntros: {
+    characters: "The drifter, the lender, the ringmaster, and the people the secrets belong to.",
+    timeline: "Four decades, from the big top to the day the violet-haired man met his own past. Spoilers are blurred — tap to reveal.",
+    notes: "The lore that holds the world up, and the drafting notes that hold the story together.",
+    tree: "Family is a loose word here. These are the bonds that did the raising.",
+    casting: "A wall of faces and lines — flip a card for the casting and author notes.",
+    links: "Who owes whom. The whole story is in the threads."
+  },
+  charCredit: "Characters & writing © their author. Fan companion archive.",
+  castingCredit: "Casting is imaginative fan-casting only."
+};
+
+/* ===================== STATE & STORAGE ===================== */
+const _storySlug = (DEFAULTS.title||"fansite").toLowerCase().replace(/[^a-z0-9]+/g,"-").slice(0,24);
+const DKEY = "fansite-" + _storySlug;
+const GHKEY = "dreaming-gh-cfg";
+let D = JSON.parse(JSON.stringify(DEFAULTS));
+let editMode = false;
+let curTab = "about";
+
+const THEMES = ["rose","parchment","dark","sage","slate","fernwood"];
+const FONTS = ["Cormorant Garamond","EB Garamond","Lora","Libre Baskerville","Playfair Display","Raleway"];
+
+const TABS = [
+  { id:"about",      label:"About",        ic:"✐", fn:buildAbout },
+  { id:"characters", label:"Characters",   ic:"◈", fn:buildChars },
+  { id:"timeline",   label:"Timeline",     ic:"◆", fn:buildTL },
+  { id:"notes",      label:"Story Lore",   ic:"✦", fn:buildStoryLore },
+  { id:"tree",       label:"Family Tree",  ic:"⊟", fn:buildTreeSection },
+  { id:"casting",    label:"Gallery",      ic:"✶", fn:buildGallery },
+  { id:"links",      label:"Relationships",ic:"⬡", fn:buildLinks }
+];
+
+const REL_TYPES = {
+  friendship:{label:"Friendship",color:"#3f7d5a"},
+  queerplatonic:{label:"Queerplatonic",color:"#5a8aaa"},
+  romance:{label:"Romance",color:"#c2456a"},
+  family:{label:"Family",color:"#b58a3a"},
+  rivals:{label:"Rivals",color:"#a85a2f"},
+  enemies:{label:"Enemies",color:"#b03048"},
+  ambiguous:{label:"Ambiguous",color:"#8a6aaa"},
+  complex:{label:"Complex",color:"#6a6a6a"}
+};
+
+function esc(s){return (s==null?"":String(s)).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function uid(p){return (p||"id")+"-"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);}
+function charById(id){return D.characters.find(c=>c.id===id);}
+function arcById(id){return D.arcs.find(a=>a.id===id);}
+async function sha256(t){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("");}
+
+function loadLocal(){
+  try{ const raw=localStorage.getItem(DKEY); if(raw){ D=JSON.parse(raw); return true; } }catch(e){}
+  return false;
+}
+function saveD(){
+  migrateD();
+  try{ localStorage.setItem(DKEY, JSON.stringify(D)); }catch(e){ toast("Storage full — export a backup."); }
+  if(ghReady()) saveToGitHub(D);
+}
+
+/* ===================== MIGRATION ===================== */
+function migrateD(){
+  D._passhash = DEFAULTS._passhash;                 // password always comes from the file
+  if(!D.theme) D.theme = DEFAULTS.theme;
+  if(!D.font) D.font = DEFAULTS.font;
+  if(D.eyebrow==null) D.eyebrow = DEFAULTS.eyebrow;
+  if(D.title==null) D.title = DEFAULTS.title;
+  if(D.subtitle==null) D.subtitle = DEFAULTS.subtitle;
+  if(D.footer==null) D.footer = DEFAULTS.footer;
+  if(!D.about) D.about = {body:"",refs:[]};
+  if(D.about.body==null) D.about.body="";
+  if(!Array.isArray(D.about.refs)) D.about.refs=[];
+  if(!Array.isArray(D.categories)||!D.categories.length) D.categories = DEFAULTS.categories.slice();
+  if(!Array.isArray(D.characters)) D.characters=[];
+  if(!Array.isArray(D.arcs)) D.arcs=[];
+  if(!Array.isArray(D.timeline)) D.timeline=[];
+  if(!Array.isArray(D.lore)) D.lore=[];
+  if(!Array.isArray(D.notes)) D.notes=[];
+  if(!Array.isArray(D.casting)) D.casting=[];
+  if(!Array.isArray(D.scrapbook)) D.scrapbook=[];
+  if(!Array.isArray(D.galleryOrder)) D.galleryOrder=[];
+  if(!Array.isArray(D.trees)) D.trees=[];
+  if(!Array.isArray(D.links)) D.links=[];
+  if(!D.sectionIntros) D.sectionIntros={};
+  if(D.charCredit==null) D.charCredit="";
+  if(D.castingCredit==null) D.castingCredit="";
+  D.characters.forEach(c=>{
+    if(!Array.isArray(c.aliases)) c.aliases=[];
+    if(!Array.isArray(c.tags)) c.tags=[];
+    if(!Array.isArray(c.fields)) c.fields=[];
+    if(!Array.isArray(c.relationships)) c.relationships=[];
+    if(c.symbol==null) c.symbol="◆";
+    if(c.image==null) c.image="";
+    if(c.species==null) c.species="";
+    if(c.faction==null) c.faction="";
+    if(c.role==null) c.role="";
+    if(c.excerpt==null) c.excerpt="";
+    if(c.summary==null) c.summary="";
+    if(c.group==null) c.group="";
+    if(!c.category) c.category=(D.categories[0]||{}).id||"main";
+  });
+  D.timeline.forEach(t=>{ if(t.key==null)t.key=""; if(t.spoiler==null)t.spoiler=false; if(t.arc==null)t.arc=""; });
+  D.casting.forEach(c=>{ if(!c.size)c.size="md"; if(c.castingNote==null)c.castingNote=""; if(c.authorNote==null)c.authorNote=""; if(c.image==null)c.image=""; if(c.title==null)c.title=""; });
+  D.scrapbook.forEach(s=>{ if(!s.type)s.type=s.quote?"quote":"image"; if(s.quote==null)s.quote=""; if(s.source==null)s.source=""; if(s.image==null)s.image=""; if(s.caption==null)s.caption=""; });
+  D.lore.forEach(l=>{ if(!Array.isArray(l.fields))l.fields=[]; if(l.icon==null)l.icon="✦"; if(l.tag==null)l.tag=""; if(l.summary==null)l.summary=""; });
+  D.notes.forEach(n=>{ if(!Array.isArray(n.tags))n.tags=[]; if(n.chapter==null)n.chapter=""; if(n.date==null)n.date=""; if(n.body==null)n.body=""; });
+  D.trees.forEach(t=>{ if(!Array.isArray(t.nodes))t.nodes=[]; if(!Array.isArray(t.edges))t.edges=[]; });
+  D.links.forEach(l=>{ if(!Array.isArray(l.nodes))l.nodes=[]; if(!Array.isArray(l.edges))l.edges=[]; });
+}
+
+/* ===================== THEME & FONT ===================== */
+function applyTheme(){ document.body.setAttribute("data-theme", D.theme); }
+function cycleTheme(){ let i=THEMES.indexOf(D.theme); D.theme=THEMES[(i+1)%THEMES.length]; applyTheme(); saveD(); toast("Theme · "+D.theme); }
+function applyFont(){ document.documentElement.style.setProperty("--hfont", "'"+D.font+"',serif"); }
+function cycleFont(){ let i=FONTS.indexOf(D.font); D.font=FONTS[(i+1)%FONTS.length]; applyFont(); saveD(); toast("Heading font · "+D.font); }
+
+/* ===================== EDIT MODE ===================== */
+async function toggleEdit(){
+  if(editMode){ exitEditMode(); return; }
+  const pass = prompt("Enter the edit password:");
+  if(pass==null) return;
+  const h = await sha256(pass);
+  if(h===D._passhash){ enterEditMode(); }
+  else toast("Wrong password.");
+}
+function enterEditMode(){
+  editMode=true; document.body.classList.add("em-on");
+  document.querySelectorAll("[data-ed]").forEach(el=>el.setAttribute("contenteditable","true"));
+  document.getElementById("btn-edit").classList.add("active");
+  document.getElementById("btn-edit").textContent="✓ Done";
+  renderAll();
+  toast("Edit mode on — click anything to change it.");
+}
+function exitEditMode(){
+  saveHeroEdits();
+  editMode=false; document.body.classList.remove("em-on");
+  document.querySelectorAll("[data-ed]").forEach(el=>el.setAttribute("contenteditable","false"));
+  document.getElementById("btn-edit").classList.remove("active");
+  document.getElementById("btn-edit").textContent="✎ Edit";
+  saveD(); renderAll();
+  toast("Saved.");
+}
+function saveHeroEdits(){
+  const g=(k)=>{const el=document.querySelector('[data-ed="'+k+'"]'); return el?el.textContent.trim():null;};
+  const t=g("title"); if(t!=null){ D.title=t; D.title2=t; }
+  const t2=document.querySelector('[data-ed="title2"]'); if(t2) D.title2=t2.textContent.trim();
+  const e=g("eyebrow"); if(e!=null) D.eyebrow=e;
+  const s=g("subtitle"); if(s!=null) D.subtitle=s;
+  document.querySelectorAll('[data-ed="title"]').forEach(el=>el.textContent=D.title);
+}
+
+/* ===================== NAV / TABS ===================== */
+function buildNav(){
+  const nav=document.getElementById("nav-inner");
+  nav.innerHTML = TABS.map(t=>
+    '<button class="tab'+(t.id===curTab?' active':'')+'" data-tab="'+t.id+'"><span class="ic">'+t.ic+'</span>'+t.label+'</button>'
+  ).join("");
+}
+function switchTab(id){
+  curTab=id;
+  document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active", b.dataset.tab===id));
+  document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+  const sec=document.getElementById("sec-"+id);
+  const tab=TABS.find(t=>t.id===id);
+  if(tab){ tab.fn(); sec.classList.add("active"); }
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function renderAll(){
+  const tab=TABS.find(t=>t.id===curTab);
+  if(tab) tab.fn();
+  document.querySelectorAll('[data-ed="title"]').forEach(el=>el.textContent=D.title);
+}
+
+/* small helpers for section headers + intros */
+function secHead(label, title, introKey){
+  const intro = D.sectionIntros[introKey]||"";
+  return '<div class="sec-head"><span class="label">'+esc(label)+'</span><h2>'+esc(title)+'</h2></div>'+
+         '<p class="sec-intro" data-introedit="'+introKey+'"'+(editMode?' contenteditable="true"':'')+'>'+esc(intro)+'</p>'+
+         '<div class="divider-rule"></div>';
+}
+function bindIntroEdits(scope){
+  (scope||document).querySelectorAll('[data-introedit]').forEach(el=>{
+    el.onblur=()=>{ D.sectionIntros[el.dataset.introedit]=el.textContent.trim(); saveD(); };
+  });
+}
+
+/* ===================== ABOUT ===================== */
+function buildAbout(){
+  const s=document.getElementById("sec-about");
+  s.innerHTML =
+    secHead("Preface","About this Archive","about")+
+    '<div class="about-editor">'+
+      '<div class="about-toolbar" id="about-tb">'+
+        '<button data-cmd="bold"><b>B</b></button>'+
+        '<button data-cmd="italic"><i>I</i></button>'+
+        '<button data-cmd="underline"><u>U</u></button>'+
+        '<button data-cmd="strikeThrough"><s>S</s></button>'+
+        '<button data-cmd="formatBlock" data-val="h2">H2</button>'+
+        '<button data-cmd="formatBlock" data-val="h3">H3</button>'+
+        '<button data-cmd="insertUnorderedList">•</button>'+
+        '<button data-cmd="insertOrderedList">1.</button>'+
+        '<button data-cmd="createLink">🔗</button>'+
+        '<button data-cmd="removeFormat">⌫</button>'+
+      '</div>'+
+      '<div class="about-body" id="about-body" '+(editMode?'contenteditable="true"':'')+'>'+(D.about.body||"")+'</div>'+
+    '</div>'+
+    '<div class="refs">'+
+      '<h3>References</h3>'+
+      '<div class="ref-list" id="ref-list">'+ D.about.refs.map((r,i)=>refRow(r,i)).join("") +
+        (D.about.refs.length?'':'<div class="empty">No references yet.</div>')+
+      '</div>'+
+      '<div style="margin-top:14px" class="editonly block"><button class="btn" onclick="addRef()">+ Reference</button></div>'+
+    '</div>';
+  // toolbar
+  const tb=document.getElementById("about-tb");
+  tb.querySelectorAll("button").forEach(b=>{
+    b.addEventListener("mousedown",e=>{
+      e.preventDefault();
+      const cmd=b.dataset.cmd;
+      if(cmd==="createLink"){ const u=prompt("Link URL:"); if(u)document.execCommand(cmd,false,u); }
+      else if(cmd==="formatBlock"){ document.execCommand(cmd,false,b.dataset.val); }
+      else document.execCommand(cmd,false,null);
+    });
+  });
+  const ab=document.getElementById("about-body");
+  ab.addEventListener("input",()=>{ D.about.body=ab.innerHTML; });
+  ab.addEventListener("blur",()=>{ D.about.body=ab.innerHTML; saveD(); });
+  bindIntroEdits(s);
+}
+function refRow(r,i){
+  return '<div class="ref">'+
+    '<span class="ref-label" '+(editMode?'contenteditable="true" onblur="setRef('+i+',\'label\',this.textContent)"':'')+'>'+esc(r.label||"Reference")+'</span>'+
+    '<span class="ref-note" '+(editMode?'contenteditable="true" onblur="setRef('+i+',\'note\',this.textContent)"':'')+'>'+esc(r.note||"")+'</span>'+
+    (r.url?'<a href="'+esc(r.url)+'" target="_blank" rel="noopener">open ↗</a>':'')+
+    '<button class="editonly" style="background:none;border:none;color:var(--red);font-size:.9rem" onclick="editRefURL('+i+')">✎url</button>'+
+    '<button class="editonly" style="background:none;border:none;color:var(--red);font-size:.9rem" onclick="delRef('+i+')">✕</button>'+
+  '</div>';
+}
+function setRef(i,k,v){ D.about.refs[i][k]=v.trim(); saveD(); }
+function editRefURL(i){ const u=prompt("Reference URL:",D.about.refs[i].url||""); if(u!=null){D.about.refs[i].url=u.trim();saveD();buildAbout();} }
+function addRef(){ D.about.refs.push({label:"New reference",url:"",note:""}); saveD(); buildAbout(); }
+function delRef(i){ if(confirm("Delete this reference?")){ D.about.refs.splice(i,1); saveD(); buildAbout(); } }
+
+/* ===================== CHARACTERS ===================== */
+let charFilter={role:"all",species:"all",fac:"all",sort:"name"};
+let bulkMode=false, bulkSel=new Set();
+
+function uniqVals(key){ return [...new Set(D.characters.map(c=>c[key]).filter(Boolean))]; }
+
+function buildChars(){
+  const s=document.getElementById("sec-characters");
+  const roles=D.categories;
+  const species=uniqVals("species");
+  const facs=uniqVals("faction");
+  const pill=(active,attr,val,lbl)=>'<button class="pill'+(active?' on':'')+'" '+attr+'="'+esc(val)+'">'+esc(lbl)+'</button>';
+
+  let html = secHead("The Cast","Characters","characters");
+  html += '<div class="addbar editonly block">'+
+            '<button class="btn p" onclick="editChar(null)">+ Character</button>'+
+            '<button class="btn" onclick="openBulkAddChar()">+ Bulk Add</button>'+
+            '<button class="btn" id="bulk-toggle" onclick="toggleBulk()">☑ Select</button>'+
+            '<span id="bulk-actions" style="display:none;gap:8px">'+
+              '<button class="btn" onclick="bulkDeleteChars()">Delete selected</button>'+
+              '<button class="btn" onclick="bulkCatChars()">Set category…</button>'+
+            '</span>'+
+          '</div>';
+  html += '<div class="filters">';
+  html +=   '<div class="filter-row"><span class="fl-lbl">Role</span>'+
+              pill(charFilter.role==="all","data-filter","all","All")+
+              roles.map(r=>pill(charFilter.role===r.id,"data-filter",r.id,r.label)).join("")+'</div>';
+  if(species.length) html += '<div class="filter-row"><span class="fl-lbl">Species</span>'+
+              pill(charFilter.species==="all","data-species","all","All")+
+              species.map(v=>pill(charFilter.species===v,"data-species",v,v)).join("")+'</div>';
+  if(facs.length) html += '<div class="filter-row"><span class="fl-lbl">Faction</span>'+
+              pill(charFilter.fac==="all","data-fac","all","All")+
+              facs.map(v=>pill(charFilter.fac===v,"data-fac",v,v)).join("")+'</div>';
+  html +=   '<div class="filter-row"><span class="fl-lbl">Sort</span>'+
+              pill(charFilter.sort==="name","data-sort","name","A → Z")+
+              pill(charFilter.sort==="role","data-sort","role","By role")+
+              pill(charFilter.sort==="species","data-sort","species","By species")+'</div>';
+  html += '</div>';
+
+  let list=D.characters.filter(c=>
+    (charFilter.role==="all"||c.category===charFilter.role)&&
+    (charFilter.species==="all"||c.species===charFilter.species)&&
+    (charFilter.fac==="all"||c.faction===charFilter.fac)
+  );
+  list.sort((a,b)=>{
+    if(charFilter.sort==="role"){ return (catLabel(a.category)+a.name).localeCompare(catLabel(b.category)+b.name); }
+    if(charFilter.sort==="species"){ return ((a.species||"~")+a.name).localeCompare((b.species||"~")+b.name); }
+    return a.name.localeCompare(b.name);
+  });
+
+  html += '<div class="char-grid'+(bulkMode?' bulkmode':'')+'" id="char-grid">';
+  html += list.length? list.map(c=>charCard(c)).join("") : '<div class="empty">No characters match these filters.</div>';
+  html += '</div>';
+  html += '<p class="sec-intro" style="margin-top:30px;font-size:.78rem" '+(editMode?'contenteditable="true" onblur="D.charCredit=this.textContent.trim();saveD();"':'')+'>'+esc(D.charCredit)+'</p>';
+
+  s.innerHTML=html;
+  bindCharEvents(s);
+  bindIntroEdits(s);
+}
+function catLabel(id){ const c=D.categories.find(x=>x.id===id); return c?c.label:id; }
+function charCard(c){
+  const img = c.image
+    ? '<img src="'+esc(c.image)+'" alt="'+esc(c.name)+'" loading="lazy">'
+    : '<div class="cc-noimg">'+esc(c.symbol||"◆")+'</div>';
+  return '<div class="cc'+(bulkMode?' selectable':'')+(bulkSel.has(c.id)?' bsel':'')+'" data-cid="'+esc(c.id)+'">'+
+    '<div class="cc-check">✓</div>'+
+    '<div class="cc-img">'+img+
+      '<span class="cc-cat">'+esc(catLabel(c.category))+'</span>'+
+      (c.symbol?'<span class="cc-sym">'+esc(c.symbol)+'</span>':'')+
+    '</div>'+
+    '<div class="cc-body">'+
+      '<div class="cc-name">'+esc(c.name)+'</div>'+
+      (c.role?'<div class="cc-role">'+esc(c.role)+'</div>':'')+
+      '<div class="cc-meta">'+[c.species,c.faction].filter(Boolean).map(esc).join(" · ")+'</div>'+
+      (c.tags.length?'<div class="cc-tags">'+c.tags.slice(0,4).map(t=>'<span class="cc-tag">'+esc(t)+'</span>').join("")+'</div>':'')+
+    '</div>'+
+    '<button class="cc-edit" data-eci="'+esc(c.id)+'">✎</button>'+
+  '</div>';
+}
+function bindCharEvents(scope){
+  scope.querySelectorAll(".pill").forEach(p=>{
+    p.onclick=()=>{
+      if(p.hasAttribute("data-filter")) charFilter.role=p.getAttribute("data-filter");
+      else if(p.hasAttribute("data-species")) charFilter.species=p.getAttribute("data-species");
+      else if(p.hasAttribute("data-fac")) charFilter.fac=p.getAttribute("data-fac");
+      else if(p.hasAttribute("data-sort")) charFilter.sort=p.getAttribute("data-sort");
+      buildChars();
+    };
+  });
+  scope.querySelectorAll(".cc-edit").forEach(b=>{
+    b.onclick=(e)=>{ e.stopPropagation(); if(!editMode) return; editChar(b.getAttribute("data-eci")); };
+  });
+  scope.querySelectorAll(".cc").forEach(card=>{
+    card.onclick=()=>{
+      const id=card.getAttribute("data-cid");
+      if(bulkMode){ if(bulkSel.has(id))bulkSel.delete(id); else bulkSel.add(id); card.classList.toggle("bsel"); return; }
+      openCharModal(id);
+    };
+  });
+}
+function toggleBulk(){
+  bulkMode=!bulkMode; bulkSel.clear();
+  document.getElementById("bulk-toggle").classList.toggle("active",bulkMode);
+  document.getElementById("bulk-actions").style.display=bulkMode?"inline-flex":"none";
+  buildChars();
+}
+function bulkDeleteChars(){
+  if(!bulkSel.size){ toast("Select some cards first."); return; }
+  if(confirm("Delete "+bulkSel.size+" character(s)?")){
+    D.characters=D.characters.filter(c=>!bulkSel.has(c.id));
+    bulkSel.clear(); saveD(); buildChars();
+  }
+}
+function bulkCatChars(){
+  if(!bulkSel.size){ toast("Select some cards first."); return; }
+  const opts=D.categories.map((c,i)=>i+": "+c.label).join("\n");
+  const pick=prompt("Set category for "+bulkSel.size+" character(s):\n"+opts+"\n\nEnter number:");
+  const idx=parseInt(pick,10);
+  if(D.categories[idx]){ D.characters.forEach(c=>{ if(bulkSel.has(c.id)) c.category=D.categories[idx].id; }); saveD(); buildChars(); }
+}
+
+/* ---- char modal ---- */
+function openCharModal(id){
+  const c=charById(id); if(!c) return;
+  const portrait = c.image
+    ? '<img class="ph" src="'+esc(c.image)+'" alt="'+esc(c.name)+'">'
+    : '<div class="ph-none">'+esc(c.symbol||"◆")+'</div>';
+  const chips=[
+    catLabel(c.category)?{t:catLabel(c.category),acc:true}:null,
+    c.species?{t:c.species}:null,
+    c.faction?{t:c.faction}:null,
+    c.role?{t:c.role}:null
+  ].filter(Boolean).map(x=>'<span class="m-chip'+(x.acc?' acc':'')+'">'+esc(x.t)+'</span>').join("");
+  const fields=c.fields.length?'<div class="m-fields">'+c.fields.map(f=>'<div class="m-field"><span class="k">'+esc(f.key)+'</span><span class="v">'+esc(f.val)+'</span></div>').join("")+'</div>':'';
+  const rels=c.relationships.length?'<div class="m-rels"><h4>Relationships</h4>'+c.relationships.map(r=>{const o=charById(r.charId);return o?'<span class="m-rel"><b>'+esc(r.label||"—")+'</b> '+esc(o.name)+'</span>':'';}).join("")+'</div>':'';
+  document.getElementById("char-modal-card").innerHTML=
+    '<button class="m-close" onclick="closeCharModal()">✕</button>'+
+    '<div class="m-inner"><div class="m-portrait">'+portrait+'</div>'+
+    '<div class="m-info">'+
+      '<h3>'+esc(c.name)+'</h3>'+
+      (c.aliases.length?'<div class="m-alias">aka '+c.aliases.map(esc).join(" · ")+'</div>':'')+
+      '<div class="m-chips">'+chips+'</div>'+
+      (c.excerpt?'<div class="m-excerpt">'+esc(c.excerpt)+'</div>':'')+
+      (c.summary?'<div class="m-summary">'+esc(c.summary)+'</div>':'')+
+      fields+rels+
+      (editMode?'<div style="margin-top:18px"><button class="btn p" onclick="editChar(\''+c.id+'\');closeCharModal()">Edit character</button></div>':'')+
+    '</div></div>';
+  document.getElementById("char-modal").classList.add("open");
+}
+function closeCharModal(){ document.getElementById("char-modal").classList.remove("open"); }
+
+/* ===================== SHARED EDIT MODAL ===================== */
+function openEM(title, bodyHTML, footHTML){
+  document.getElementById("em-title").textContent=title;
+  document.getElementById("em-body").innerHTML=bodyHTML;
+  document.getElementById("em-foot").innerHTML=footHTML;
+  document.getElementById("edit-overlay-bg").classList.add("open");
+}
+function closeEM(){ document.getElementById("edit-overlay-bg").classList.remove("open"); }
+function emField(id,label,val,opts){
+  opts=opts||{};
+  if(opts.ta) return '<div class="em-row"><label class="em-lbl">'+esc(label)+'</label><textarea class="em-ta" id="'+id+'">'+esc(val||"")+'</textarea></div>';
+  if(opts.sel) return '<div class="em-row"><label class="em-lbl">'+esc(label)+'</label><select class="em-sel" id="'+id+'">'+opts.sel.map(o=>'<option value="'+esc(o.v)+'"'+(o.v===val?' selected':'')+'>'+esc(o.l)+'</option>').join("")+'</select></div>';
+  return '<div class="em-row"><label class="em-lbl">'+esc(label)+'</label><input class="em-in" id="'+id+'" value="'+esc(val||"")+'"></div>';
+}
+function getVal(id){ const el=document.getElementById(id); return el?el.value.trim():""; }
+
+/* dynamic list rows (tags / aliases) */
+function dynList(containerId, values, placeholder){
+  const rows=(values||[]).map(v=>dynRow(v,placeholder)).join("");
+  return '<div id="'+containerId+'">'+rows+'</div>'+
+    '<button type="button" class="em-addrow" onclick="addDyn(\''+containerId+'\',\''+esc(placeholder)+'\')">+ add</button>';
+}
+function dynRow(v,ph){ return '<div class="em-dynrow"><input class="em-in" value="'+esc(v||"")+'" placeholder="'+esc(ph)+'"><button type="button" onclick="this.parentElement.remove()">✕</button></div>'; }
+function addDyn(cid,ph){ document.getElementById(cid).insertAdjacentHTML("beforeend",dynRow("",ph)); }
+function readDyn(cid){ return [...document.getElementById(cid).querySelectorAll("input")].map(i=>i.value.trim()).filter(Boolean); }
+
+/* key/val rows (fields) */
+function kvList(containerId, fields){
+  const rows=(fields||[]).map(f=>kvRow(f.key,f.val)).join("");
+  return '<div id="'+containerId+'">'+rows+'</div>'+
+    '<button type="button" class="em-addrow" onclick="addKV(\''+containerId+'\')">+ add field</button>';
+}
+function kvRow(k,v){ return '<div class="em-dynrow"><input class="em-in" style="flex:0 0 38%" value="'+esc(k||"")+'" placeholder="label"><input class="em-in" value="'+esc(v||"")+'" placeholder="value"><button type="button" onclick="this.parentElement.remove()">✕</button></div>'; }
+function addKV(cid){ document.getElementById(cid).insertAdjacentHTML("beforeend",kvRow("","")); }
+function readKV(cid){ return [...document.getElementById(cid).querySelectorAll(".em-dynrow")].map(r=>{const i=r.querySelectorAll("input");return {key:i[0].value.trim(),val:i[1].value.trim()};}).filter(f=>f.key||f.val); }
+
+/* relationship rows (char picker + label) */
+function relList(containerId, rels){
+  const rows=(rels||[]).map(r=>relRow(r.charId,r.label)).join("");
+  return '<div id="'+containerId+'">'+rows+'</div>'+
+    '<button type="button" class="em-addrow" onclick="addRelRow(\''+containerId+'\')">+ add relationship</button>';
+}
+function relRow(charId,label){
+  const opts=D.characters.map(c=>'<option value="'+esc(c.id)+'"'+(c.id===charId?' selected':'')+'>'+esc(c.name)+'</option>').join("");
+  return '<div class="em-dynrow"><input class="em-in" style="flex:0 0 40%" value="'+esc(label||"")+'" placeholder="label (e.g. raised by)"><select class="em-sel" style="flex:1"><option value="">— character —</option>'+opts+'</select><button type="button" onclick="this.parentElement.remove()">✕</button></div>';
+}
+function addRelRow(cid){ document.getElementById(cid).insertAdjacentHTML("beforeend",relRow("","")); }
+function readRel(cid){ return [...document.getElementById(cid).querySelectorAll(".em-dynrow")].map(r=>{const lbl=r.querySelector("input").value.trim();const cid=r.querySelector("select").value;return cid?{charId:cid,label:lbl}:null;}).filter(Boolean); }
+
+/* ===================== CHARACTER EDIT ===================== */
+let _editCharId=null;
+function editChar(id){
+  _editCharId=id;
+  const c=id?charById(id):{name:"",aliases:[],category:(D.categories[0]||{}).id,species:"",faction:"",role:"",symbol:"◆",image:"",tags:[],excerpt:"",summary:"",fields:[],relationships:[],group:""};
+  const catSel=D.categories.map(x=>({v:x.id,l:x.label}));
+  const body=
+    '<div class="em-row two">'+emField("ec-name","Name",c.name)+emField("ec-symbol","Symbol",c.symbol)+'</div>'+
+    '<div class="em-row two">'+emField("ec-cat","Category",c.category,{sel:catSel})+emField("ec-role","Role title",c.role)+'</div>'+
+    '<div class="em-row two">'+emField("ec-species","Species",c.species)+emField("ec-faction","Faction",c.faction)+'</div>'+
+    emField("ec-image","Portrait image URL",c.image)+
+    '<div class="em-row"><label class="em-lbl">Aliases</label>'+dynList("ec-aliases",c.aliases,"alias")+'</div>'+
+    '<div class="em-row"><label class="em-lbl">Tags</label>'+dynList("ec-tags",c.tags,"tag")+'</div>'+
+    emField("ec-excerpt","Pull quote",c.excerpt,{ta:true})+
+    emField("ec-summary","Summary",c.summary,{ta:true})+
+    '<div class="em-row"><label class="em-lbl">Detail fields</label>'+kvList("ec-fields",c.fields)+'</div>'+
+    '<div class="em-row"><label class="em-lbl">Relationships</label>'+relList("ec-rels",c.relationships)+'</div>'+
+    emField("ec-group","Group / house",c.group);
+  const foot=(id?'<button class="em-btn d" onclick="deleteChar()">Delete</button>':'')+
+    '<button class="em-btn" onclick="closeEM()">Cancel</button>'+
+    '<button class="em-btn p" onclick="saveChar()">Save character</button>';
+  openEM(id?"Edit character":"New character", body, foot);
+}
+function saveChar(){
+  const name=getVal("ec-name"); if(!name){ toast("Name required."); return; }
+  const data={
+    name, symbol:getVal("ec-symbol")||"◆", category:getVal("ec-cat"), role:getVal("ec-role"),
+    species:getVal("ec-species"), faction:getVal("ec-faction"), image:getVal("ec-image"),
+    aliases:readDyn("ec-aliases"), tags:readDyn("ec-tags"),
+    excerpt:getVal("ec-excerpt"), summary:getVal("ec-summary"),
+    fields:readKV("ec-fields"), relationships:readRel("ec-rels"), group:getVal("ec-group")
+  };
+  if(_editCharId){ Object.assign(charById(_editCharId), data); }
+  else { data.id=uid("c"); D.characters.push(data); }
+  saveD(); closeEM(); buildChars();
+  toast("Character saved.");
+}
+function deleteChar(){
+  if(!_editCharId) return;
+  if(confirm("Delete this character?")){
+    D.characters=D.characters.filter(c=>c.id!==_editCharId);
+    saveD(); closeEM(); buildChars();
+  }
+}
+
+/* ---- bulk add characters (quick, name + category) ---- */
+function openBulkAddChar(){
+  const catSel=D.categories.map(x=>({v:x.id,l:x.label}));
+  const body=
+    '<p class="em-hint">Add several characters at once. One name per line. They share the category below; edit details later.</p>'+
+    emField("ba-cat","Category for all",D.categories[0].id,{sel:catSel})+
+    '<div class="em-row"><label class="em-lbl">Names (one per line)</label><textarea class="em-ta" id="ba-names" style="min-height:160px" placeholder="Marlowe Finch\nThe Twins\n…"></textarea></div>';
+  openEM("Bulk add characters", body,
+    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="doBulkAddChar()">Add all</button>');
+}
+function doBulkAddChar(){
+  const cat=getVal("ba-cat");
+  const names=getVal("ba-names").split("\n").map(s=>s.trim()).filter(Boolean);
+  if(!names.length){ toast("Add at least one name."); return; }
+  names.forEach(n=>D.characters.push({id:uid("c"),name:n,aliases:[],category:cat,species:"",faction:"",role:"",symbol:"◆",image:"",tags:[],excerpt:"",summary:"",fields:[],relationships:[],group:""}));
+  saveD(); closeEM(); buildChars();
+  toast(names.length+" characters added.");
+}
+
+/* ===================== TIMELINE ===================== */
+function buildTL(){
+  const s=document.getElementById("sec-timeline");
+  let html=secHead("The Long Wire","Timeline","timeline");
+  html+='<div class="addbar editonly block">'+
+          '<button class="btn p" onclick="editTL(null)">+ Event</button>'+
+          '<button class="btn" onclick="openBulkTL()">+ Bulk Add</button>'+
+          '<button class="btn" onclick="editArcs()">⛭ Arcs</button>'+
+        '</div>';
+  html+='<div class="tl-wrap" id="tl-wrap"><div class="tl-spine"></div>';
+  let lastArc=null;
+  D.timeline.forEach((t,i)=>{
+    if(t.arc!==lastArc){
+      const a=arcById(t.arc);
+      if(a) html+='<div class="arc-divider" style="--arc:'+esc(a.color)+'"><span>'+esc(a.name)+'</span></div>';
+      lastArc=t.arc;
+    }
+    html+=tlItem(t,i);
+  });
+  html+='</div>';
+  s.innerHTML=html;
+  bindTLEvents(s);
+  bindIntroEdits(s);
+}
+function tlItem(t,i){
+  const a=arcById(t.arc);
+  const acol=a?a.color:"";
+  return '<div class="tli'+(t.spoiler?' spoiler':'')+'" data-idx="'+i+'"'+(editMode?' draggable="true"':'')+(acol?' style="--arc:'+esc(acol)+'"':'')+'>'+
+    '<span class="tli-grip">⠿</span>'+
+    '<span class="tli-dot"></span>'+
+    '<div class="tli-card">'+
+      '<div class="tli-label">'+esc(t.label)+'</div>'+
+      '<div class="tli-title">'+esc(t.title)+'</div>'+
+      '<div class="tli-body">'+esc(t.body)+'</div>'+
+      (t.key?'<span class="tli-key">'+esc(t.key)+'</span>':'')+
+      '<div class="tli-ed"><button onclick="event.stopPropagation();editTL('+i+')">✎</button></div>'+
+    '</div>'+
+  '</div>';
+}
+function bindTLEvents(scope){
+  scope.querySelectorAll(".tli.spoiler").forEach(el=>{
+    el.addEventListener("click",e=>{ if(editMode) return; if(e.target.closest(".tli-ed")) return; el.classList.toggle("reveal"); });
+  });
+  if(!editMode) return;
+  let dragIdx=null;
+  scope.querySelectorAll(".tli").forEach(el=>{
+    el.addEventListener("dragstart",e=>{ dragIdx=+el.dataset.idx; el.classList.add("dragging"); e.dataTransfer.effectAllowed="move"; });
+    el.addEventListener("dragend",()=>el.classList.remove("dragging"));
+    el.addEventListener("dragover",e=>e.preventDefault());
+    el.addEventListener("drop",e=>{
+      e.preventDefault();
+      const to=+el.dataset.idx;
+      if(dragIdx==null||dragIdx===to) return;
+      const moved=D.timeline.splice(dragIdx,1)[0];
+      D.timeline.splice(to,0,moved);
+      saveD(); buildTL();
+    });
+  });
+}
+let _editTLIdx=null;
+function editTL(i){
+  _editTLIdx=i;
+  const t=(i!=null)?D.timeline[i]:{label:"",title:"",body:"",key:"",spoiler:false,arc:(D.arcs[0]||{}).id||""};
+  const arcSel=[{v:"",l:"— no arc —"}].concat(D.arcs.map(a=>({v:a.id,l:a.name})));
+  const body=
+    '<div class="em-row two">'+emField("et-label","Date / label",t.label)+emField("et-arc","Arc",t.arc,{sel:arcSel})+'</div>'+
+    emField("et-title","Title",t.title)+
+    emField("et-body","Description",t.body,{ta:true})+
+    '<div class="em-row two">'+emField("et-key","Key badge (optional)",t.key)+
+      '<div class="em-row"><label class="em-lbl">Spoiler?</label><select class="em-sel" id="et-spoiler"><option value="no"'+(!t.spoiler?' selected':'')+'>No</option><option value="yes"'+(t.spoiler?' selected':'')+'>Yes — blur it</option></select></div></div>';
+  const foot=(i!=null?'<button class="em-btn d" onclick="deleteTL()">Delete</button>':'')+
+    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="saveTL()">Save event</button>';
+  openEM(i!=null?"Edit event":"New event", body, foot);
+}
+function saveTL(){
+  const data={label:getVal("et-label"),title:getVal("et-title"),body:getVal("et-body"),key:getVal("et-key"),arc:getVal("et-arc"),spoiler:getVal("et-spoiler")==="yes"};
+  if(!data.title){ toast("Title required."); return; }
+  if(_editTLIdx!=null) D.timeline[_editTLIdx]=data; else D.timeline.push(data);
+  saveD(); closeEM(); buildTL(); toast("Event saved.");
+}
+function deleteTL(){ if(_editTLIdx!=null&&confirm("Delete this event?")){ D.timeline.splice(_editTLIdx,1); saveD(); closeEM(); buildTL(); } }
+
+function openBulkTL(){
+  const arcSel=[{v:"",l:"— no arc —"}].concat(D.arcs.map(a=>({v:a.id,l:a.name})));
+  const body='<p class="em-hint">One event per line as <b>label | title</b>. They all get the arc below.</p>'+
+    emField("bt-arc","Arc for all",(D.arcs[0]||{}).id||"",{sel:arcSel})+
+    '<div class="em-row"><label class="em-lbl">Events</label><textarea class="em-ta" id="bt-rows" style="min-height:160px" placeholder="1985 | The fire\n1986 | Rebuilt"></textarea></div>';
+  openEM("Bulk add events", body,
+    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="doBulkTL()">Add all</button>');
+}
+function doBulkTL(){
+  const arc=getVal("bt-arc");
+  const rows=getVal("bt-rows").split("\n").map(s=>s.trim()).filter(Boolean);
+  if(!rows.length){ toast("Add at least one event."); return; }
+  rows.forEach(r=>{ const [label,...rest]=r.split("|"); D.timeline.push({label:(label||"").trim(),title:rest.join("|").trim()||(label||"").trim(),body:"",key:"",arc,spoiler:false}); });
+  saveD(); closeEM(); buildTL(); toast(rows.length+" events added.");
+}
+
+/* ---- arc manager ---- */
+function editArcs(){
+  const rows=D.arcs.map(a=>'<div class="em-dynrow" data-aid="'+esc(a.id)+'"><input class="em-in" value="'+esc(a.name)+'" placeholder="arc name"><input class="em-in" type="color" style="flex:0 0 50px;padding:2px" value="'+esc(a.color)+'"><button type="button" onclick="this.parentElement.remove()">✕</button></div>').join("");
+  const body='<p class="em-hint">Arcs group timeline events and colour them.</p><div id="arc-rows">'+rows+'</div><button type="button" class="em-addrow" onclick="document.getElementById(\'arc-rows\').insertAdjacentHTML(\'beforeend\',arcRowHTML())">+ add arc</button>';
+  openEM("Timeline arcs", body, '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="saveArcs()">Save arcs</button>');
+}
+function arcRowHTML(){ return '<div class="em-dynrow" data-aid="'+uid("arc")+'"><input class="em-in" placeholder="arc name"><input class="em-in" type="color" style="flex:0 0 50px;padding:2px" value="#9e3b54"><button type="button" onclick="this.parentElement.remove()">✕</button></div>'; }
+function saveArcs(){
+  const rows=[...document.querySelectorAll("#arc-rows .em-dynrow")];
+  D.arcs=rows.map(r=>{const i=r.querySelectorAll("input");return {id:r.dataset.aid,name:i[0].value.trim(),color:i[1].value};}).filter(a=>a.name);
+  saveD(); closeEM(); buildTL(); toast("Arcs saved.");
+}
+
+/* ===================== STORY LORE (lore + notes) ===================== */
+function buildStoryLore(){
+  const s=document.getElementById("sec-notes");
+  let html=secHead("The World & the Work","Story Lore","notes");
+  html+='<div class="addbar editonly block">'+
+          '<button class="btn p" onclick="editLore(null)">+ Lore Entry</button>'+
+          '<button class="btn p" onclick="editNote(null)">+ Story Note</button>'+
+        '</div>';
+  html+='<div class="lore-acc" id="lore-acc">';
+  html+= D.lore.length? D.lore.map((l,i)=>loreItem(l,i)).join("") : '<div class="empty">No lore entries yet.</div>';
+  html+='</div>';
+  html+='<h3 style="font-family:var(--hfont);font-style:italic;font-size:1.6rem;margin:10px 0 16px">Drafting Notes</h3>';
+  html+='<div class="notes-grid">';
+  html+= D.notes.length? D.notes.map((n,i)=>noteCard(n,i)).join("") : '<div class="empty">No notes yet.</div>';
+  html+='</div>';
+  s.innerHTML=html;
+  s.querySelectorAll(".lore-head").forEach(h=>h.onclick=(e)=>{ if(e.target.closest(".lore-ed"))return; h.parentElement.classList.toggle("open"); });
+  bindIntroEdits(s);
+}
+function loreItem(l,i){
+  const fields=l.fields.length?'<div class="lore-fields">'+l.fields.map(f=>'<div class="lore-f"><span class="k">'+esc(f.key)+'</span><span>'+esc(f.val)+'</span></div>').join("")+'</div>':'';
+  return '<div class="lore-item">'+
+    '<div class="lore-head">'+
+      '<span class="lore-icon">'+esc(l.icon||"✦")+'</span>'+
+      '<div class="lore-htext"><div class="lore-name">'+esc(l.name)+'</div>'+(l.tag?'<div class="lore-tag">'+esc(l.tag)+'</div>':'')+'</div>'+
+      '<button class="lore-ed editonly" style="background:none;border:none;color:var(--gold);font-size:.9rem" onclick="event.stopPropagation();editLore('+i+')">✎</button>'+
+      '<span class="lore-chev">▸</span>'+
+    '</div>'+
+    '<div class="lore-body"><div class="lore-summary">'+esc(l.summary)+'</div>'+fields+'</div>'+
+  '</div>';
+}
+function noteCard(n,i){
+  return '<div class="note-card">'+
+    '<div class="note-meta">'+(n.chapter?'<span class="ch">'+esc(n.chapter)+'</span>':'')+(n.date?'<span>'+esc(n.date)+'</span>':'')+
+      '<button class="editonly" style="margin-left:auto;background:none;border:none;color:var(--gold)" onclick="editNote('+i+')">✎</button></div>'+
+    '<div class="note-title">'+esc(n.title)+'</div>'+
+    '<div class="note-body">'+esc(n.body)+'</div>'+
+    (n.tags.length?'<div class="note-tags">'+n.tags.map(t=>'<span class="cc-tag">'+esc(t)+'</span>').join("")+'</div>':'')+
+  '</div>';
+}
+let _editLoreIdx=null;
+function editLore(i){
+  _editLoreIdx=i;
+  const l=(i!=null)?D.lore[i]:{name:"",icon:"✦",tag:"",summary:"",fields:[]};
+  const body='<div class="em-row two">'+emField("el-name","Name",l.name)+emField("el-icon","Icon",l.icon)+'</div>'+
+    emField("el-tag","Tag / kind",l.tag)+
+    emField("el-summary","Summary",l.summary,{ta:true})+
+    '<div class="em-row"><label class="em-lbl">Fields</label>'+kvList("el-fields",l.fields)+'</div>';
+  openEM(i!=null?"Edit lore":"New lore entry", body,
+    (i!=null?'<button class="em-btn d" onclick="deleteLore()">Delete</button>':'')+
+    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="saveLore()">Save</button>');
+}
+function saveLore(){
+  const data={name:getVal("el-name"),icon:getVal("el-icon")||"✦",tag:getVal("el-tag"),summary:getVal("el-summary"),fields:readKV("el-fields")};
+  if(!data.name){ toast("Name required."); return; }
+  if(_editLoreIdx!=null) D.lore[_editLoreIdx]=data; else D.lore.push(data);
+  saveD(); closeEM(); buildStoryLore(); toast("Lore saved.");
+}
+function deleteLore(){ if(_editLoreIdx!=null&&confirm("Delete this entry?")){ D.lore.splice(_editLoreIdx,1); saveD(); closeEM(); buildStoryLore(); } }
+let _editNoteIdx=null;
+function editNote(i){
+  _editNoteIdx=i;
+  const n=(i!=null)?D.notes[i]:{chapter:"",date:"",title:"",body:"",tags:[]};
+  const body='<div class="em-row two">'+emField("en-chapter","Chapter",n.chapter)+emField("en-date","Date / status",n.date)+'</div>'+
+    emField("en-title","Title",n.title)+
+    emField("en-body","Body",n.body,{ta:true})+
+    '<div class="em-row"><label class="em-lbl">Tags</label>'+dynList("en-tags",n.tags,"tag")+'</div>';
+  openEM(i!=null?"Edit note":"New story note", body,
+    (i!=null?'<button class="em-btn d" onclick="deleteNote()">Delete</button>':'')+
+    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="saveNote()">Save</button>');
+}
+function saveNote(){
+  const data={chapter:getVal("en-chapter"),date:getVal("en-date"),title:getVal("en-title"),body:getVal("en-body"),tags:readDyn("en-tags")};
+  if(!data.title){ toast("Title required."); return; }
+  if(_editNoteIdx!=null) D.notes[_editNoteIdx]=data; else D.notes.push(data);
+  saveD(); closeEM(); buildStoryLore(); toast("Note saved.");
+}
+function deleteNote(){ if(_editNoteIdx!=null&&confirm("Delete this note?")){ D.notes.splice(_editNoteIdx,1); saveD(); closeEM(); buildStoryLore(); } }
+
+/* ===================== GALLERY (casting + scrapbook) ===================== */
+const FLIP_H={xs:180,sm:240,md:310,lg:420,xl:540};
+function galleryItems(){
+  const items=[];
+  D.casting.forEach(c=>items.push({gkey:"casting:"+c.id,type:"casting",ref:c}));
+  D.scrapbook.forEach(s=>items.push({gkey:"scrapbook:"+s.id,type:"scrapbook",ref:s}));
+  // order by galleryOrder, append missing, drop stale
+  const map=new Map(items.map(it=>[it.gkey,it]));
+  const ordered=[];
+  (D.galleryOrder||[]).forEach(k=>{ const norm=k.includes(":")?k:k.replace(/-(\d+)$/,""); if(map.has(k)){ordered.push(map.get(k));map.delete(k);} });
+  map.forEach(it=>ordered.push(it));
+  D.galleryOrder=ordered.map(it=>it.gkey);
+  return ordered;
+}
+function buildGallery(){
+  const s=document.getElementById("sec-casting");
+  let html=secHead("The Wall","Gallery","casting");
+  html+='<div class="addbar editonly block">'+
+          '<button class="btn p" onclick="editCast(null)">+ Casting Card</button>'+
+          '<button class="btn p" onclick="editScrap(null,\'quote\')">+ Quote</button>'+
+          '<button class="btn p" onclick="editScrap(null,\'image\')">+ Image</button>'+
+        '</div>';
+  const items=galleryItems();
+  html+='<div class="gallery-wall" id="gallery-wall">';
+  html+= items.length? items.map(it=>galleryItemHTML(it)).join("") : '<div class="empty">The wall is empty.</div>';
+  html+='</div>';
+  html+='<p class="sec-intro" style="margin-top:26px;font-size:.78rem" '+(editMode?'contenteditable="true" onblur="D.castingCredit=this.textContent.trim();saveD();"':'')+'>'+esc(D.castingCredit)+'</p>';
+  s.innerHTML=html;
+  bindGalleryEvents(s);
+  bindIntroEdits(s);
+}
+function galleryItemHTML(it){
+  if(it.type==="casting") return castCardHTML(it.ref,it.gkey);
+  return scrapHTML(it.ref,it.gkey);
+}
+function castCardHTML(c,gkey){
+  const h=FLIP_H[c.size]||FLIP_H.md;
+  const ch=charById(c.charId);
+  const img=c.image?c.image:(ch&&ch.image?ch.image:"");
+  const name=c.title||(ch?ch.name:"Casting");
+  const front=img?'<img src="'+esc(img)+'" alt="'+esc(name)+'">':'<div class="noimg">'+esc(ch?ch.symbol:"✶")+'</div>';
+  return '<div class="gallery-item" data-gkey="'+esc(gkey)+'"'+(editMode?' draggable="true"':'')+'>'+
+    '<span class="gi-grip">⠿</span>'+
+    '<button class="gi-edit" onclick="event.stopPropagation();editCast(\''+esc(c.id)+'\')">✎</button>'+
+    '<div class="flip" style="height:'+h+'px">'+
+      '<div class="flip-inner">'+
+        '<div class="flip-face flip-front">'+
+          '<button class="flip-expand" title="Expand">⤢</button>'+
+          front+
+          '<div class="flip-name">'+esc(name)+'</div>'+
+          '<span class="flip-hint">↺</span>'+
+        '</div>'+
+        '<div class="flip-face flip-back">'+
+          '<div class="flip-note"><div class="nh">✦ Casting Director</div><div class="nb">'+esc(c.castingNote||"—")+'</div></div>'+
+          '<div class="flip-note"><div class="nh">✒ Author</div><div class="nb">'+esc(c.authorNote||"—")+'</div></div>'+
+        '</div>'+
+      '</div>'+
+    '</div>'+
+  '</div>';
+}
+function scrapHTML(sc,gkey){
+  let inner;
+  if(sc.type==="image"&&sc.image){
+    inner='<div class="scrap"><img src="'+esc(sc.image)+'" alt="">'+(sc.caption?'<div class="scrap-cap">'+esc(sc.caption)+'</div>':'')+'</div>';
+  } else {
+    inner='<div class="scrap"><div class="scrap-quote">'+esc(sc.quote||sc.caption||"…")+(sc.source?'<span class="src">— '+esc(sc.source)+'</span>':'')+'</div></div>';
+  }
+  return '<div class="gallery-item" data-gkey="'+esc(gkey)+'"'+(editMode?' draggable="true"':'')+'>'+
+    '<span class="gi-grip">⠿</span>'+
+    '<button class="gi-edit" onclick="event.stopPropagation();editScrap(\''+esc(sc.id)+'\',\''+esc(sc.type)+'\')">✎</button>'+
+    inner+
+  '</div>';
+}
+function bindGalleryEvents(scope){
+  // flip
+  scope.querySelectorAll(".flip").forEach(f=>{
+    f.addEventListener("click",e=>{
+      if(e.target.closest(".flip-expand")||e.target.closest(".gi-edit")||e.target.closest(".gi-grip")) return;
+      f.classList.toggle("flipped");
+    });
+  });
+  // expand → lightbox
+  scope.querySelectorAll(".flip-expand").forEach(b=>{
+    b.addEventListener("click",e=>{
+      e.stopPropagation();
+      const img=b.parentElement.querySelector("img");
+      if(img) openLB(img.src);
+    });
+  });
+  scope.querySelectorAll(".scrap img").forEach(img=>img.addEventListener("click",()=>openLB(img.src)));
+  // drag reorder
+  if(!editMode) return;
+  let dragKey=null;
+  scope.querySelectorAll(".gallery-item").forEach(el=>{
+    el.addEventListener("dragstart",e=>{ dragKey=el.dataset.gkey; el.classList.add("dragging"); e.dataTransfer.effectAllowed="move"; });
+    el.addEventListener("dragend",()=>el.classList.remove("dragging"));
+    el.addEventListener("dragover",e=>e.preventDefault());
+    el.addEventListener("drop",e=>{
+      e.preventDefault();
+      const toKey=el.dataset.gkey;
+      if(!dragKey||dragKey===toKey) return;
+      const ord=D.galleryOrder.slice();
+      const from=ord.indexOf(dragKey), to=ord.indexOf(toKey);
+      ord.splice(to,0,ord.splice(from,1)[0]);
+      D.galleryOrder=ord; saveD(); buildGallery();
+    });
+  });
+}
+/* casting edit */
+let _editCastId=null;
+function editCast(id){
+  _editCastId=id;
+  const c=id?D.casting.find(x=>x.id===id):{title:"",charId:"",image:"",size:"md",castingNote:"",authorNote:""};
+  const charSel=[{v:"",l:"— link a character (optional) —"}].concat(D.characters.map(ch=>({v:ch.id,l:ch.name})));
+  const sizeSel=[["xs","Extra small"],["sm","Small"],["md","Medium"],["lg","Large"],["xl","Extra large"]].map(o=>({v:o[0],l:o[1]}));
+  const body='<div class="em-row two">'+emField("cc-title","Card title",c.title)+emField("cc-size","Card height",c.size,{sel:sizeSel})+'</div>'+
+    emField("cc-char","Linked character",c.charId,{sel:charSel})+
+    emField("cc-image","Image URL (blank = use character's)",c.image)+
+    emField("cc-cast","✦ Casting director note",c.castingNote,{ta:true})+
+    emField("cc-auth","✒ Author note",c.authorNote,{ta:true});
+  openEM(id?"Edit casting card":"New casting card", body,
+    (id?'<button class="em-btn d" onclick="deleteCast()">Delete</button>':'')+
+    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="saveCast()">Save</button>');
+}
+function saveCast(){
+  const data={title:getVal("cc-title"),charId:getVal("cc-char"),image:getVal("cc-image"),size:getVal("cc-size"),castingNote:getVal("cc-cast"),authorNote:getVal("cc-auth")};
+  if(_editCastId){ Object.assign(D.casting.find(x=>x.id===_editCastId),data); }
+  else { data.id=uid("cast"); D.casting.push(data); D.galleryOrder.push("casting:"+data.id); }
+  saveD(); closeEM(); buildGallery(); toast("Card saved.");
+}
+function deleteCast(){ if(_editCastId&&confirm("Delete this card?")){ D.casting=D.casting.filter(x=>x.id!==_editCastId); D.galleryOrder=D.galleryOrder.filter(k=>k!=="casting:"+_editCastId); saveD(); closeEM(); buildGallery(); } }
+/* scrapbook edit */
+let _editScrapId=null;
+function editScrap(id,type){
+  _editScrapId=id;
+  const sc=id?D.scrapbook.find(x=>x.id===id):{type:type||"quote",quote:"",source:"",image:"",caption:""};
+  let body;
+  if(sc.type==="image"){
+    body=emField("sc-image","Image URL",sc.image)+emField("sc-caption","Caption",sc.caption);
+  } else {
+    body=emField("sc-quote","Quote",sc.quote,{ta:true})+emField("sc-source","Source / speaker",sc.source);
+  }
+  openEM(id?"Edit item":(sc.type==="image"?"New image":"New quote"), body,
+    (id?'<button class="em-btn d" onclick="deleteScrap()">Delete</button>':'')+
+    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="saveScrap(\''+esc(sc.type)+'\')">Save</button>');
+}
+function saveScrap(type){
+  let data;
+  if(type==="image") data={type:"image",image:getVal("sc-image"),caption:getVal("sc-caption"),quote:"",source:""};
+  else data={type:"quote",quote:getVal("sc-quote"),source:getVal("sc-source"),image:"",caption:""};
+  if(_editScrapId){ Object.assign(D.scrapbook.find(x=>x.id===_editScrapId),data); }
+  else { data.id=uid("scrap"); D.scrapbook.push(data); D.galleryOrder.push("scrapbook:"+data.id); }
+  saveD(); closeEM(); buildGallery(); toast("Saved.");
+}
+function deleteScrap(){ if(_editScrapId&&confirm("Delete this item?")){ D.scrapbook=D.scrapbook.filter(x=>x.id!==_editScrapId); D.galleryOrder=D.galleryOrder.filter(k=>k!=="scrapbook:"+_editScrapId); saveD(); closeEM(); buildGallery(); } }
+/* lightbox */
+function openLB(src){ document.getElementById("lb-img").src=src; document.getElementById("lightbox").classList.add("open"); }
+function closeLB(){ document.getElementById("lightbox").classList.remove("open"); }
+
+/* ===================== CANVAS ENGINE (tree + links) ===================== */
+const _cv={ tree:{i:0,panX:40,panY:20,zoom:1}, links:{i:0,panX:20,panY:20,zoom:1} };
+
+function canvasHost(kind, toolbarHTML){
+  return '<div class="canvas-host" data-kind="'+kind+'">'+
+    '<div class="canvas-toolbar">'+toolbarHTML+'</div>'+
+    '<div class="canvas-stage" id="stage-'+kind+'"><div class="canvas-pan" id="pan-'+kind+'">'+
+      '<svg class="cv-edges" id="edges-'+kind+'"></svg>'+
+    '</div></div>'+
+  '</div>';
+}
+function applyPan(kind){
+  const st=_cv[kind];
+  const pan=document.getElementById("pan-"+kind);
+  if(pan) pan.style.transform="translate("+st.panX+"px,"+st.panY+"px) scale("+st.zoom+")";
+}
+function zoomCanvas(kind,d){ const st=_cv[kind]; st.zoom=Math.min(2,Math.max(.4,+(st.zoom+d).toFixed(2))); applyPan(kind); }
+function resetCanvas(kind){ const st=_cv[kind]; st.panX=kind==="tree"?40:20; st.panY=20; st.zoom=1; applyPan(kind); }
+
+function bindStagePan(kind){
+  const stage=document.getElementById("stage-"+kind);
+  if(!stage) return;
+  let panning=false,sx,sy,ox,oy;
+  stage.addEventListener("mousedown",e=>{
+    if(e.target.closest(".node")) return;
+    panning=true; stage.classList.add("panning");
+    sx=e.clientX; sy=e.clientY; ox=_cv[kind].panX; oy=_cv[kind].panY;
+  });
+  window.addEventListener("mousemove",e=>{ if(!panning)return; _cv[kind].panX=ox+(e.clientX-sx); _cv[kind].panY=oy+(e.clientY-sy); applyPan(kind); });
+  window.addEventListener("mouseup",()=>{ panning=false; stage.classList.remove("panning"); });
+  stage.addEventListener("wheel",e=>{ e.preventDefault(); zoomCanvas(kind, e.deltaY<0?.1:-.1); },{passive:false});
+}
+
+function nodeCenter(el){ return { x: el.offsetLeft+el.offsetWidth/2, y: el.offsetTop+el.offsetHeight/2 }; }
+
+function drawEdges(kind, model){
+  const svg=document.getElementById("edges-"+kind);
+  const pan=document.getElementById("pan-"+kind);
+  if(!svg||!pan) return;
+  const nodeEls={};
+  pan.querySelectorAll(".node").forEach(n=>nodeEls[n.dataset.nid]=n);
+  let maxX=600,maxY=400, parts="";
+  Object.values(nodeEls).forEach(el=>{ maxX=Math.max(maxX,el.offsetLeft+el.offsetWidth+80); maxY=Math.max(maxY,el.offsetTop+el.offsetHeight+80); });
+  (model.edges||[]).forEach(ed=>{
+    const a=nodeEls[ed.from], b=nodeEls[ed.to];
+    if(!a||!b) return;
+    const p1=nodeCenter(a), p2=nodeCenter(b);
+    const col = kind==="links" ? (REL_TYPES[ed.rel]||REL_TYPES.complex).color : "var(--b1)";
+    const dash = (kind==="links"&&(ed.rel==="ambiguous"||ed.rel==="complex"))?'stroke-dasharray="6 5"':'';
+    parts+='<line x1="'+p1.x+'" y1="'+p1.y+'" x2="'+p2.x+'" y2="'+p2.y+'" stroke="'+col+'" stroke-width="2.2" '+dash+'/>';
+    const mx=(p1.x+p2.x)/2, my=(p1.y+p2.y)/2;
+    if(ed.label) parts+='<text class="edge-lbl" x="'+mx+'" y="'+(my-6)+'" text-anchor="middle">'+esc(ed.label)+'</text>';
+  });
+  svg.setAttribute("width",maxX); svg.setAttribute("height",maxY);
+  svg.innerHTML=parts;
+}
+
+function renderNodes(kind, model){
+  const pan=document.getElementById("pan-"+kind);
+  pan.querySelectorAll(".node").forEach(n=>n.remove());
+  (model.nodes||[]).forEach(n=>{
+    const el=document.createElement("div");
+    let names,sub;
+    if(kind==="links"){
+      const c=charById(n.charId); names=c?c.name:"(missing)"; sub=c?[c.role,c.species].filter(Boolean).join(" · "):"";
+      el.className="node";
+    } else {
+      const ids=n.charIds||[]; const chs=ids.map(charById).filter(Boolean);
+      el.className="node"+(n.kind==="couple"||chs.length>1?" couple":"");
+      if(chs.length>1){ names='<div class="node-pair"><span class="nm">'+esc(chs[0].name)+'</span><span class="amp2">&</span><span class="nm">'+esc(chs[1].name)+'</span></div>'; sub=chs.map(c=>c.role).filter(Boolean).join(" · "); }
+      else { names=chs[0]?chs[0].name:"(empty)"; sub=chs[0]?[chs[0].role,chs[0].species].filter(Boolean).join(" · "):""; }
+    }
+    el.dataset.nid=n.id; el.style.left=(n.x||0)+"px"; el.style.top=(n.y||0)+"px";
+    el.innerHTML='<button class="node-del" title="Remove">✕</button>'+
+      (kind==="links"||(n.charIds||[]).length<=1?'<div class="node-name">'+(typeof names==="string"?esc(names):names)+'</div>':names)+
+      (sub?'<div class="node-sub">'+esc(sub)+'</div>':'');
+    pan.appendChild(el);
+    el.querySelector(".node-del").onclick=(e)=>{ e.stopPropagation(); if(!editMode)return; if(confirm("Remove this node?")){ model.nodes=model.nodes.filter(x=>x.id!==n.id); model.edges=model.edges.filter(e=>e.from!==n.id&&e.to!==n.id); saveD(); renderNodes(kind,model); drawEdges(kind,model); } };
+    bindNodeDrag(el,kind,n,model);
+  });
+  drawEdges(kind,model);
+}
+function bindNodeDrag(el,kind,n,model){
+  el.addEventListener("mousedown",e=>{
+    if(!editMode) return;
+    if(e.target.closest(".node-del")) return;
+    e.stopPropagation();
+    const z=_cv[kind].zoom;
+    const sx=e.clientX, sy=e.clientY, ox=n.x||0, oy=n.y||0;
+    function mv(ev){ n.x=ox+(ev.clientX-sx)/z; n.y=oy+(ev.clientY-sy)/z; el.style.left=n.x+"px"; el.style.top=n.y+"px"; drawEdges(kind,model); }
+    function up(){ window.removeEventListener("mousemove",mv); window.removeEventListener("mouseup",up); saveD(); }
+    window.addEventListener("mousemove",mv); window.addEventListener("mouseup",up);
+  });
+}
+
+/* ---- FAMILY TREE SECTION ---- */
+function buildTreeSection(){
+  const s=document.getElementById("sec-tree");
+  if(!D.trees.length) D.trees.push({id:uid("tree"),label:"Family Tree",nodes:[],edges:[]});
+  if(_cv.tree.i>=D.trees.length) _cv.tree.i=0;
+  const tree=D.trees[_cv.tree.i];
+  let html=secHead("Bonds & Blood","Family Tree","tree");
+  if(D.trees.length>1||editMode){
+    html+='<div class="addbar"><select class="em-sel" style="max-width:240px" id="tree-pick" onchange="_cv.tree.i=this.selectedIndex;buildTreeSection()">'+
+      D.trees.map((t,i)=>'<option'+(i===_cv.tree.i?' selected':'')+'>'+esc(t.label)+'</option>').join("")+'</select>'+
+      '<span class="editonly"><button class="btn" onclick="addTree()">+ Tree</button><button class="btn" onclick="renameTree()">Rename</button><button class="btn" onclick="delTree()">Delete tree</button></span></div>';
+  }
+  const toolbar=
+    '<button class="btn editonly" onclick="openTreeAdd()">+ Person</button>'+
+    '<button class="btn editonly" onclick="openBondAdd()">+ Bond</button>'+
+    '<button class="btn" onclick="zoomCanvas(\'tree\',.1)">+</button>'+
+    '<button class="btn" onclick="zoomCanvas(\'tree\',-.1)">−</button>'+
+    '<button class="btn" onclick="resetCanvas(\'tree\')">⟲</button>';
+  html+=canvasHost("tree",toolbar);
+  s.innerHTML=html;
+  applyPan("tree"); bindStagePan("tree"); renderNodes("tree",tree);
+  bindIntroEdits(s);
+}
+function curTree(){ return D.trees[_cv.tree.i]; }
+function addTree(){ const n=prompt("Name this tree:","New tree"); if(n){ D.trees.push({id:uid("tree"),label:n.trim(),nodes:[],edges:[]}); _cv.tree.i=D.trees.length-1; saveD(); buildTreeSection(); } }
+function renameTree(){ const t=curTree(); const n=prompt("Rename tree:",t.label); if(n){ t.label=n.trim(); saveD(); buildTreeSection(); } }
+function delTree(){ if(D.trees.length<=1){toast("Keep at least one tree.");return;} if(confirm("Delete this tree?")){ D.trees.splice(_cv.tree.i,1); _cv.tree.i=0; saveD(); buildTreeSection(); } }
+
+/* ---- RELATIONSHIPS SECTION ---- */
+function buildLinks(){
+  const s=document.getElementById("sec-links");
+  if(!D.links.length) D.links.push({id:uid("link"),label:"Relationships",nodes:[],edges:[]});
+  if(_cv.links.i>=D.links.length) _cv.links.i=0;
+  const web=D.links[_cv.links.i];
+  let html=secHead("The Threads","Relationships","links");
+  const legend='<div class="rel-legend">'+Object.entries(REL_TYPES).map(([k,v])=>'<span><i style="background:'+v.color+'"></i>'+v.label+'</span>').join("")+'</div>';
+  html+=legend;
+  if(D.links.length>1||editMode){
+    html+='<div class="addbar"><select class="em-sel" style="max-width:240px" onchange="_cv.links.i=this.selectedIndex;buildLinks()">'+
+      D.links.map((w,i)=>'<option'+(i===_cv.links.i?' selected':'')+'>'+esc(w.label)+'</option>').join("")+'</select>'+
+      '<span class="editonly"><button class="btn" onclick="addWeb()">+ Web</button><button class="btn" onclick="renameWeb()">Rename</button><button class="btn" onclick="delWeb()">Delete</button></span></div>';
+  }
+  const toolbar=
+    '<button class="btn editonly" onclick="openLinkAdd()">+ People</button>'+
+    '<button class="btn editonly" onclick="openConnAdd()">+ Connection</button>'+
+    '<button class="btn" onclick="zoomCanvas(\'links\',.1)">+</button>'+
+    '<button class="btn" onclick="zoomCanvas(\'links\',-.1)">−</button>'+
+    '<button class="btn" onclick="resetCanvas(\'links\')">⟲</button>';
+  html+=canvasHost("links",toolbar);
+  s.innerHTML=html;
+  applyPan("links"); bindStagePan("links"); renderNodes("links",web);
+  bindIntroEdits(s);
+}
+function curWeb(){ return D.links[_cv.links.i]; }
+function addWeb(){ const n=prompt("Name this web:","New web"); if(n){ D.links.push({id:uid("link"),label:n.trim(),nodes:[],edges:[]}); _cv.links.i=D.links.length-1; saveD(); buildLinks(); } }
+function renameWeb(){ const w=curWeb(); const n=prompt("Rename:",w.label); if(n){ w.label=n.trim(); saveD(); buildLinks(); } }
+function delWeb(){ if(D.links.length<=1){toast("Keep at least one web.");return;} if(confirm("Delete this web?")){ D.links.splice(_cv.links.i,1); _cv.links.i=0; saveD(); buildLinks(); } }
+
+/* ===================== SEARCHABLE CHARACTER PICKER ===================== */
+function charPickerBody(){
+  if(!D.characters.length) return '<p style="color:var(--tdim)">No characters yet — add some on the Characters tab first.</p>';
+  const list=D.characters.slice().sort((a,b)=>a.name.localeCompare(b.name));
+  return '<input class="pick-search" id="pick-q" placeholder="Search name, role, species…" oninput="filterPick()">'+
+    '<div class="pick-list" id="pick-list">'+
+    list.map(c=>{
+      const meta=[c.role,c.species,c.faction].filter(Boolean).join(" · ");
+      return '<div class="pick-row" data-cid="'+esc(c.id)+'" data-hay="'+esc((c.name+" "+(c.role||"")+" "+(c.species||"")).toLowerCase())+'" onclick="togglePick(this)">'+
+        '<span class="pk-box"></span><span><b>'+esc(c.name)+'</b>'+(meta?' <span style="color:var(--tdim);font-size:.85em">— '+esc(meta)+'</span>':'')+'</span></div>';
+    }).join("")+
+    '</div>';
+}
+function filterPick(){ const q=document.getElementById("pick-q").value.toLowerCase().trim(); document.querySelectorAll("#pick-list .pick-row").forEach(r=>{ r.style.display=(!q||r.dataset.hay.indexOf(q)>-1)?"":"none"; }); }
+function togglePick(el){ el.classList.toggle("on"); el.querySelector(".pk-box").textContent=el.classList.contains("on")?"✓":""; }
+function pickedIds(){ return [...document.querySelectorAll("#pick-list .pick-row.on")].map(r=>r.dataset.cid); }
+function circleLayout(n,cx,cy,r){ const p=[]; for(let i=0;i<n;i++){ const a=(-Math.PI/2)+(i*2*Math.PI/n); p.push({x:Math.round(cx+r*Math.cos(a)),y:Math.round(cy+r*Math.sin(a))}); } return p; }
+function nodeOptions(model){
+  return (model.nodes||[]).map(n=>{
+    let nm;
+    if(n.charId!=null){ const c=charById(n.charId); nm=c?c.name:"(node)"; }
+    else { const chs=(n.charIds||[]).map(charById).filter(Boolean); nm=chs.map(c=>c.name).join(" & ")||"(node)"; }
+    return {v:n.id,l:nm};
+  });
+}
+
+/* ---- Family tree: + Person / + Bond ---- */
+function openTreeAdd(){
+  openEM("Add people to this tree", charPickerBody(),
+    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="doTreeAdd()">Add selected</button>');
+}
+function doTreeAdd(){
+  const ids=pickedIds(); if(!ids.length){ toast("Pick at least one person."); return; }
+  const t=curTree();
+  const existing=new Set(t.nodes.flatMap(n=>n.charIds||[]));
+  const fresh=ids.filter(id=>!existing.has(id));
+  if(!fresh.length){ toast("Those are already on the tree."); closeEM(); return; }
+  const pts=fresh.length===1?[{x:300,y:200}]:circleLayout(fresh.length,330,230,Math.max(120,fresh.length*34));
+  fresh.forEach((id,i)=>t.nodes.push({id:uid("tn"),kind:"single",charIds:[id],x:pts[i].x,y:pts[i].y}));
+  saveD(); closeEM(); buildTreeSection(); toast(fresh.length+(fresh.length>1?" people added.":" person added."));
+}
+function openBondAdd(){
+  const t=curTree();
+  if((t.nodes||[]).length<2){ toast("Add at least two people first."); return; }
+  const opts=nodeOptions(t);
+  const relOpts=Object.entries(REL_TYPES).map(([k,v])=>({v:k,l:v.label}));
+  const body=emField("bond-a","From",opts[0].v,{sel:opts})+
+    emField("bond-b","To",opts[1].v,{sel:opts})+
+    emField("bond-rel","Type",'family',{sel:relOpts})+
+    emField("bond-label","Label (e.g. parent of, sibling)","",{});
+  openEM("Add a bond", body,
+    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="doBondAdd()">Add bond</button>');
+}
+function doBondAdd(){
+  const a=getVal("bond-a"), b=getVal("bond-b");
+  if(a===b){ toast("Pick two different people."); return; }
+  curTree().edges.push({id:uid("ed"),from:a,to:b,rel:getVal("bond-rel")||"family",label:getVal("bond-label")});
+  saveD(); closeEM(); buildTreeSection(); toast("Bond added.");
+}
+
+/* ---- Relationships: + People / + Connection ---- */
+function openLinkAdd(){
+  openEM("Add people to this web", charPickerBody(),
+    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="doLinkAdd()">Add selected</button>');
+}
+function doLinkAdd(){
+  const ids=pickedIds(); if(!ids.length){ toast("Pick at least one person."); return; }
+  const w=curWeb();
+  const existing=new Set(w.nodes.map(n=>n.charId));
+  const fresh=ids.filter(id=>!existing.has(id));
+  if(!fresh.length){ toast("Those are already on the web."); closeEM(); return; }
+  const pts=fresh.length===1?[{x:330,y:230}]:circleLayout(fresh.length,350,250,Math.max(130,fresh.length*38));
+  fresh.forEach((id,i)=>w.nodes.push({id:uid("ln"),charId:id,x:pts[i].x,y:pts[i].y}));
+  saveD(); closeEM(); buildLinks(); toast(fresh.length+(fresh.length>1?" people added.":" person added."));
+}
+function openConnAdd(){
+  const w=curWeb();
+  if((w.nodes||[]).length<2){ toast("Add at least two people first."); return; }
+  const opts=nodeOptions(w);
+  const relOpts=Object.entries(REL_TYPES).map(([k,v])=>({v:k,l:v.label}));
+  const body=emField("conn-a","From",opts[0].v,{sel:opts})+
+    emField("conn-b","To",opts[1].v,{sel:opts})+
+    emField("conn-rel","Relationship",'friendship',{sel:relOpts})+
+    emField("conn-label","Label (optional)","",{});
+  openEM("Add a connection", body,
+    '<button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="doConnAdd()">Add connection</button>');
+}
+function doConnAdd(){
+  const a=getVal("conn-a"), b=getVal("conn-b");
+  if(a===b){ toast("Pick two different people."); return; }
+  curWeb().edges.push({id:uid("ed"),from:a,to:b,rel:getVal("conn-rel")||"friendship",label:getVal("conn-label")});
+  saveD(); closeEM(); buildLinks(); toast("Connection added.");
+}
+
+/* ===================== GITHUB SYNC ===================== */
+function b64encode(str){ return btoa(unescape(encodeURIComponent(str))); }
+function b64decode(b64){ return decodeURIComponent(escape(atob(b64))); }
+function ghCfg(){ try{ return JSON.parse(localStorage.getItem(GHKEY)||"{}"); }catch(e){ return {}; } }
+function ghReady(){ const g=ghCfg(); return !!(g.token&&g.owner&&g.repo&&g.path); }
+function ghStatus(cls,txt){ const el=document.getElementById("gh-status"); if(!el)return; el.className="gh-status"+(cls?" "+cls:""); el.textContent=txt||""; }
+function ghURL(){ const g=ghCfg(); return "https://api.github.com/repos/"+g.owner+"/"+g.repo+"/contents/"+g.path.split("/").map(encodeURIComponent).join("/"); }
+
+function openGH(){
+  const g=ghCfg();
+  const body=emField("gh-token","Personal access token (repo scope)",g.token||"",{})+
+    emField("gh-owner","Owner / username",g.owner||"",{})+
+    emField("gh-repo","Repository",g.repo||"",{})+
+    emField("gh-path","Data file path",g.path||"data.json",{})+
+    '<p style="font-size:.78rem;color:var(--tdim);margin:.5rem 0 0;line-height:1.5">Stores your data as a JSON file in the repo (keep this separate from <code>index.html</code>). The token lives only in this browser — it is never written into the page or committed.</p>';
+  openEM("GitHub sync", body,
+    '<button class="em-btn d" onclick="ghDisconnect()">Disconnect</button><button class="em-btn" onclick="closeEM()">Cancel</button><button class="em-btn p" onclick="ghSaveCfg()">Connect</button>');
+}
+function ghSaveCfg(){
+  const cfg={token:getVal("gh-token"),owner:getVal("gh-owner"),repo:getVal("gh-repo"),path:getVal("gh-path")||"data.json"};
+  if(!cfg.token||!cfg.owner||!cfg.repo){ toast("Token, owner and repo are all required."); return; }
+  localStorage.setItem(GHKEY,JSON.stringify(cfg));
+  closeEM(); ghStatus("ok","✓ ready"); toast("GitHub connected.");
+  saveToGitHub(D);
+}
+function ghDisconnect(){ localStorage.removeItem(GHKEY); closeEM(); ghStatus("",""); toast("GitHub disconnected."); }
+
+async function ghGetSha(){
+  const g=ghCfg();
+  const r=await fetch(ghURL()+"?ref=HEAD&t="+Date.now(),{cache:"no-store",headers:{Authorization:"token "+g.token,Accept:"application/vnd.github+json"}});
+  if(r.status===404) return null;
+  if(!r.ok) throw new Error("GET "+r.status);
+  const j=await r.json(); return j.sha||null;
+}
+let _ghBusy=false, _ghQueued=false;
+async function saveToGitHub(data){
+  if(!ghReady()) return;
+  if(_ghBusy){ _ghQueued=true; return; }
+  _ghBusy=true; ghStatus("busy","syncing…");
+  try{
+    const g=ghCfg();
+    const sha=await ghGetSha();                         // always fetch a fresh SHA before PUT
+    const content=b64encode(JSON.stringify(data,null,2));
+    const payload={message:"Update story data — "+new Date().toISOString(),content:content};
+    if(sha) payload.sha=sha;
+    const r=await fetch(ghURL(),{method:"PUT",headers:{Authorization:"token "+g.token,Accept:"application/vnd.github+json"},body:JSON.stringify(payload)});
+    if(!r.ok) throw new Error("PUT "+r.status);
+    ghStatus("ok","✓ synced");
+  }catch(e){ ghStatus("err","⚠ error"); }
+  finally{
+    _ghBusy=false;
+    if(_ghQueued){ _ghQueued=false; saveToGitHub(D); }
+  }
+}
+async function loadFromGitHub(){
+  if(!ghReady()) return false;
+  try{
+    const g=ghCfg();
+    const r=await fetch(ghURL()+"?ref=HEAD&t="+Date.now(),{cache:"no-store",headers:{Authorization:"token "+g.token,Accept:"application/vnd.github+json"}});
+    if(!r.ok) return false;
+    const j=await r.json();
+    if(!j.content) return false;
+    const parsed=JSON.parse(b64decode(j.content.replace(/\n/g,"")));
+    if(parsed&&typeof parsed==="object"){ D=parsed; ghStatus("ok","✓ synced"); return true; }
+  }catch(e){}
+  return false;
+}
+
+/* ===================== EXPORT / IMPORT ===================== */
+function exportJSON(){
+  const blob=new Blob([JSON.stringify(D,null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download=(_storySlug||"fansite")+"-backup-"+new Date().toISOString().slice(0,10)+".json";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  toast("Backup downloaded.");
+}
+function importJSON(){
+  const inp=document.createElement("input");
+  inp.type="file"; inp.accept="application/json,.json";
+  inp.onchange=()=>{
+    const f=inp.files&&inp.files[0]; if(!f) return;
+    const rd=new FileReader();
+    rd.onload=()=>{
+      try{
+        const parsed=JSON.parse(rd.result);
+        if(!parsed||typeof parsed!=="object") throw new Error("bad");
+        if(!confirm("Replace ALL current data with this backup? This cannot be undone.")) return;
+        D=parsed; migrateD(); saveD();
+        buildNav(); switchTab(curTab);
+        setEd("eyebrow",D.eyebrow); setEd("subtitle",D.subtitle);
+        document.querySelectorAll('[data-ed="title"]').forEach(el=>el.textContent=D.title);
+        toast("Backup restored.");
+      }catch(e){ toast("Could not read that file."); }
+    };
+    rd.readAsText(f);
+  };
+  inp.click();
+}
+
+/* ===================== TOAST ===================== */
+let _toastT;
+function toast(msg){
+  const el=document.getElementById("toast"); if(!el) return;
+  el.textContent=msg; el.classList.add("show");
+  clearTimeout(_toastT); _toastT=setTimeout(()=>el.classList.remove("show"),2600);
+}
+
+/* ===================== INIT ===================== */
+function setEd(key,val){ const el=document.querySelector('[data-ed="'+key+'"]'); if(el&&val!=null) el.textContent=val; }
+async function init(){
+  let loaded=false;
+  if(ghReady()){ ghStatus("busy","syncing…"); loaded=await loadFromGitHub(); }
+  if(!loaded) loaded=loadLocal();
+  migrateD();
+  applyTheme(); applyFont();
+  setEd("eyebrow",D.eyebrow);
+  setEd("subtitle",D.subtitle);
+  if(D.title2) setEd("title2",D.title2);
+  document.querySelectorAll('[data-ed="title"]').forEach(el=>el.textContent=D.title);
+  if(ghReady()&&!loaded) ghStatus("ok","✓ ready");
+  buildNav(); switchTab("about");
+  document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ closeEM(); closeCharModal(); closeLB(); } });
+  document.querySelectorAll('[data-ed="title"]').forEach(el=>el.addEventListener("blur",()=>{
+    if(!editMode) return;
+    D.title=el.textContent.trim(); saveD();
+    document.querySelectorAll('[data-ed="title"]').forEach(x=>x.textContent=D.title);
+  }));
+}
+init();
+</script>
+</body>
+</html>
