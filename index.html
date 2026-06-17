@@ -258,6 +258,7 @@ body.em-on .cc-edit{display:flex}
 .cc.bsel{border-width:3px;border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 30%,transparent),var(--shadow)}
 .cc-check{position:absolute;top:8px;left:8px;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--bg4);display:none;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;z-index:4}
 .cc.bsel .cc-check{display:flex}
+.cc.bsel .cc-cat{display:none}
 
 /* ============ CHAR MODAL ============ */
 .m-bg{position:fixed;inset:0;z-index:200;background:color-mix(in srgb,var(--text) 55%,transparent);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:24px}
@@ -1005,7 +1006,7 @@ function buildChars(){
             '<button class="btn" onclick="manageLists()">⚙ Species &amp; Factions</button>'+
             '<button class="btn'+(bulkMode?' active':'')+'" id="bulk-toggle" onclick="toggleBulk()">'+(bulkMode?'✓ Selecting':'☑ Select')+'</button>'+
             '<span id="bulk-actions" style="display:'+(bulkMode?'inline-flex':'none')+';gap:8px">'+
-              '<button class="btn d" onclick="bulkDeleteChars()">🗑 Delete selected</button>'+
+              '<button class="btn d" id="bulk-del" onclick="bulkDeleteChars()">🗑 Delete selected</button>'+
               '<button class="btn" onclick="bulkCatChars()">Set category…</button>'+
             '</span>'+
           '</div>';
@@ -1083,7 +1084,7 @@ function bindCharEvents(scope){
   scope.querySelectorAll(".cc").forEach(card=>{
     card.onclick=()=>{
       const id=card.getAttribute("data-cid");
-      if(bulkMode){ if(bulkSel.has(id))bulkSel.delete(id); else bulkSel.add(id); card.classList.toggle("bsel"); return; }
+      if(bulkMode){ if(bulkSel.has(id))bulkSel.delete(id); else bulkSel.add(id); card.classList.toggle("bsel"); updateBulkCount(); return; }
       openCharModal(id);
     };
   });
@@ -1093,11 +1094,16 @@ function toggleBulk(){
   buildChars();
   if(bulkMode) toast("Tap cards to select, then “Delete selected”.");
 }
+function updateBulkCount(){
+  const b=document.getElementById("bulk-del");
+  if(b) b.textContent="🗑 Delete selected"+(bulkSel.size?" ("+bulkSel.size+")":"");
+}
 function bulkDeleteChars(){
-  if(!bulkSel.size){ toast("Select some cards first."); return; }
-  if(confirm("Delete "+bulkSel.size+" character(s)?")){
+  if(!bulkSel.size){ toast("Tap one or more cards to select them first."); return; }
+  if(confirm("Delete "+bulkSel.size+" character"+(bulkSel.size>1?"s":"")+"? This can't be undone.")){
     D.characters=D.characters.filter(c=>!bulkSel.has(c.id));
     bulkSel.clear(); saveD(); buildChars();
+    toast("Deleted.");
   }
 }
 function bulkCatChars(){
