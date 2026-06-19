@@ -114,6 +114,19 @@
   --shadow:0 8px 30px -12px rgba(82,50,132,.3);
 }
 
+  /* HARBOR — dark teal & wine */
+[data-theme="harbor"]{
+  --bg:#0a080d; --bg2:#12121b; --bg3:#181c27; --bg4:#1f2632;
+  --b1:#36303c; --b2:#2a2832; --b3:#22232d;
+  --gold:#268ea7; --gold2:#19465a; --goldl:#4fb3c9;
+  --text:#e7dde1; --tmid:#b59aa3; --tdim:#8a7681; --tfaint:#5f5560;
+  --nav:#d9c9d0; --navdim:#8a7681;
+  --red:#b83a52; --green:#3f9d7a;
+  --btn-bg:#181c27; --btn-border:#36303c; --btn-text:#b59aa3;
+  --btn-bg-hover:#268ea7; --btn-border-hover:#268ea7; --btn-text-hover:#0a080d;
+  --shadow:0 14px 44px -16px rgba(0,0,0,.7);
+}
+
 /* ============ BASE ============ */
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -779,7 +792,7 @@ let D = JSON.parse(JSON.stringify(DEFAULTS));
 let editMode = false;
 let curTab = "about";
 
-const THEMES = ["rose","parchment","dark","sage","slate","fernwood","crimson","lilac"];
+const THEMES = ["rose","parchment","dark","sage","slate","fernwood","crimson","lilac","harbor"];
 const FONTS = ["Cormorant Garamond","EB Garamond","Lora","Libre Baskerville","Playfair Display","Raleway"];
 
 const TABS = [
